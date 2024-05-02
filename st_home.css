@@ -1,8 +1,3 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-
 .button-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3개의 열 */
