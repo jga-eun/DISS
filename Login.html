@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>로그인</title>
+<link rel="stylesheet" href="st_login.css">
+<link rel="stylesheet" href="st_base.css">
+<script src="base.js" defer></script>
+<script src="login.js" defer></script>
+</head>
+
+<body>
+
+<div class="header">
+    <img src="image/logo.png" alt="Logo Image" class="logo" onclick="goToPage('Home.html')"> <!-- alt : 이미지 로드 실패 시 대체 텍스트 -->
+    <img src="image/profile.png" alt="Profile Image" class="profile" onclick="goToPage('profile.html')">
+</div>
+
+<div class="login-form">
+    <form action="/login" method="POST">
+        <input type="text" id="id" name="id" placeholder="ID" required>
+        <input type="password" id="password" name="password" placeholder="PW" required>
+        <button type="submit">Login</button> <br><br>
+        아이디 찾기 | 비밀번호 찾기 | 회원가입
+    </form>
+</div>
+
+
+<div class="bottom">
+    <div class="rule" onclick="goToPage('rule.html')" r1="이용약관">이용약관</div> 
+    <!-- css rule 클래스 할당해서 스타일 적용시키고 js에서 함수 가져와서 페이지 이동, js에서 이용약관이라는 parameter 사용할 수도 있어서 r1=""이런식으로 존재, 실제 사용할 때 r1==""  -->
+    <div class="rule" onclick="goToPage('rule.html')" r2="개인정보처리방침">개인정보처리방침</div>
+    <div class="rule" onclick="goToPage('rule.html')" r3="청소년보호정책">청소년보호정책</div>
+    <div class="rule" onclick="goToPage('rule.html')" r4="커뮤니티이용규칙">커뮤니티이용규칙</div>
+    <div class="rule" onclick="goToPage('inform.html')" r5="공지사항">공지사항</div>
+    <div class="rule">@DISS</div>
+    <div class="email">Email : DISS@gmail.com</div>
+</div>
+
+</body>
+</html>
