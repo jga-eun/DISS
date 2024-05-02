@@ -158,6 +158,22 @@ header {
     float: right;
 }
 
+.write-container {
+    text-align: right; /* 오른쪽 정렬 */
+    padding: 20px;
+    margin-right: 20px;
+}
+
+.write-button {
+    background-color: #7f3fbf;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
 footer {
     display: flex;
     flex-direction: column;
@@ -282,7 +298,7 @@ footer a {
 }
 
 .open-button {
-    margin-left: 970px;
+    margin-left: 950px;
     padding: 5px 10px;
     background-color: #F3E6FF;
     color: #7E05FE;
@@ -294,4 +310,36 @@ footer a {
 
 .hidden {
     display: none;
+}
+
+
+/*write.html*/
+.row-content {
+    width: 80%;
+    padding: 10px;
+    border: 3px solid #F3E6FF;
+    border-radius: 5px; 
+    margin-right: 10px; 
+}
+
+textarea.row-content {
+    resize: vertical;
+    height: 100px; 
+}
+
+.upload-container {
+    text-align: right;
+    padding: 20px;
+    margin-right: 20px;
+}
+
+.upload-button {
+    background-color: #7f3fbf;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
 }

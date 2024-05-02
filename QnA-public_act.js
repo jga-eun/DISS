@@ -13,6 +13,9 @@ function incrementLikes(button) {
 function showAnswer() {
     document.querySelector('.open-button').style.display = 'none';
     document.getElementById('additional-info').innerHTML = 'make all 명령은 모두 작성되어있습니다.';
-    document.getElementById('timestamp').innerHTML = '2024년 4월 2일 오전 4:01';
-    document.getElementById('timestamp').style.display = 'inline-block';
+    const timestampDiv = document.getElementById('timestamp');
+    timestampDiv.innerHTML = '2024년 4월 2일 오전 4:01';
+    timestampDiv.style.display = 'block'; // 변경된 내용 표시
+    timestampDiv.style.color = '#555'; // 텍스트 색상 변경
 }
+

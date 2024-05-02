@@ -12,63 +12,84 @@
         <img src="images/char.png" alt="캐릭터" class="char-img">
     </header>
 
-    <div class="search-bar">
-        <div class="search-options">
-            <a href="#" class="button active">public</a>
-            <a href="#" class="button">private</a>
-            <div class="underline"></div>
-        </div>
-        <div class="search-container">
-            <input type="text" class="search-input" id="search-input" placeholder="검색어 입력">
-            <button class="search-button"></button>
-        </div>
-    </div>
-
-    <div class="questions">
-        <div class="question" onclick="navigateToPage('QnA-public_sub.html')">
-            <img src="images/icon.jpg" alt="아이콘" class="question-icon">
-            <div class="question-content">
-                <div class="question-header">
-                    <span class="question-author">sulyong</span>
-                    <div class="question-time alignright">오전 12:31</div>
-                </div>
-                <div class="question-header">
-                    <div class="question-title">알고리즘 과제1 makefile 오류나는 부분 찾아주세요.</div>
-                    <button class="question-likes alignright" onclick="incrementLikes(this); event.stopPropagation();">💜 9</button>
-                </div>
-                <div style="clear: both;"></div> <!-- 부동산을 치우기 위한 요소 -->
+    <div class="question-detail">
+        <div class="search-bar">
+            <div class="search-options">
+                <a href="#" class="button active">public</a>
+                <a href="#" class="button">private</a>
+                <div class="underline"></div>
+            </div>
+            <div class="search-container">
+                <input type="text" class="search-input" id="search-input" placeholder="검색어 입력">
+                <button class="search-button"></button>
             </div>
         </div>
-        
-        <div class="question" onclick="navigateToPage('page2.html')">
-            <img src="images/icon.jpg" alt="아이콘" class="question-icon">
-            <div class="question-content">
-                <div class="question-header">
-                    <span class="question-author">sung</span>
-                    <div class="question-time alignright">오후 8:19</div>
+    
+        <div class="questions">
+            <div class="question" onclick="navigateToPage('QnA-public_sub.html')">
+                <img src="images/icon.jpg" alt="아이콘" class="question-icon">
+                <div class="question-content">
+                    <div class="question-header">
+                        <span class="question-author">sulyong</span>
+                        <div class="question-time alignright">오전 12:31</div>
+                    </div>
+                    <div class="question-header">
+                        <div class="question-title">알고리즘 과제1 makefile 오류나는 부분 찾아주세요.</div>
+                        <button class="question-likes alignright" onclick="incrementLikes(this); event.stopPropagation();">💜 9</button>
+                    </div>
+                    <div style="clear: both;"></div>
                 </div>
-                <div class="question-header">
-                    <div class="question-title">심층학습 확률적 경사하강법 문제 풀이 중 틀린 부분 찾아주세요.</div>
-                    <button class="question-likes alignright" onclick="incrementLikes(this); event.stopPropagation();">💜 11</button>
+            </div>
+            
+            <div class="question" onclick="navigateToPage('page2.html')">
+                <img src="images/icon.jpg" alt="아이콘" class="question-icon">
+                <div class="question-content">
+                    <div class="question-header">
+                        <span class="question-author">sung</span>
+                        <div class="question-time alignright">오후 8:19</div>
+                    </div>
+                    <div class="question-header">
+                        <div class="question-title">심층학습 확률적 경사하강법 문제 풀이 중 틀린 부분 찾아주세요.</div>
+                        <button class="question-likes alignright" onclick="incrementLikes(this); event.stopPropagation();">💜 11</button>
+                    </div>
+                    <div style="clear: both;"></div>
                 </div>
-                <div style="clear: both;"></div> <!-- 부동산을 치우기 위한 요소 -->
+            </div>
+    
+            <div class="question" onclick="navigateToPage('page3.html')">
+                <img src="images/icon.jpg" alt="아이콘" class="question-icon">
+                <div class="question-content">
+                    <div class="question-header">
+                        <span class="question-author">shin</span>
+                        <div class="question-time alignright">오후 7:04</div>
+                    </div>
+                    <div class="question-header">
+                        <div class="question-title">이산수학 186쪽 예제 3번 풀었는데 어디서 잘못된건가요?</div>
+                        <button class="question-likes alignright" onclick="incrementLikes(this); event.stopPropagation();">💜 13</button>
+                    </div>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+            <div class="question" onclick="navigateToPage('page3.html')">
+                <img src="images/icon.jpg" alt="아이콘" class="question-icon">
+                <div class="question-content">
+                    <div class="question-header">
+                        <span class="question-author">shin</span>
+                        <div class="question-time alignright">오후 7:04</div>
+                    </div>
+                    <div class="question-header">
+                        <div class="question-title">이산수학 186쪽 예제 3번 풀었는데 어디서 잘못된건가요?</div>
+                        <button class="question-likes alignright" onclick="incrementLikes(this); event.stopPropagation();">💜 13</button>
+                    </div>
+                    <div style="clear: both;"></div>
+                </div>
             </div>
         </div>
-
-        <div class="question" onclick="navigateToPage('page3.html')">
-            <img src="images/icon.jpg" alt="아이콘" class="question-icon">
-            <div class="question-content">
-                <div class="question-header">
-                    <span class="question-author">shin</span>
-                    <div class="question-time alignright">오후 7:04</div>
-                </div>
-                <div class="question-header">
-                    <div class="question-title">이산수학 186쪽 예제 3번 풀었는데 어디서 잘못된건가요?</div>
-                    <button class="question-likes alignright" onclick="incrementLikes(this); event.stopPropagation();">💜 13</button>
-                </div>
-                <div style="clear: both;"></div> <!-- 부동산을 치우기 위한 요소 -->
-            </div>
+    
+        <div class="write-container">
+            <button class="write-button" onclick="navigateToPage('QnA-public_write.html')">글쓰기</button>
         </div>
+    
     </div>
 
     <footer>
