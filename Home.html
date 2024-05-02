@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DISS</title>
+<link rel="stylesheet" href="st_home.css">
+<link rel="stylesheet" href="st_base.css">
+<script src="base.js" defer></script>
+</head>
+
+<body>
+
+<div class="header">
+    <img src="image/logo.png" alt="Logo Image" class="logo" onclick="goToPage('Home.html')"> <!-- alt : 이미지 로드 실패 시 대체 텍스트 -->
+    <img src="image/profile.png" alt="Profile Image" class="profile" onclick="goToPage('profile.html')">
+</div>
+
+<div class="content">
+    <div class="button-container">
+        <div class="button-wrapper">
+            <button class="custom-button" onclick="goToPage('QnA_private')" r1="button1">
+                <img src="image/button1.png" alt="1:1 질의응답" style="width:100%; height:auto;">
+            </button>
+            <div>1:1 질의응답</div>
+        </div>
+        <div class="button-wrapper">
+            <button class="custom-button" onclick="goToPage('QnA_public')" r2="button2">
+                <img src="image/button2.png" alt="공개 질문" style="width:100%; height:auto;">
+            </button>
+            <div>공개 질문</div>
+        </div>
+        <div class="button-wrapper">
+            <button class="custom-button" onclick="goToPage('video')" r3="button3">
+                <img src="image/button3.png" alt="동영상 강의" style="width:100%; height:auto;">
+            </button>
+            <div>동영상 강의</div>
+        </div>
+        <div class="button-wrapper">
+            <button class="custom-button" onclick="goToPage('file')" r4="button4">
+                <img src="image/button4.png" alt="자료실" style="width:100%; height:auto;">
+            </button>
+            <div>자료실</div>
+        </div>
+        <div class="button-wrapper">
+            <button class="custom-button" onclick="goToPage('academy')" r5="button5">
+                <img src="image/button5.png" alt="대학원" style="width:100%; height:auto;">
+            </button>
+            <div>대학원</div>
+        </div>
+        <div class="button-wrapper">
+            <button class="custom-button" onclick="goToPage('product')" r6="button6">
+                <img src="image/button6.png" alt="수비니아" style="width:100%; height:auto;">
+            </button>
+            <div>수비니아</div>
+        </div>
+    </div>
+</div>
+    
+<div class="bottom">
+    <div class="rule" onclick="goToPage('rule.html')" r1="이용약관">이용약관</div>
+    <div class="rule" onclick="goToPage('rule.html')" r2="개인정보처리방침">개인정보처리방침</div>
+    <div class="rule" onclick="goToPage('rule.html')" r2="청소년보호정책">청소년보호정책</div>
+    <div class="rule" onclick="goToPage('rule.html')" r2="커뮤니티이용규칙">커뮤니티이용규칙</div>
+    <div class="rule" onclick="goToPage('inform.html')" r2="공지사항">공지사항</div>
+    <div class="rule">@DISS</div>
+    <div class="email">Email : DISS@gmail.com</div>
+</div>
+    
+    </body>
+</html>

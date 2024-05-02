@@ -1,0 +1,23 @@
+.content {
+    width:100%;
+    margin: 20px auto;
+  }
+  
+  h1 {  /* 스타일 태그로 지정된 요소들은 . 안 붙여도 됨 */ 
+    background-color: #7E05FE;
+    border: 1px solid #7E05FE;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  .notice {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .notice h2 {
+    margin-top: 0;
+  }

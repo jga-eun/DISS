@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>공지사항</title>
+<link rel="stylesheet" href="st_inform.css">
+<link rel="stylesheet" href="st_base.css">
+<script src="base.js" defer></script>
+</head>
+
+<body>
+
+<div class="header">
+    <img src="image/logo.png" alt="Logo Image" class="logo" onclick="goToPage('Home.html')"> <!-- alt : 이미지 로드 실패 시 대체 텍스트 -->
+    <img src="image/profile.png" alt="Profile Image" class="profile" onclick="goToPage('profile.html')">
+</div>
+
+<div class="content">
+  <h1>게시판 공지사항</h1>
+  <div class="notice">
+    <h2>2024년 4월 1일 공지</h2>
+    <p>안녕하세요. DISS 관리자입니다. 4월 1일은 만우절이자 채원이 생일입니다.</p>
+  </div>
+  <div class="notice">
+    <h2>2024년 6월 1일 공지</h2>
+    <p>안녕하세요. DISS 관리자입니다. 6월 1일은 알고리즘 기말고사이자 다영이 언니 생일입니다.</p>
+  </div>
+  <div class="notice">
+    <h2>2024년 8월 19일 공지</h2>
+    <p>안녕하세요. DISS 관리자입니다. 8월 19일은 소웨경 제출일이자 정연이 언니 생일입니다.</p>
+  </div>
+  <div class="notice">
+    <h2>2024년 9월 29일 공지</h2>
+    <p>안녕하세요. DISS 관리자입니다. 9월 29일은 정가은 생일입니다.</p>
+  </div>
+</div>
+
+<div class="bottom">
+    <div class="rule" onclick="goToPage('rule.html')" r1="이용약관">이용약관</div> <!-- css rule 클래스 할당해서 스타일 적용시키고 js에서 함수 가져와서 페이지 이동, js에서 이용약관이라는 parameter 사용할 수도 있어서 r1=""이런식으로 존재, 실제 사용할 때 r1==""  -->
+    <div class="rule" onclick="goToPage('rule.html')" r2="개인정보처리방침">개인정보처리방침</div>
+    <div class="rule" onclick="goToPage('rule.html')" r3="청소년보호정책">청소년보호정책</div>
+    <div class="rule" onclick="goToPage('rule.html')" r4="커뮤니티이용규칙">커뮤니티이용규칙</div>
+    <div class="rule" onclick="goToPage('inform.html')" r5="공지사항">공지사항</div>
+    <div class="rule">@DISS</div>
+    <div class="email">Email : DISS@gmail.com</div>
+</div>
+
+</body>
+</html>

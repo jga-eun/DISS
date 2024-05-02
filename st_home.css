@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3개의 열 */
+    grid-template-rows: repeat(2, auto); /* 2개의 행, 각 행의 높이는 자동으로 설정 */
+    grid-gap: 10px; /* 그리드 사이의 간격 */
+}
+
+.button-wrapper {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px; /* 버튼 간격 조절 */
+}
+
+.custom-button {
+    background-color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* 버튼의 너비를 조정 */
+    overflow: hidden; /* 이미지가 버튼 크기를 넘지 않도록 */
+    position: relative; /* 포지션 상대적 설정 */
+}
+
+.custom-button img {
+    max-width: 100%; /* 이미지가 버튼 크기를 넘지 않도록 */
+    height: auto; /* 이미지 비율 유지 */
+    transition: filter 0.3s ease; /* 필터 전환 효과 */
+}
+
+.custom-button:hover img {
+    filter: brightness(75%); /* 호버 시 이미지 밝기 조정 */
+}
