@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DISS 대학원 페이지</title>
+    <link rel="stylesheet" href="graduate_school_style.css">
+    <script src="graduate_school_main.js" defer></script>
+
+</head>
+<body>
+
+    <!-- DISS 이미지를 페이지의 상단, 가운데에 위치 -->
+    <div style="text-align: center; margin-top: 30px;">
+        <img src="logo_image.png" alt="Diss logo" style="max-width:100%;height:auto;display: inline-block;">
+    </div>
+
+    <!-- 수룡이 이미지를 페이지의 상단, 우측에 위치 -->
+    <div style="position: absolute; top: 0; right: 0; margin-top: 30px; margin-right: 30px;">
+        <img src="profile.ver2.png" alt="Diss logo2" style="max-width:100%;height:auto;">
+    </div>
+
+    <!-- 분야, 지역 선택 div-->
+    <div class="selection">       <!-- 모든 걸 포함하는 div: selection-->
+        <div class="branch"> <!-- 분야 div: branch-->
+            <h2><b>분야</b></h2>
+            <table id="branch-table">
+                <tbody>
+                    <tr>
+                        <td id="architecture"><b>건축</b></td>
+                        <td id="management"><b>경영</b></td>
+                        <td id="education"><b>교육</b></td>
+                        <td id="machine"><b>기계</b></td>
+                        <td id="animal"><b>동물</b></td>
+                        <td id="physics"><b>물리</b></td>
+                        <td id="biology"><b>생명</b></td>
+                        <td id="math"><b>수학</b></td>
+                    </tr>
+
+                    <tr>
+                        <td id="psychology"><b>심리</b></td>
+                        <td id="entertainment"><b>예체능</b></td>
+                        <td id="medical"><b>의료</b></td>
+                        <td id="electron"><b>전자</b></td>
+                        <td id="shipbuilding"><b>조선</b></td>
+                        <td id="chemistry"><b>화학</b></td>
+                        <td id="environment"><b>환경</b></td>
+                        <td id="it"><b>IT</b></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="region">
+            <h2>지역</h2>
+            <table id="region-table">
+                <tbody>
+                    <tr>
+                        <td id="gangwon"><b>강원</b></td>
+                        <td id="gyeonggi"><b>경기</b></td>
+                        <td id="busan"><b>부산</b></td>
+                        <td id="seoul"><b>서울</b></td>
+                        <td id="incheon"><b>인천</b></td>
+                        <td id="jeolla"><b>전라</b></td>
+                        <td id="jeju"><b>제주</b></td>
+                        <td id="chungcheong"><b>충청</b></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="button-container">
+            <button type="button">초기화</button>
+            <button id="selectButton" type="button" onclick="showSelectedInfo()">검색</button>
+        </div>
+
+    </div>
+
+    <!-- 선택된 정보를 표시할 영역 -->
+    <div class="ShowInfo" id="selectedInfo" style="margin-top:30px">
+        <select id="standard" name="standard">
+            <option value="popular">인기순</option>
+            <option value="recommend">추천순</option>
+            <option value="much">후기 많은순</option>
+          </select>
+        <div class="Info" id="selectedInfo1" style="margin-top: 30px;">
+            <img src="profile.png" alt="Diss logo" style="max-width:100%;height:auto;display: inline-block; margin-left:30px; margin-top:15px; margin-bottom:15px;">
+            <div class="Info_detail" style="margin-left: 50px;">
+                <p><b>이채원</b></p>
+                <h2><b>성신여자대학교 AI 융합학부</b></h2>
+                <p>서울</p>
+                <h4 style= color:#18106C>#GaN HEMT #Internet of Things (IoT) #Power Amplifier #RF CMOS #Trasmitter</h4>
+            </div>
+        </div>
+
+        <div class="Info" id="selectedInfo2" style="margin-top: 30px;">
+            <img src="profile.png" alt="Diss logo" style="max-width:100%;height:auto;display: inline-block; margin-left:30px; margin-top:15px; margin-bottom:15px;">
+            <div class="Info_detail" style="margin-left: 50px;">
+                <p><b>정가은</b></p>
+                <h2><b>성신여자대학교 AI 융합학부</b></h2>
+                <p>서울</p>
+                <h4 style= color:#18106C>#GaN HEMT #Internet of Things (IoT) #Power Amplifier #RF CMOS #Trasmitter</h4>
+            </div>
+        </div>
+
+        <div class="Info" id="selectedInfo3" style="margin-top: 30px;">
+            <img src="profile.png" alt="Diss logo" style="max-width:100%;height:auto;display: inline-block; margin-left:30px; margin-top:15px; margin-bottom:15px;">
+            <div class="Info_detail" style="margin-left: 50px;">
+                <p><b>이다영</b></p>
+                <h2><b>성신여자대학교 AI 융합학부</b></h2>
+                <p>서울</p>
+                <h4 style= color:#18106C>#GaN HEMT #Internet of Things (IoT) #Power Amplifier #RF CMOS #Trasmitter</h4>
+            </div>
+        </div>
+
+        <div class="button-more">
+            <button type="button">더보기</button>
+        </div>
+    </div>
+
+   <!-- <footer class="bottom">
+        <footer class="bottom1">
+            <p>이용약관</p>
+            <p>개인정보처리방침</p>
+            <p>청소년보호정책</p>
+            <p>커뮤니티이용규칙</p>
+            <p>공지사항</p>
+            <p>@DISS</p>
+        </footer>
+        <footer class="bottom2">
+            <p>Email: DISS@gmail.com</p>
+        </footer>
+
+    </footer> -->
+</body>
+</html>
