@@ -1,193 +1,193 @@
 body {
-  font-family: sans-serif;
-  background-color: #ffffff;
-  color: #333;
-  margin: 0;
-  padding: 0;
+    font-family: sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-  text-align: center;
-  padding: 20px;
-  position: relative;
-  width: 95%; /* 전체 화면의 95%로 설정 */
-  margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    width: 95%; /* 전체 화면의 95%로 설정 */
+    margin: 0 auto;
 }
 
 .logo-img {
-  max-width: 150px;
-  margin: 0 auto;
-  display: block; /* 로고 이미지를 가운데 정렬하기 위해 추가 */
+    max-width: 150px;
+    margin: 0 auto;
+    display: block; /* 로고 이미지를 가운데 정렬하기 위해 추가 */
 }
 
 .char-img {
-  position: absolute;
-  top: 25px; /* 페이지 상단에서의 거리 */
-  right: 15px; /* 오른쪽으로부터의 거리 */
-  width: 60px; /* 캐릭터 이미지의 크기 조절 */
+    position: absolute;
+    top: 25px; /* 페이지 상단에서의 거리 */
+    right: 15px; /* 오른쪽으로부터의 거리 */
+    width: 60px; /* 캐릭터 이미지의 크기 조절 */
 }
 
 .search-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  width: 95%; /* 전체 화면의 95%로 설정 */
-  margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 95%; /* 전체 화면의 95%로 설정 */
+    margin: 0 auto;
 }
 
 .search-options {
-  display: flex;
-  position: relative;
+    display: flex;
+    position: relative;
 }
 
 .button {
-  padding: 10px 20px;
-  margin-right: 10px;
-  text-decoration: none;
-  color: #000000;
-  border: none;
-  background-color: transparent;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
+    padding: 10px 20px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #000000;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .button:hover,
 .button.active {
-  background-color: #f3e6ff; /* public 선택되었을 때의 배경색 */
-  color: #000000;
+    background-color: #f3e6ff; /* public 선택되었을 때의 배경색 */
+    color: #000000;
 }
 
 .underline {
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  width: 95%;
-  height: 3px;
-  background-color: #d8b2ff;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 95%;
+    height: 3px;
+    background-color: #d8b2ff;
 }
 
 .search-container {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .search-input {
-  padding: 8px;
-  border: 3px solid #d8b2ff; /* 검색창 보더 색상 변경 */
-  width: 400px; /* 검색창 넓이 확대 */
-  height: 30px;
-  border-radius: 10px;
-  margin-right: 15px; /* 검색어 입력 부분에 여백 추가 */
+    padding: 8px;
+    border: 3px solid #d8b2ff; /* 검색창 보더 색상 변경 */
+    width: 400px; /* 검색창 넓이 확대 */
+    height: 30px;
+    border-radius: 10px;
+    margin-right: 15px; /* 검색어 입력 부분에 여백 추가 */
 }
 
 .search-button {
-  width: 40px; /* 버튼 크기 조정 */
-  height: 40px; /* 버튼 크기 조정 */
-  border: none;
-  background-image: url("images/search.jpg"); /* 검색 이미지 추가 */
-  background-size: cover; /* 이미지가 버튼을 덮도록 설정 */
-  cursor: pointer;
-  background-position: center;
-  background-repeat: no-repeat;
+    width: 40px; /* 버튼 크기 조정 */
+    height: 40px; /* 버튼 크기 조정 */
+    border: none;
+    background-image: url("images/search.jpg"); /* 검색 이미지 추가 */
+    background-size: cover; /* 이미지가 버튼을 덮도록 설정 */
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .questions {
-  width: 95%; /* 전체 화면의 95%로 설정 */
-  margin: 20px auto;
-  padding: 0 20px;
+    width: 95%; /* 전체 화면의 95%로 설정 */
+    margin: 20px auto;
+    padding: 0 20px;
 }
 
 .question {
-  display: flex;
-  align-items: flex-start;
-  border-bottom: 3px solid #f3e6ff; /* 질문 박스 보더 색상 변경 */
-  padding: 15px 0;
-  cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 3px solid #f3e6ff; /* 질문 박스 보더 색상 변경 */
+    padding: 15px 0;
+    cursor: pointer;
 }
 
 .question-icon {
-  width: 70px; /* 아이콘 크기 조절 */
-  height: 60px; /* 아이콘 크기 조절 */
-  margin-right: 15px;
+    width: 70px; /* 아이콘 크기 조절 */
+    height: 60px; /* 아이콘 크기 조절 */
+    margin-right: 15px;
 }
 
 .question-content {
-  flex: 1;
+    flex: 1;
 }
 
 .question-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 5px;
 }
 
 .question-info {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 3px;
 }
 
 .question-author {
-  font-weight: bold;
-  color: #000000;
-  margin-bottom: 5px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 5px;
 }
 
 .question-title {
-  font-size: 16px;
-  margin-bottom: 5px;
+    font-size: 16px;
+    margin-bottom: 5px;
 }
 
 .question-likes {
-  background-color: transparent;
-  border: none;
-  color: #7f3fbf;
-  cursor: pointer;
-  font-size: 14px;
-  float: right;
+    background-color: transparent;
+    border: none;
+    color: #7f3fbf;
+    cursor: pointer;
+    font-size: 14px;
+    float: right;
 }
 
 .question-time {
-  font-size: 14px;
-  color: #555;
-  float: right;
+    font-size: 14px;
+    color: #555;
+    float: right;
 }
 
 footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  background-color: #7f3fbf;
-  color: white;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #7f3fbf;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 .footer-nav {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 10px;
 }
 
 footer a {
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
 }
 
 
 /*sub page*/
 .question-detail {
     overflow-y: scroll; /* 세로 스크롤을 위한 설정 */
-    max-height: 400px; /* 스크롤 높이 제한을 위해 추가 */
+    max-height: 500px; /* 스크롤 높이 제한을 위해 추가 */
 }
 
 .detail-header {
@@ -282,7 +282,7 @@ footer a {
 }
 
 .open-button {
-    margin-right: 40px;
+    margin-left: 970px;
     padding: 5px 10px;
     background-color: #F3E6FF;
     color: #7E05FE;
@@ -290,4 +290,8 @@ footer a {
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
+}
+
+.hidden {
+    display: none;
 }
