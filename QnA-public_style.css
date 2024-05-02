@@ -182,3 +182,112 @@ footer a {
   text-decoration: none;
   font-size: 14px;
 }
+
+
+/*sub page*/
+.question-detail {
+    overflow-y: scroll; /* 세로 스크롤을 위한 설정 */
+    max-height: 400px; /* 스크롤 높이 제한을 위해 추가 */
+}
+
+.detail-header {
+    display: flex;
+    justify-content: flex-end; /* 오른쪽 정렬 */
+    align-items: center;
+    margin-bottom: 10px;
+    margin-right: 40px;
+    gap: 10px; 
+}
+
+.row-title {
+    width: 15%; 
+    font-weight: bold;
+    text-align: center; /* 타이틀 가운데 정렬 */
+    margin-right: 10px;
+}
+
+.row-content {
+    width: 80%; /* 내용의 폭 */
+    text-align: left; /* 내용 왼쪽 정렬 */
+    padding: 10px;
+    border: 3px solid #f3e6ff; 
+    border-radius: 5px; 
+}
+
+.detail-timestamp, .question-likes {
+    font-weight: bold;
+    color: #555;
+}
+
+.detail-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* 보라색 구분선 */
+.file-divider {
+    margin-top: 20px;
+    width: 95%; 
+    border-top: 2px solid #D8B2FF; 
+}
+
+.detail-photo {
+    width: 50px; /* 이미지 크기 조정 */
+    height: 50px; /* 이미지 크기 조정 */
+    margin-right: 15px;
+}
+
+.detail-icon {
+    width: 50px; /* 아이콘 크기 조정 */
+    height: 50px; /* 아이콘 크기 조정 */
+    margin-right: 15px;
+}
+
+.icon-info {
+    display: inline-block; /* 아이콘과 텍스트를 같은 줄에 배치 */
+    vertical-align: middle;
+}
+/*sub page*/
+.detail-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 15px; 
+}
+
+.detail-photo {
+    width: 50px; /* 이미지 크기 조정 */
+    height: 50px; /* 이미지 크기 조정 */
+    margin-right: 15px;
+}
+
+.detail-icon {
+    width: 80px; /* 아이콘 크기 조정 */
+    height: 80px; /* 아이콘 크기 조정 */
+    margin-right: 15px;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    margin-left: 80px;
+    margin-bottom: 15px;
+}
+
+.icon-info {
+    display: inline-block; 
+    vertical-align: middle;
+    
+}
+
+.open-button {
+    margin-right: 40px;
+    padding: 5px 10px;
+    background-color: #F3E6FF;
+    color: #7E05FE;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
