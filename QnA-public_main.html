@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>DISS QnA</title>
+    <link rel="stylesheet" href="QnA-public_style.css">
+    <script src="QnA-public_main.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/logo.jpg" alt="DISS 로고" class="logo-img">
+        <img src="images/char.png" alt="캐릭터" class="char-img">
+    </header>
+
+    <div class="search-bar">
+        <div class="search-options">
+            <a href="#" class="button active">public</a>
+            <a href="#" class="button">private</a>
+            <div class="underline"></div>
+        </div>
+        <div class="search-container">
+            <input type="text" class="search-input" id="search-input" placeholder="검색어 입력">
+            <button class="search-button"></button>
+        </div>
+    </div>
+
+    <div class="questions">
+        <div class="question" onclick="navigateToPage('page1.html')">
+            <img src="images/icon.jpg" alt="아이콘" class="question-icon">
+            <div class="question-content">
+                <div class="question-header">
+                    <span class="question-author">sulyong</span>
+                    <div class="question-time alignright">오전 12:31</div>
+                </div>
+                <div class="question-header">
+                    <div class="question-title">알고리즘 과제1 makefile 오류나는 부분 찾아주세요.</div>
+                    <button class="question-likes alignright" onclick="incrementLikes(this); event.stopPropagation();">💜 9</button>
+                </div>
+                <div style="clear: both;"></div> <!-- 부동산을 치우기 위한 요소 -->
+            </div>
+        </div>
+        
+        <div class="question" onclick="navigateToPage('page2.html')">
+            <img src="images/icon.jpg" alt="아이콘" class="question-icon">
+            <div class="question-content">
+                <div class="question-header">
+                    <span class="question-author">sung</span>
+                    <div class="question-time alignright">오후 8:19</div>
+                </div>
+                <div class="question-header">
+                    <div class="question-title">심층학습 확률적 경사하강법 문제 풀이 중 틀린 부분 찾아주세요.</div>
+                    <button class="question-likes alignright" onclick="incrementLikes(this); event.stopPropagation();">💜 11</button>
+                </div>
+                <div style="clear: both;"></div> <!-- 부동산을 치우기 위한 요소 -->
+            </div>
+        </div>
+
+        <div class="question" onclick="navigateToPage('page3.html')">
+            <img src="images/icon.jpg" alt="아이콘" class="question-icon">
+            <div class="question-content">
+                <div class="question-header">
+                    <span class="question-author">shin</span>
+                    <div class="question-time alignright">오후 7:04</div>
+                </div>
+                <div class="question-header">
+                    <div class="question-title">이산수학 186쪽 예제 3번 풀었는데 어디서 잘못된건가요?</div>
+                    <button class="question-likes alignright" onclick="incrementLikes(this); event.stopPropagation();">💜 13</button>
+                </div>
+                <div style="clear: both;"></div> <!-- 부동산을 치우기 위한 요소 -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <nav class="footer-nav">
+            <a href="#">이용약관</a>
+            <a href="#">개인정보처리방침</a>
+            <a href="#">청소년보호정책</a>
+            <a href="#">커뮤니티이용규칙</a>
+            <a href="#">공지사항</a>
+            <a href="#">©DISS</a>
+        </nav>
+        <p>Email: DISS@gmail.com</p>
+    </footer>
+</body>
+</html>
