@@ -87,7 +87,7 @@ header {
   width: 40px; /* 버튼 크기 조정 */
   height: 40px; /* 버튼 크기 조정 */
   border: none;
-  background-image: url("images/search.jpg"); /* 검색 이미지 추가 */
+  background-image: url("image/search.jpg"); /* 검색 이미지 추가 */
   background-size: cover; /* 이미지가 버튼을 덮도록 설정 */
   cursor: pointer;
   background-position: center;
@@ -174,35 +174,10 @@ header {
   border-radius: 8px;
 }
 
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  background-color: #7f3fbf;
-  color: white;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-.footer-nav {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  margin-bottom: 10px;
-}
-
-footer a {
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-}
-
 /*sub page*/
 .question-detail {
   overflow-y: scroll; /* 세로 스크롤을 위한 설정 */
-  max-height: 500px; /* 스크롤 높이 제한을 위해 추가 */
+  max-height: 581px; /* 스크롤 높이 제한을 위해 추가 */
 }
 
 .detail-header {

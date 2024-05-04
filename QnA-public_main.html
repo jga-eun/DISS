@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <title>DISS QnA</title>
     <link rel="stylesheet" href="QnA-public_style.css">
+    <link rel="stylesheet" href="st_base.css">
     <script src="QnA-public_act.js" defer></script>
 </head>
 <body>
-    <header>
-        <img src="images/logo.png" alt="DISS 로고" class="logo-img">
-        <img src="images/char.png" alt="캐릭터" class="char-img">
-    </header>
+    <div class="header">
+        <a href="Home.html"><img src="image/logo.png" alt="Logo Image" class="logo"></a><!-- alt : 이미지 로드 실패 시 대체 텍스트 -->
+        <a href="profile.html"><img src="image/profile.png" alt="Profile Image" class="profile"></a>
+    </div>
 
     <div class="question-detail">
         <div class="search-bar">
@@ -27,7 +28,7 @@
     
         <div class="questions">
             <div class="question" onclick="navigateToPage('QnA-public_sub.html')">
-                <img src="images/icon.jpg" alt="아이콘" class="question-icon">
+                <img src="image/icon.jpg" alt="아이콘" class="question-icon">
                 <div class="question-content">
                     <div class="question-header">
                         <span class="question-author">sulyong</span>
@@ -42,7 +43,7 @@
             </div>
             
             <div class="question" onclick="navigateToPage('page2.html')">
-                <img src="images/icon.jpg" alt="아이콘" class="question-icon">
+                <img src="image/icon.jpg" alt="아이콘" class="question-icon">
                 <div class="question-content">
                     <div class="question-header">
                         <span class="question-author">sung</span>
@@ -57,7 +58,7 @@
             </div>
     
             <div class="question" onclick="navigateToPage('page3.html')">
-                <img src="images/icon.jpg" alt="아이콘" class="question-icon">
+                <img src="image/icon.jpg" alt="아이콘" class="question-icon">
                 <div class="question-content">
                     <div class="question-header">
                         <span class="question-author">shin</span>
@@ -71,7 +72,7 @@
                 </div>
             </div>
             <div class="question" onclick="navigateToPage('page3.html')">
-                <img src="images/icon.jpg" alt="아이콘" class="question-icon">
+                <img src="image/icon.jpg" alt="아이콘" class="question-icon">
                 <div class="question-content">
                     <div class="question-header">
                         <span class="question-author">shin</span>
@@ -92,16 +93,14 @@
     
     </div>
 
-    <footer>
-        <nav class="footer-nav">
-            <a href="#">이용약관</a>
-            <a href="#">개인정보처리방침</a>
-            <a href="#">청소년보호정책</a>
-            <a href="#">커뮤니티이용규칙</a>
-            <a href="#">공지사항</a>
-            <a href="#">©DISS</a>
-        </nav>
-        <p>Email: DISS@gmail.com</p>
-    </footer>
+    <div class="bottom">
+        <div class="rule"><a href="rule1.html">이용약관</a></div>
+        <div class="rule"><a href="rule2.html">개인정보처리방침</a></div>
+        <div class="rule"><a href="rule3.html">청소년보호정책</a></div>
+        <div class="rule"><a href="rule4.html">커뮤니티이용규칙</a></div>
+        <div class="rule"><a href="inform.html">공지사항</a></div>
+        <div class="rule">@DISS</div>
+        <div class="email">Email: DISS@gmail.com</div>
+    </div>
 </body>
 </html>

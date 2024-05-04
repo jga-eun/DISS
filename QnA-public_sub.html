@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <title>DISS QnA</title>
     <link rel="stylesheet" href="QnA-public_style.css">
+    <link rel="stylesheet" href="st_base.css">
     <script src="QnA-public_act.js" defer></script>
 </head>
 <body>
-    <header>
-        <img src="images/logo.png" alt="DISS 로고" class="logo-img">
-        <img src="images/char.png" alt="캐릭터" class="char-img">
-    </header>
+    <div class="header">
+        <a href="Home.html"><img src="image/logo.png" alt="Logo Image" class="logo"></a><!-- alt : 이미지 로드 실패 시 대체 텍스트 -->
+        <a href="profile.html"><img src="image/profile.png" alt="Profile Image" class="profile"></a>
+    </div>
 
     <div class="question-detail">
         <div class="search-bar">
@@ -52,7 +53,7 @@
         <div class="detail-row">
             <div class="row-title">사진</div>
             <div class="row-content">
-                <img src="images/image.png" alt="이미지 추가" class="detail-photo">
+                <img src="image/image.png" alt="이미지 추가" class="detail-photo">
             </div>
         </div>
         <div class="detail-row">
@@ -60,7 +61,7 @@
             <div class="row-content">
                 Makefile 
                 <span>
-                    <img src="images/download.png" alt="다운로드 아이콘" class="download-icon">
+                    <img src="image/download.png" alt="다운로드 아이콘" class="download-icon">
                 </span>
                 </a>
             </div>
@@ -70,7 +71,7 @@
         
         <div class="icon-container" style="display: flex; justify-content: space-between; align-items: center;">
             <div style="display: flex; align-items: center;">
-                <img src="images/icon.jpg" alt="아이콘" class="detail-icon">
+                <img src="image/icon.jpg" alt="아이콘" class="detail-icon">
                 <div class="icon-info">
                     <strong>윤수정</strong>
                     <p id="additional-info">열람하면 10포인트가 차감됩니다.</p>
@@ -81,16 +82,14 @@
         </div>
     </div>
 
-    <footer>
-        <nav class="footer-nav">
-            <a href="#">이용약관</a>
-            <a href="#">개인정보처리방침</a>
-            <a href="#">청소년보호정책</a>
-            <a href="#">커뮤니티이용규칙</a>
-            <a href="#">공지사항</a>
-            <a href="#">©DISS</a>
-        </nav>
-        <p>Email: DISS@gmail.com</p>
-    </footer>
+    <div class="bottom">
+        <div class="rule"><a href="rule1.html">이용약관</a></div>
+        <div class="rule"><a href="rule2.html">개인정보처리방침</a></div>
+        <div class="rule"><a href="rule3.html">청소년보호정책</a></div>
+        <div class="rule"><a href="rule4.html">커뮤니티이용규칙</a></div>
+        <div class="rule"><a href="inform.html">공지사항</a></div>
+        <div class="rule">@DISS</div>
+        <div class="email">Email: DISS@gmail.com</div>
+    </div>
 </body>
 </html>
