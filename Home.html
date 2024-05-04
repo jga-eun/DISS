@@ -1,83 +1,97 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DISS</title>
-<link rel="stylesheet" href="st_home.css">
-<link rel="stylesheet" href="st_base.css">
-<script src="base.js" defer></script>
-<script src="slide.js" defer></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DISS</title>
+    <link rel="stylesheet" href="st_home.css">
+    <link rel="stylesheet" href="st_base.css">
 </head>
 
 <body>
-
-<div class="header">
-    <img src="image/logo.png" alt="Logo Image" class="logo" onclick="goToPage('Home.html')"> <!-- alt : 이미지 로드 실패 시 대체 텍스트 -->
-    <img src="image/profile.png" alt="Profile Image" class="profile" onclick="goToPage('profile.html')">
-</div>
-
-<div class="content">
-
-    <div class="search-container">
-        <input type="text" id="search-input" placeholder="검색어를 입력하세요...">
-        <button type="button" id="search-button">검색</button>
-    </div>
-    
-    <div class="banner">
-        <img src="image/banner1.png">
+    <div class="header">
+        <a href="Home.html"><img src="image/logo.png" alt="Logo Image" class="logo"></a><!-- alt : 이미지 로드 실패 시 대체 텍스트 -->
+        <a href="profile.html"><img src="image/profile.png" alt="Profile Image" class="profile"></a>
     </div>
 
-    <div class="button-container">
-        <div class="button-wrapper">
-            <button class="custom-button" onclick="goToPage('QnA_private')" r1="button1">
-                <img src="image/button1.png" alt="1:1 질의응답" style="width:100%; height:auto;">
-            </button>
-            <div>1:1 질의응답</div>
+    <div class="content">
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="검색어를 입력하세요...">
+            <button type="button" id="search-button">검색</button>
         </div>
-        <div class="button-wrapper">
-            <button class="custom-button" onclick="goToPage('QnA_public')" r2="button2">
-                <img src="image/button2.png" alt="공개 질문" style="width:100%; height:auto;">
-            </button>
-            <div>공개 질문</div>
+        
+        <div class="banner">
+            <img src="image/banner1.png" alt="Banner Image">
         </div>
-        <div class="button-wrapper">
-            <button class="custom-button" onclick="goToPage('video')" r3="button3">
-                <img src="image/button3.png" alt="동영상 강의" style="width:100%; height:auto;">
-            </button>
-            <div>동영상 강의</div>
-        </div>
-        <div class="button-wrapper">
-            <button class="custom-button" onclick="goToPage('file')" r4="button4">
-                <img src="image/button4.png" alt="자료실" style="width:100%; height:auto;">
-            </button>
-            <div>자료실</div>
-        </div>
-        <div class="button-wrapper">
-            <button class="custom-button" onclick="goToPage('academy')" r5="button5">
-                <img src="image/button5.png" alt="대학원" style="width:100%; height:auto;">
-            </button>
-            <div>대학원</div>
-        </div>
-        <div class="button-wrapper">
-            <button class="custom-button" onclick="goToPage('product')" r6="button6">
-                <img src="image/button6.png" alt="수비니아" style="width:100%; height:auto;">
-            </button>
-            <div>수비니아</div>
+
+        <div class="button-container">
+            <div class="button-wrapper">
+                <button class="custom-button" onclick="goToPage('QnA_private')">
+                    <img src="image/button1.png" alt="1:1 질의응답" style="width:100%; height:auto;">
+                    <br>1:1 질의응답
+                </button>
+            </div>
+            <div class="button-wrapper">
+                <button class="custom-button" onclick="goToPage('QnA_public')">
+                    <img src="image/button2.png" alt="공개 질문" style="width:100%; height:auto;">
+                    <br>공개 질문
+                </button>
+            </div>
+            <div class="button-wrapper">
+                <button class="custom-button" onclick="goToPage('video')">
+                    <img src="image/button3.png" alt="동영상 강의" style="width:100%; height:auto;">
+                    <br>동영상 강의
+                </button>
+            </div>
+            <div class="button-wrapper">
+                <button class="custom-button" onclick="goToPage('file')">
+                    <img src="image/button4.png" alt="자료실" style="width:100%; height:auto;">
+                    <br>자료실
+                </button>
+            </div>
+            <div class="button-wrapper">
+                <button class="custom-button" onclick="goToPage('academy')">
+                    <img src="image/button5.png" alt="대학원" style="width:100%; height:auto;">
+                    <br>대학원
+                </button>
+            </div>
+            <div class="button-wrapper">
+                <button class="custom-button" onclick="goToPage('product')">
+                    <img src="image/button6.png" alt="수비니아" style="width:100%; height:auto;">
+                    <br>수비니아
+                </button>
+            </div>
         </div>
     </div>
-</div>
     
-<div class="bottom">
-    <div class="rule" onclick="goToPage('rule.html')" r1="이용약관">이용약관</div>
-    <div class="rule" onclick="goToPage('rule.html')" r2="개인정보처리방침">개인정보처리방침</div>
-    <div class="rule" onclick="goToPage('rule.html')" r2="청소년보호정책">청소년보호정책</div>
-    <div class="rule" onclick="goToPage('rule.html')" r2="커뮤니티이용규칙">커뮤니티이용규칙</div>
-    <div class="rule" onclick="goToPage('inform.html')" r2="공지사항">공지사항</div>
-    <div class="rule">@DISS</div>
-    <div class="email">Email : DISS@gmail.com</div>
-</div>
-    
-    </body>
+    <div class="bottom">
+        <div class="rule"><a href="rule1.html">이용약관</a></div>
+        <div class="rule"><a href="rule2.html">개인정보처리방침</a></div>
+        <div class="rule"><a href="rule3.html">청소년보호정책</a></div>
+        <div class="rule"><a href="rule4.html">커뮤니티이용규칙</a></div>
+        <div class="rule"><a href="inform.html">공지사항</a></div>
+        <div class="rule">@DISS</div>
+        <div class="email">Email: DISS@gmail.com</div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchButton = document.getElementById('search-button');
+            searchButton.addEventListener('click', function () {
+                const keyword = document.getElementById('search-input').value;
+                fetch(`http://localhost/search.php?keyword=${keyword}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.length > 0) {  // 데이터가 있을 경우
+                            sessionStorage.setItem('searchResult', JSON.stringify(data));
+                            window.location.href = 'result.html';
+                        } else {  // 데이터가 없을 경우
+                            sessionStorage.setItem('searchResult', JSON.stringify({'error': '검색 결과가 없습니다.'}));
+                            window.location.href = 'result.html';
+                        }
+                    })
+                    .catch(error => console.error('Error:', error));
+            });
+        });
+    </script>
+</body>
 </html>

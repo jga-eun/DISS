@@ -3,6 +3,7 @@
     margin-top: 20px; /* 로고와 상단 여백 설정 */
 }
 .header .logo { /*header 내부에 있는 logo 클래스에 대해서만 스타일 적용*/
+    margin-left: 9vh; /* 로고 오른쪽 마진 추가 */
     max-width: 10%; /* 이미지의 최대 너비를 부모 요소에 맞게 조정 */
     height: auto; /* 세로 크기 자동 조정 */
 }
@@ -34,4 +35,9 @@
     clear: both; /* float 속성 초기화 */
     width: 100%; /* 전체 너비를 차지하도록 설정 */
     margin-bottom: 5px;
+}
+/*js 대신 html href 사용하면 링크화 되어서 파란색으로 글씨 변하고, 밑줄 생기는거 안 생기게 하기 위해 스타일 지정*/
+a {
+  text-decoration: none; /* 밑줄 제거 */
+  color: inherit; /* 기본 텍스트 색상으로 설정 */
 }

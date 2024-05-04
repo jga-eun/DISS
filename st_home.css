@@ -1,4 +1,40 @@
 
+/* 검색 바 부분 */
+.search-container {
+    height: 10vh;
+    justify-content: center; /* 수평 중앙 정렬 */
+    display: flex;
+    align-items: center;
+    margin-top: 2%;
+}
+
+#search-input {
+    width: 80%;
+    height:70%;
+    padding: 8px;
+    font-size: 3vh;
+    border: 0.3vh solid #7E05FE;
+    border-radius: 4px;
+}
+
+#search-button {
+    height:10vh;
+    width:12vh;
+    font-size: 3vh;
+    padding: 8px 16px;
+    background-color: #7E05FE;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+#search-button:hover {
+    background-color: #5e03c0;
+}
+
+/*배너 부분*/
 .banner {
     margin: 3%;
     display: flex;
@@ -10,6 +46,7 @@
     height: auto;
 }
 
+/*메뉴 버튼 부분*/
 .button-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3개의 열 */
@@ -18,11 +55,9 @@
 }
 
 .button-wrapper {
-    font-weight: bold;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
     margin-bottom: 10px; /* 버튼 간격 조절 */
 }
 
@@ -35,6 +70,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center; /*글씨 가운데로 고정*/
+    font-weight: bold;
+    font-size: 3vh;
     width: 100%; /* 버튼의 너비를 조정 */
     overflow: hidden; /* 이미지가 버튼 크기를 넘지 않도록 */
     position: relative; /* 포지션 상대적 설정 */
@@ -50,35 +88,3 @@
     filter: brightness(75%); /* 호버 시 이미지 밝기 조정 */
 }
 
-/* 검색 바 스타일링 */
-.search-container {
-    height: 10vh;
-    justify-content: center; /* 수평 중앙 정렬 */
-    display: flex;
-    align-items: center;
-    margin-top: 2%;
-}
-
-#search-input {
-    width: 80%;
-    height:70%;
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #7E05FE;
-    border-radius: 4px;
-}
-
-#search-button {
-    height:100%;
-    padding: 8px 16px;
-    background-color: #7E05FE;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-left: 8px;
-}
-
-#search-button:hover {
-    background-color: #5e03c0;
-}
