@@ -294,6 +294,35 @@ header {
   display: none;
 }
 
+.chat-input-container {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: white;
+  height: 50px;
+}
+
+.chat-input {
+  flex-grow: 1;
+  padding: 10px;
+  margin-right: 30px;
+  border: 3px solid #D8B2FF;
+  border-radius: 5px;
+}
+
+.send-button {
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-image: url("image/DISS_logo.png");
+  background-size: cover;
+  background-position: center;  /* 이미지를 버튼의 중앙에 위치시킵니다 */
+  height: 40px;
+  width: 5%;
+}
+
 /*write.html*/
 .row-content {
   width: 80%;

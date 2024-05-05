@@ -33,6 +33,7 @@ header {
 
 .profile-sidebar {
   width: 30%;
+  height:500px;
   padding: 20px;
   background-color: white;
   border-right: 2px solid #e0e0e0;
@@ -146,7 +147,7 @@ header {
   max-height: 450px; /* 스크롤 높이 제한을 위해 추가 */
 }
 
-/* 테이블 스타일 */
+/* file.html */
 .file-table {
   width: 100%;
   border-collapse: collapse; /* 테이블 경계선 합치기 */
@@ -164,3 +165,128 @@ header {
   background-color: #f3e6ff; /* 테이블 헤더 배경색 */
   font-weight: bold; /* 헤더 글씨 굵게 */
 }
+
+/*schedule.html*/
+.timetable {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.timetable th{
+    border: 1px solid #ccc;
+    padding: 8px;
+    width:40px;
+    background-color: #f3e6ff; /* 연보라색 */
+}
+.timetable td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    width:0px;
+}
+
+.timetable td {
+    height: 80px; /* 각 셀의 높이 조정 */
+}
+
+/*privacy.html*/
+.info-item {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.info-label {
+    width: 100px; /* 레이블의 고정된 너비 */
+    font-weight: bold;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.info-box {
+    flex: 1;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #F3E6FF; /* 연보라색 */
+}
+
+/*other.html*/
+.highlight {
+    background-color: #f3e6ff;
+    padding: 5px 10px;
+    border-radius: 8px;
+    text-align: left;
+    margin: 10px 0;
+  }
+
+  .quote {
+    font-weight: bold; 
+    margin-top: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .hashtags {
+    margin-top: 15px;
+    text-align: left;
+    margin-left:130px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .button {
+    padding: 15px 20px;
+    border: none;
+    background-color: #f3e6ff;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* 버튼을 화면에 꽉 차게 하기 위해 100% 설정 */
+    font-size: 14px;
+    text-align: center; /* 버튼 내부 텍스트 가운데 정렬 */
+  }
+
+  .box-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: fit-content; /* 박스 크기를 자동 조정 */
+    margin-bottom: 20px; /* 박스와 다음 요소 간의 간격 추가 */
+  }
+
+  .box {
+    background-color: #f3e6ff; /* 연보라색 배경 */
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .info-label {
+    width: 100px; /* 레이블의 고정된 너비 */
+    font-weight: bold;
+    margin-right: 20px;
+    text-align: left;
+  }
+
+  .info-box {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f3e6ff; /* 연보라색 배경 */
+    text-align:center;
+  }
