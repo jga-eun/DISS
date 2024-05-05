@@ -56,7 +56,7 @@ header {
 
 .button:hover,
 .button.active {
-  background-color: #f3e6ff; /* public 선택되었을 때의 배경색 */
+  background-color: #f3e6ff;
   color: #000000;
 }
 
