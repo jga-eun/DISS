@@ -6,6 +6,13 @@
     <title>DISS_QnA_private_sub</title>
     <link rel="stylesheet" href="QnA_private_sub_styles.css">
     <link rel="stylesheet" href="st_base.css">
+
+    <style>
+        #messages {
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
     <div class="header">
@@ -109,11 +116,12 @@
             </div>
             <div class="message-timestamp">2024년 4월 1일 오전 12:43</div>
         </div>
+        <div id="messages"></div>
     </div>
 
     <div class="chat-input-container">
-        <input type="text" class="chat-input" placeholder="메시지를 입력하세요...">
-        <button class="send-button"></button>
+        <input type="text" class="chat-input" id="messageInput" placeholder="메시지를 입력하세요...">
+        <button class="send-button" onclick="sendMessage()"></button>
     </div>
 
     <div class="bottom">
@@ -125,5 +133,7 @@
         <div class="rule">@DISS</div>
         <div class="email">Email: DISS@gmail.com</div>
     </div>
+
+    <script src="QnA_private_script.js"></script>
 </body>
 </html>
