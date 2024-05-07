@@ -1,24 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DISS 대학원 페이지</title>
+    <title>DISS</title>
+    <link rel="stylesheet" href="st_base.css">
     <link rel="stylesheet" href="graduate_school_style.css">
     <script src="graduate_school_main.js" defer></script>
-
 </head>
 <body>
 
-    <!-- DISS 이미지를 페이지의 상단, 가운데에 위치 -->
-    <div style="text-align: center; margin-top: 30px;">
-        <img src="logo_image.png" alt="Diss logo" style="max-width:100%;height:auto;display: inline-block;">
+    <div class="header">
+        <a href="Home.html"><img src="logo_image.png" alt="Logo Image" class="logo"></a><!-- alt : 이미지 로드 실패 시 대체 텍스트 -->
+        <a href="profile.html"><img src="profile.ver2.png" alt="Profile Image" class="profile"></a>
     </div>
 
-    <!-- 수룡이 이미지를 페이지의 상단, 우측에 위치 -->
-    <div style="position: absolute; top: 0; right: 0; margin-top: 30px; margin-right: 30px;">
-        <img src="profile.ver2.png" alt="Diss logo2" style="max-width:100%;height:auto;">
-    </div>
 
     <!-- 분야, 지역 선택 div-->
     <div class="selection">       <!-- 모든 걸 포함하는 div: selection-->
@@ -83,15 +79,18 @@
             <option value="recommend">추천순</option>
             <option value="much">후기 많은순</option>
           </select>
-        <div class="Info" id="selectedInfo1" style="margin-top: 30px;">
-            <img src="profile.png" alt="Diss logo" style="max-width:100%;height:auto;display: inline-block; margin-left:30px; margin-top:15px; margin-bottom:15px;">
-            <div class="Info_detail" style="margin-left: 50px;">
-                <p><b>이채원</b></p>
-                <h2><b>성신여자대학교 AI 융합학부</b></h2>
-                <p>서울</p>
-                <h4 style= color:#18106C>#GaN HEMT #Internet of Things (IoT) #Power Amplifier #RF CMOS #Trasmitter</h4>
+
+        <a href="DISS_graduate_school_detail.html">
+            <div class="Info" id="selectedInfo1" style="margin-top: 30px;">
+                <img src="profile.png" alt="Diss logo" style="max-width:100%;height:auto;display: inline-block; margin-left:30px; margin-top:15px; margin-bottom:15px;">
+                <div class="Info_detail" style="margin-left: 50px;">
+                    <p><b>이채원</b></p>
+                    <h2><b>성신여자대학교 AI 융합학부</b></h2>
+                    <p>서울</p>
+                    <h4 style= color:#18106C>#GaN HEMT #Internet of Things (IoT) #Power Amplifier #RF CMOS #Trasmitter</h4>
+                </div>
             </div>
-        </div>
+        </a>
 
         <div class="Info" id="selectedInfo2" style="margin-top: 30px;">
             <img src="profile.png" alt="Diss logo" style="max-width:100%;height:auto;display: inline-block; margin-left:30px; margin-top:15px; margin-bottom:15px;">
@@ -113,24 +112,23 @@
             </div>
         </div>
 
+            
         <div class="button-more">
             <button type="button">더보기</button>
         </div>
+
     </div>
 
-   <!-- <footer class="bottom">
-        <footer class="bottom1">
-            <p>이용약관</p>
-            <p>개인정보처리방침</p>
-            <p>청소년보호정책</p>
-            <p>커뮤니티이용규칙</p>
-            <p>공지사항</p>
-            <p>@DISS</p>
-        </footer>
-        <footer class="bottom2">
-            <p>Email: DISS@gmail.com</p>
-        </footer>
+    <div class="bottom">
+        <div class="rule"><a href="rule1.html">이용약관</a></div>
+        <div class="rule"><a href="rule2.html">개인정보처리방침</a></div>
+        <div class="rule"><a href="rule3.html">청소년보호정책</a></div>
+        <div class="rule"><a href="rule4.html">커뮤니티이용규칙</a></div>
+        <div class="rule"><a href="inform.html">공지사항</a></div>
+        <div class="rule">@DISS</div>
+        <div class="email">Email: DISS@gmail.com</div>
+    </div>
 
-    </footer> -->
 </body>
+
 </html>
