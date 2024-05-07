@@ -54,7 +54,7 @@
                     <tr>
                         <td id="gangwon"><b>강원</b></td>
                         <td id="gyeonggi"><b>경기</b></td>
-                        <td id="busan"><b>부산</b></td>
+                        <td id="busan"><b>경상</b></td>
                         <td id="seoul"><b>서울</b></td>
                         <td id="incheon"><b>인천</b></td>
                         <td id="jeolla"><b>전라</b></td>
@@ -66,14 +66,14 @@
         </div>
 
         <div class="button-container">
-            <button type="button">초기화</button>
+            <button id="resetButton" type="button" onclick="resetSelection()">초기화</button>
             <button id="selectButton" type="button" onclick="showSelectedInfo()">검색</button>
         </div>
 
     </div>
 
     <!-- 선택된 정보를 표시할 영역 -->
-    <div class="ShowInfo" id="selectedInfo" style="margin-top:30px">
+    <div class="ShowInfo" id="selectedInfo">
         <select id="standard" name="standard">
             <option value="popular">인기순</option>
             <option value="recommend">추천순</option>
@@ -81,36 +81,40 @@
           </select>
 
         <a href="DISS_graduate_school_detail.html">
-            <div class="Info" id="selectedInfo1" style="margin-top: 30px;">
-                <img src="profile.png" alt="Diss logo" style="max-width:100%;height:auto;display: inline-block; margin-left:30px; margin-top:15px; margin-bottom:15px;">
-                <div class="Info_detail" style="margin-left: 50px;">
+            <div class="Info" id="selectedInfo1">
+                <img src="profile.png" alt="Diss logo" class="profile2">
+                <div class="Info_detail">
                     <p><b>이채원</b></p>
                     <h2><b>성신여자대학교 AI 융합학부</b></h2>
                     <p>서울</p>
-                    <h4 style= color:#18106C>#GaN HEMT #Internet of Things (IoT) #Power Amplifier #RF CMOS #Trasmitter</h4>
+                    <h4>#GaN HEMT #Internet of Things (IoT) #Power Amplifier #RF CMOS #Trasmitter</h4>
                 </div>
             </div>
         </a>
 
-        <div class="Info" id="selectedInfo2" style="margin-top: 30px;">
-            <img src="profile.png" alt="Diss logo" style="max-width:100%;height:auto;display: inline-block; margin-left:30px; margin-top:15px; margin-bottom:15px;">
-            <div class="Info_detail" style="margin-left: 50px;">
+        <a href="DISS_graduate_school_detail.html">
+        <div class="Info" id="selectedInfo2">
+            <img src="profile.png" alt="Diss logo" class="profile2">
+            <div class="Info_detail">
                 <p><b>정가은</b></p>
                 <h2><b>성신여자대학교 AI 융합학부</b></h2>
                 <p>서울</p>
-                <h4 style= color:#18106C>#GaN HEMT #Internet of Things (IoT) #Power Amplifier #RF CMOS #Trasmitter</h4>
+                <h4>#GaN HEMT #Internet of Things (IoT) #Power Amplifier #RF CMOS #Trasmitter</h4>
             </div>
         </div>
+        </a>
 
-        <div class="Info" id="selectedInfo3" style="margin-top: 30px;">
-            <img src="profile.png" alt="Diss logo" style="max-width:100%;height:auto;display: inline-block; margin-left:30px; margin-top:15px; margin-bottom:15px;">
-            <div class="Info_detail" style="margin-left: 50px;">
+        <a href="DISS_graduate_school_detail.html">
+        <div class="Info" id="selectedInfo3">
+            <img src="profile.png" alt="Diss logo" class="profile2">
+            <div class="Info_detail">
                 <p><b>이다영</b></p>
                 <h2><b>성신여자대학교 AI 융합학부</b></h2>
                 <p>서울</p>
-                <h4 style= color:#18106C>#GaN HEMT #Internet of Things (IoT) #Power Amplifier #RF CMOS #Trasmitter</h4>
+                <h4>#GaN HEMT #Internet of Things (IoT) #Power Amplifier #RF CMOS #Trasmitter</h4>
             </div>
         </div>
+        </a>
 
             
         <div class="button-more">

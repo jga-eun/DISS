@@ -1,15 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .container {
     display: flex;
     margin-top: 30px;
+    margin-bottom: 60px;
 }
 
 .detail {
+    display: flex; /* 요소들을 수평으로 배열 */
+    flex-direction: column; /* 요소들을 수직으로 배열 */
     flex: 1;
     height: 100%;
-    display: flex;
     align-items: center;
     justify-content: center; /* 수평 정렬 */
     align-items: center; /* 수직 정렬 */
+}
+
+.detail button {
+    background-color: rgba(217, 217, 217, 0.5); /* 투명도가 50%인 회색 배경색 */
+        border: none;
+        padding: 5px 35px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        font-weight: bold;
 }
 
 .detail img {
@@ -17,17 +35,49 @@
     height: auto;
 }
 
+
 .detail-explain {
     flex: 3;
     height: 100%;
-    background-color: #f0f0f0;
-    padding: 20px;
+    background-color: rgba(217, 217, 217, 0.5); /* 투명도가 50%인 회색 배경색 */
+    padding: 40px;
     margin-right: 100px;
+    margin-bottom: 30px;
 }
 
-.detail-explain > div {
-    height: 400%;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 10px;
+
+.explain1 h2 {
+    margin-top: 10px; 
+    margin-bottom: 5px; /* h2 요소 아래의 간격을 조절합니다 */
+}
+
+.explain1 p {
+    margin-top: 5px; /* p 요소 위의 간격을 조절합니다 */
+    margin-bottom: 5px; 
+}
+
+.explain2 h2 {
+    margin-top: 30px; 
+}
+
+.explain3 h2 {
+    margin-top: 30px; 
+}
+
+.explain3 h3 {
+    margin-top: 8px;
+    margin-bottom: 8px; 
+}
+
+#reviewInputSection {
+    display: none;
+    margin-top: 30px;
+}
+
+#reviewInputSection input {
+    margin-right: 10px; /* 입력칸 아래에 10px의 마진을 추가합니다. */
+}
+
+#reviewInputSection button {
+    margin-left: 10px; /* 버튼 위에 10px의 마진을 추가합니다. */
 }

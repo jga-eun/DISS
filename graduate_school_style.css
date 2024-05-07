@@ -79,6 +79,7 @@ td.selected {
     display: none; /* 초기에는 숨겨진 상태로 설정 */
     flex-direction: column;
     margin-bottom: 60px;
+    margin-top:30px
 }
 
 a {
@@ -103,14 +104,31 @@ select{
     margin-right:50px;
     align-items: center; /* 수직 가운데 정렬 */
     background-color: rgba(217, 217, 217, 0.23);
+    margin-top: 30px;
+}
 
+.Info_detail {
+    margin-left: 50px;
 }
 
 .Info_detail p,
-.Info_detail h2,
-.Info_detail h4 {
+.Info_detail h2{
     line-height: 0.7; /* 기본 글씨 크기에 따라 조절 가능한 값을 사용 */
 }
+.Info_detail h4 {
+    color:#18106C;
+    line-height: 0.7;
+}
+
+.Info profile2 {
+    max-width:100%;
+    height:auto;
+    display: inline-block;
+    margin-left:30px;
+    margin-top:15px;
+    margin-bottom:15px;
+}
+
 .button-more {
     text-align: center;
     margin-top: 30px;

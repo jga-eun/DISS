@@ -3,13 +3,33 @@ var selectedRegion = null; // 선택된 지역의 정보를 저장할 변수
 
 // 클릭한 셀에 해당하는 분야 정보 저장하는 함수
 function selectBranch(branchId) {
-    selectedBranch = branchId;
+    // 이미 선택된 분야가 있다면 선택 해제
+    if (selectedBranch === branchId) {
+        selectedBranch = null;
+    } else {
+        // 이전에 선택된 분야가 있다면 선택 해제
+        if (selectedBranch !== null) {
+            var prevSelectedCell = document.getElementById(selectedBranch);
+            prevSelectedCell.classList.remove('selected');
+        }
+        selectedBranch = branchId;
+    }
     updateCellStyle(branchId);
 }
 
 // 클릭한 셀에 해당하는 지역 정보 저장하는 함수
 function selectRegion(regionId) {
-    selectedRegion = regionId;
+    // 이미 선택된 지역이 있다면 선택 해제
+    if (selectedRegion === regionId) {
+        selectedRegion = null;
+    } else {
+        // 이전에 선택된 지역이 있다면 선택 해제
+        if (selectedRegion !== null) {
+            var prevSelectedCell = document.getElementById(selectedRegion);
+            prevSelectedCell.classList.remove('selected');
+        }
+        selectedRegion = regionId;
+    }
     updateCellStyle(regionId);
 }
 
@@ -23,13 +43,35 @@ function updateCellStyle(cellId) {
 function showSelectedInfo() {
     var selectedInfoDiv = document.getElementById('selectedInfo');
 
-   /* if (selectedBranch === null || selectedRegion === null) {
+    if (selectedBranch === null && selectedRegion === null) {
         selectedInfoDiv.innerHTML = "분야와 지역을 모두 선택해주세요.";
-    } else { */
-
+    } else {
         selectedInfoDiv.style.display = "flex";
-    //}
+    }
 }
+
+// 초기화 함수
+function resetSelection() {
+    // 선택된 분야 초기화
+    if (selectedBranch !== null) {
+        var prevSelectedBranchCell = document.getElementById(selectedBranch);
+        prevSelectedBranchCell.classList.remove('selected');
+        selectedBranch = null;
+    }
+
+    // 선택된 지역 초기화
+    if (selectedRegion !== null) {
+        var prevSelectedRegionCell = document.getElementById(selectedRegion);
+        prevSelectedRegionCell.classList.remove('selected');
+        selectedRegion = null;
+    }
+
+    // 선택된 정보 표시 초기화
+    var selectedInfoDiv = document.getElementById('selectedInfo');
+    selectedInfoDiv.style.display = "none";
+}
+
+
 
 // 분야 테이블의 각 셀에 클릭 이벤트 추가하여 선택 정보 업데이트
 document.getElementById('architecture').addEventListener('click', function() {
@@ -117,4 +159,9 @@ document.getElementById('jeju').addEventListener('click', function() {
 
 document.getElementById('chungcheong').addEventListener('click', function() {
     selectRegion('chungcheong');
+});
+
+// 초기화 버튼 클릭 이벤트 추가
+document.getElementById('resetButton').addEventListener('click', function() {
+    resetSelection();
 });
