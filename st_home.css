@@ -36,15 +36,27 @@
 
 /*배너 부분*/
 .banner {
-    margin: 3%;
+    margin: 3%; /* 간격 유지 */
     display: flex;
     justify-content: center; /* 수평 중앙 정렬 */
+    overflow: hidden; /* 배너 슬라이드에서 화면 밖의 부분을 숨김 */
 }
 
-.banner img {
-    max-width: 100%;
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* 부드러운 슬라이드 */
+}
+
+.banner-slide {
+    flex: 0 0 100%; /* 각 슬라이드가 화면의 전체 너비를 차지하도록 설정 */
+    box-sizing: border-box; /* 슬라이드 간 경계 */
+}
+
+.banner-slide img {
+    width: 100%;
     height: auto;
 }
+
 
 /*메뉴 버튼 부분*/
 .button-container {
@@ -87,4 +99,3 @@
 .custom-button:hover img {
     filter: brightness(75%); /* 호버 시 이미지 밝기 조정 */
 }
-
