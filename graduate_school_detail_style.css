@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    margin-top: 30px;
+}
+
+.detail {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 수평 정렬 */
+    align-items: center; /* 수직 정렬 */
+}
+
+.detail img {
+    max-width: 100%;
+    height: auto;
+}
+
+.detail-explain {
+    flex: 3;
+    height: 100%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-right: 100px;
+}
+
+.detail-explain > div {
+    height: 400%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+}

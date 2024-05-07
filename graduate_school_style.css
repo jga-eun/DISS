@@ -5,6 +5,7 @@ body{
     padding:0;
 }
 .selection {
+    position: fixed;
     min-height:100%;
     position: relative;
     border: 8px solid #7E05FE; /* 보더 스타일 및 색상 설정 */
@@ -12,6 +13,8 @@ body{
     border-right: 15px solid #7E05FE; /* 오른쪽 선 굵기 설정 */
     border-radius: 20px; /* 내부 테두리에 둥근 모서리 적용 */
     margin-top: 30px;
+    height: auto;
+    min-height: 100%;
 }
 
 .branch {
@@ -75,7 +78,12 @@ td.selected {
     height:100%;
     display: none; /* 초기에는 숨겨진 상태로 설정 */
     flex-direction: column;
-    min-height: calc(100% - 30px);
+    margin-bottom: 60px;
+}
+
+a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: inherit; /* 기본 텍스트 색상 상속 */
 }
 
 select{
@@ -103,11 +111,12 @@ select{
 .Info_detail h4 {
     line-height: 0.7; /* 기본 글씨 크기에 따라 조절 가능한 값을 사용 */
 }
-
 .button-more {
-    margin:auto;
-    margin-top:30px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
+
 .button-more button {
     background-color: #F3E6FF; 
     border: none;
@@ -116,34 +125,10 @@ select{
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    width:1000px;
-    height:50px;
+    width: 1000px; /* 또는 필요한 너비로 조정 */
+    height: 50px;
     cursor: pointer;
     border-radius: 10px;
     font-weight: bold;
 }
 
-.bottom {
-    left:0;
-    position:relative;
-    width: 100%; /* 가로 폭을 100%로 설정하여 전체 너비를 차지함 */
-    text-align: center;
-    color: white;
-    margin-top: 30px;
-    align-items: center; /* 수직 가운데 정렬 */
-    background-color: #7E05FE;
-}
-
-.bottom1 {
-    display: flex;
-    justify-content: center;
-}
-
-.bottom1 p{
-    padding-top: 30px;
-    margin-right:20px;
-}
-
-.bottom2 p{
-    padding-bottom: 30px;
-}
