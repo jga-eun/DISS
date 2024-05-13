@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DISS Video</title>
+    <link rel="stylesheet" href="st_base.css" />
+    <link rel="stylesheet" href="video.css" />
+    <script src="video.js" defer></script>
+    <style>
+      .course-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .course-info {
+        margin-left: 20px;
+      }
+      .course-item a {
+        display: block;
+        color: inherit; /* 링크 색상을 상속받아 변경하지 않음 */
+        text-decoration: none; /* 밑줄 제거 */
+        transition: background-color 0.3s; /* 부드러운 배경색 변화 */
+      }
+      .course-item a:hover {
+        background-color: #f0f0f0; /* 마우스 오버 시 배경색 변경 */
+      }
+      .course-info strong {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <a href="#"><img src="image/logo.png" alt="Logo Image" class="logo" /></a>
+      <a href="#"
+        ><img src="image/profile.png" alt="Profile Image" class="profile"
+      /></a>
+    </div>
+
+    <div class="search-container">
+      <input
+        type="text"
+        class="search-input"
+        id="search-input"
+        placeholder="검색어 입력"
+      />
+      <button class="search-button"></button>
+    </div>
+
+    <div class="container">
+      <div id="sidebar" class="sidebar">
+        <div class="sidebar-content">
+          <h3>
+            카테고리
+            <button onclick="toggleCategory()">
+              <span id="category-arrow">▼</span>
+            </button>
+          </h3>
+          <ul id="category-list">
+            <li class="category-item selected"><a href="#">전체</a></li>
+            <li class="category-item"><a href="#">전공별</a></li>
+            <li class="category-item"><a href="#">자격증</a></li>
+            <li class="category-item"><a href="#">기타</a></li>
+          </ul>
+          <h3>
+            정렬
+            <button onclick="toggleOrder()">
+              <span id="order-arrow">▼</span>
+            </button>
+          </h3>
+          <ul id="order-list">
+            <li class="order-item selected"><a href="#">인기순</a></li>
+            <li class="order-item"><a href="#">평점순</a></li>
+            <li class="order-item"><a href="#">최신순</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <div class="course-list">
+          <a href="video_sub.html" class="course-item">
+            <img src="image/video_1.png" alt="Video 1" />
+            <div class="course-info">
+              <p>권수정</p>
+              <strong>쉽게 사용하는 노션 사용법</strong>
+              <span class="stars">★ </span>
+              <span>4.8 </span>
+              <span>5,000원</span>
+            </div>
+          </a>
+          <a href="video_sub.html" class="course-item">
+            <img src="image/video_2.png" alt="Video 2" />
+            <div class="course-info">
+              <p>박수정</p>
+              <strong>2시간으로 끝내는 Figma</strong>
+              <span class="stars">★</span>
+              <span> 4.9 </span>
+              <span>3,000원</span>
+            </div>
+          </a>
+          <a href="video_sub.html" class="course-item">
+            <img src="image/video_3.png" alt="Video 3" />
+            <div class="course-info">
+              <p>이수정</p>
+              <strong>하루 30분, 포토샵 기본</strong>
+              <span class="stars">★</span>
+              <span> 5.0 </span>
+              <span>10,000원</span>
+            </div>
+          </a>
+          <a href="video_sub.html" class="course-item">
+            <img src="image/video_4.png" alt="Video 4" />
+            <div class="course-info">
+              <p>정수정</p>
+              <strong>눈에 띄는 포트폴리오 제작법</strong>
+              <span class="stars">★ </span>
+              <span>4.5 </span>
+              <span>8,000원</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div class="rule"><a href="rule1.html">이용약관</a></div>
+      <div class="rule"><a href="rule2.html">개인정보처리방침</a></div>
+      <div class="rule"><a href="rule3.html">청소년보호정책</a></div>
+      <div class="rule"><a href="rule4.html">커뮤니티이용규칙</a></div>
+      <div class="rule"><a href="inform.html">공지사항</a></div>
+      <div class="rule">@DISS</div>
+      <div class="email">Email: DISS@gmail.com</div>
+    </div>
+  </body>
+</html>
