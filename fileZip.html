@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자료집</title>
+    <link rel="stylesheet" href="st_inform.css">
+    <link rel="stylesheet" href="st_base.css">
+    <link rel="stylesheet" href="fileZip.css">
+</head>
+
+<body>
+    <div class="header">
+        <a href="Home.html"><img src="image/logo.png" alt="Logo Image" class="logo"></a>
+        <a href="profile.html"><img src="image/profile.png" alt="Profile Image" class="profile"></a>
+    </div>
+
+    <div class="content">
+        <div id="button-container" class="button-container"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  fetch('http://localhost/file.php')
+    .then(response => response.json())
+    .then(data => {
+      const buttonContainer = document.getElementById('button-container');
+      data.forEach(item => {
+        const button = document.createElement('button');
+        button.className = 'custom-button';
+        let categoryImage = '';
+        if (item.category === '자격증') {
+          categoryImage = 'certification.png';
+        } else if (item.category === '공모전') {
+          categoryImage = 'challenge.png';
+        } else {
+          categoryImage = 'etc.png';
+        }
+        button.innerHTML = `
+          <img src="image/${categoryImage}" alt="Category Image" class="image" />
+          <div class="button-text">
+            <div class="category">${item.category}</div>
+            <div class="title"><strong>${item.title}</strong></div>
+            <div class="content">${item.content1}</div>
+            <div class="content">${item.content2}</div>
+            <div class="content">${item.content3}</div>
+            <div class="details">조회: ${item.click}</div>
+            <div class="details">별점: ${item.review}</div>
+            <div class="details">날짜: ${item.upload}</div>
+          </div>
+        `;
+        buttonContainer.appendChild(button);
+      });
+    })
+    .catch(error => console.error('Error:', error));
+});
+</script>
+
+    </div>
+
+    <div class="bottom">
+        <div class="rule"><a href="rule1.html" r1="이용약관">이용약관</a></div>
+        <div class="rule"><a href="rule2.html" r2="개인정보처리방침">개인정보처리방침</a></div>
+        <div class="rule"><a href="rule3.html" r3="청소년보호정책">청소년보호정책</a></div>
+        <div class="rule"><a href="rule4.html" r4="커뮤니티이용규칙">커뮤니티이용규칙</a></div>
+        <div class="rule"><a href="inform.html" r5="공지사항">공지사항</a></div>
+        <div class="rule">@DISS</div>
+        <div class="email">Email : DISS@gmail.com</div>
+    </div>
+</body>
+</html>

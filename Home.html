@@ -50,63 +50,63 @@
 
       <div class="button-container">
         <div class="button-wrapper">
-          <button class="custom-button" onclick="goToPage('QnA_private')">
+          <a href="QnA_private.html" class="custom-button">
             <img
               src="image/button1.png"
               alt="1:1 질의응답"
               style="width: 100%; height: auto"
             />
-            <br />1:1 질의응답
+            <br />1:1 질의응답</a>
           </button>
         </div>
         <div class="button-wrapper">
-          <button class="custom-button" onclick="goToPage('QnA_public')">
+          <a href="QnA_public.html" class="custom-button">
             <img
               src="image/button2.png"
               alt="공개 질문"
               style="width: 100%; height: auto"
             />
-            <br />공개 질문
+            <br />공개 질문 </a>
           </button>
         </div>
         <div class="button-wrapper">
-          <button class="custom-button" onclick="goToPage('video')">
+          <a href="video.html" class="custom-button">
             <img
               src="image/button3.png"
               alt="동영상 강의"
               style="width: 100%; height: auto"
             />
-            <br />동영상 강의
+            <br />동영상 강의</a>
           </button>
         </div>
         <div class="button-wrapper">
-          <button class="custom-button" onclick="goToPage('file')">
+          <a href="fileZip.html" class="custom-button">
             <img
               src="image/button4.png"
               alt="자료실"
               style="width: 100%; height: auto"
             />
-            <br />자료실
+            <br />자료실</a>
           </button>
         </div>
         <div class="button-wrapper">
-          <button class="custom-button" onclick="goToPage('academy')">
+          <a href="academy.html" class="custom-button">
             <img
               src="image/button5.png"
               alt="대학원"
               style="width: 100%; height: auto"
             />
-            <br />대학원
+            <br />대학원</a>
           </button>
         </div>
         <div class="button-wrapper">
-          <button class="custom-button" onclick="goToPage('product')">
+          <a href="product.html" class="custom-button">
             <img
               src="image/button6.png"
               alt="수비니아"
               style="width: 100%; height: auto"
             />
-            <br />수비니아
+            <br />수비니아</a>
           </button>
         </div>
       </div>
@@ -122,29 +122,27 @@
       <div class="email">Email: DISS@gmail.com</div>
     </div>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const searchButton = document.getElementById("search-button");
-        searchButton.addEventListener("click", function () {
-          const keyword = document.getElementById("search-input").value;
-          fetch(`http://localhost/search.php?keyword=${keyword}`)
+       document.addEventListener("DOMContentLoaded", function () {
+    const searchButton = document.getElementById("search-button");
+    const searchInput = document.getElementById("search-input");
+    
+    searchButton.addEventListener("click", function () {
+        const keyword = searchInput.value;
+        fetch(`http://localhost/search.php`)
             .then((response) => response.json())
             .then((data) => {
-              if (data.length > 0) {
-                // 데이터가 있을 경우
-                sessionStorage.setItem("searchResult", JSON.stringify(data));
-                window.location.href = "result.html";
-              } else {
-                // 데이터가 없을 경우
-                sessionStorage.setItem(
-                  "searchResult",
-                  JSON.stringify({ error: "검색 결과가 없습니다." })
-                );
-                window.location.href = "result.html";
-              }
+                const searchResults = data.filter(item => item.keyword === keyword);
+                if (searchResults.length > 0) {
+                    sessionStorage.setItem("searchResult", JSON.stringify(searchResults));
+                    window.location.href = "result.html";
+                } else {
+                    // 검색 결과가 없는 경우 경고창 표시
+                    alert("검색 결과가 존재하지 않습니다."); //경고창 사용법 js에서 alert
+                }
             })
             .catch((error) => console.error("Error:", error));
-        });
-      });
+    });
+  });
 
       document.addEventListener("DOMContentLoaded", function () {
         let currentIndex = 1;

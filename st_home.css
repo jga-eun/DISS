@@ -43,6 +43,7 @@
 }
 
 .slider-wrapper {
+    margin-right: 0;
     display: flex;
     transition: transform 0.5s ease-in-out; /* 부드러운 슬라이드 */
 }
