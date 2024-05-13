@@ -1,105 +1,184 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>DISS QnA</title>
-    <link rel="stylesheet" href="QnA-public_style.css">
-    <link rel="stylesheet" href="st_base.css">
+    <link rel="stylesheet" href="QnA-public_style.css" />
+    <link rel="stylesheet" href="st_base.css" />
     <script src="QnA-public_act.js" defer></script>
-</head>
-<body>
+    <script src="translator.js" defer></script>
+  </head>
+  <body>
     <div class="header">
-        <a href="Home.html"><img src="image/logo.png" alt="Logo Image" class="logo"></a><!-- alt : 이미지 로드 실패 시 대체 텍스트 -->
-        <a href="profile.html"><img src="image/profile.png" alt="Profile Image" class="profile"></a>
+      <a href="Home.html"
+        ><img src="image/logo.png" alt="Logo Image" class="logo" /></a
+      ><!-- alt : 이미지 로드 실패 시 대체 텍스트 -->
+      <a href="profile.html"
+        ><img src="image/profile.png" alt="Profile Image" class="profile"
+      /></a>
     </div>
 
     <div class="question-detail">
-        <div class="search-bar">
-            <div class="search-options">
-                <a href="#" class="button active">public</a>
-                <a href="#" class="button">private</a>
-                <div class="underline"></div>
-            </div>
-            <div class="search-container">
-                <input type="text" class="search-input" id="search-input" placeholder="검색어 입력">
-                <button class="search-button"></button>
-            </div>
+      <div class="search-bar">
+        <div class="search-options">
+          <a href="QnA-public_main.html" class="button active">public</a>
+          <a href="QnA_private_home.html" class="button">private</a>
+          <a href="#" class="button">AI</a>
+          <button onclick="setLanguage('en')">English</button>
+          <button onclick="setLanguage('es')">Español</button>
+          <button onclick="setLanguage('ko')">한국어</button>
+
+          <div class="underline"></div>
         </div>
-    
-        <div class="questions">
-            <div class="question">
-                <img src="image/icon.jpg" alt="아이콘" class="question-icon" onclick="navigateToPage('profile-other.html')">
-                <div class="question-content" onclick="navigateToPage('QnA-public_sub.html')">
-                    <div class="question-header">
-                        <span class="question-author">sulyong</span>
-                        <div class="question-time alignright">오전 12:31</div>
-                    </div>
-                    <div class="question-header">
-                        <div class="question-title">알고리즘 과제1 makefile 오류나는 부분 찾아주세요.</div>
-                        <button class="question-likes alignright" onclick="incrementLikes(this); event.stopPropagation();">💜 9</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="question">
-                <img src="image/icon.jpg" alt="아이콘" class="question-icon" onclick="navigateToPage('profile-other.html')">
-                <div class="question-content" onclick="navigateToPage('QnA-public_sub.html')">
-                    <div class="question-header">
-                        <span class="question-author">sung</span>
-                        <div class="question-time alignright">오후 8:19</div>
-                    </div>
-                    <div class="question-header">
-                        <div class="question-title">심층학습 확률적 경사하강법 문제 풀이 중 틀린 부분 찾아주세요.</div>
-                        <button class="question-likes alignright" onclick="incrementLikes(this); event.stopPropagation();">💜 11</button>
-                    </div>
-                    <div style="clear: both;"></div>
-                </div>
-            </div>
-    
-            <div class="question">
-                <img src="image/icon.jpg" alt="아이콘" class="question-icon" onclick="navigateToPage('profile-other.html')">
-                <div class="question-content" onclick="navigateToPage('QnA-public_sub.html')">
-                    <div class="question-header">
-                        <span class="question-author">shin</span>
-                        <div class="question-time alignright">오후 7:04</div>
-                    </div>
-                    <div class="question-header">
-                        <div class="question-title">이산수학 186쪽 예제 3번 풀었는데 어디서 잘못된건가요?</div>
-                        <button class="question-likes alignright" onclick="incrementLikes(this); event.stopPropagation();">💜 13</button>
-                    </div>
-                    <div style="clear: both;"></div>
-                </div>
-            </div>
-            <div class="question">
-                <img src="image/icon.jpg" alt="아이콘" class="question-icon" onclick="navigateToPage('profile-other.html')">
-                <div class="question-content" onclick="navigateToPage('QnA-public_sub.html')">
-                    <div class="question-header">
-                        <span class="question-author">shin</span>
-                        <div class="question-time alignright">오후 7:04</div>
-                    </div>
-                    <div class="question-header">
-                        <div class="question-title">이산수학 186쪽 예제 3번 풀었는데 어디서 잘못된건가요?</div>
-                        <button class="question-likes alignright" onclick="incrementLikes(this); event.stopPropagation();">💜 13</button>
-                    </div>
-                    <div style="clear: both;"></div>
-                </div>
-            </div>
+        <div class="search-container">
+          <input
+            type="text"
+            class="search-input"
+            id="search-input"
+            placeholder="검색어 입력"
+          />
+          <button class="search-button"></button>
         </div>
-    
-        <div class="write-container">
-            <button class="write-button" onclick="navigateToPage('QnA-public_write.html')">글쓰기</button>
+      </div>
+
+      <div class="questions">
+        <div class="question">
+          <img
+            src="image/icon.jpg"
+            alt="아이콘"
+            class="question-icon"
+            onclick="navigateToPage('profile-other.html')"
+          />
+          <div
+            class="question-content"
+            onclick="navigateToPage('QnA-public_sub.html')"
+          >
+            <div class="question-header">
+              <span class="question-author">sulyong</span>
+              <div class="question-time alignright">오전 12:31</div>
+            </div>
+            <div class="question-header">
+              <div class="question-title">
+                알고리즘 과제1 makefile 오류나는 부분 찾아주세요.
+              </div>
+              <button
+                class="question-likes alignright"
+                onclick="incrementLikes(this); event.stopPropagation();"
+              >
+                💜 9
+              </button>
+            </div>
+          </div>
         </div>
-    
+
+        <div class="question">
+          <img
+            src="image/icon.jpg"
+            alt="아이콘"
+            class="question-icon"
+            onclick="navigateToPage('profile-other.html')"
+          />
+          <div
+            class="question-content"
+            onclick="navigateToPage('QnA-public_sub.html')"
+          >
+            <div class="question-header">
+              <span class="question-author">sung</span>
+              <div class="question-time alignright">오후 8:19</div>
+            </div>
+            <div class="question-header">
+              <div class="question-title">
+                심층학습 확률적 경사하강법 문제 풀이 중 틀린 부분 찾아주세요.
+              </div>
+              <button
+                class="question-likes alignright"
+                onclick="incrementLikes(this); event.stopPropagation();"
+              >
+                💜 11
+              </button>
+            </div>
+            <div style="clear: both"></div>
+          </div>
+        </div>
+
+        <div class="question">
+          <img
+            src="image/icon.jpg"
+            alt="아이콘"
+            class="question-icon"
+            onclick="navigateToPage('profile-other.html')"
+          />
+          <div
+            class="question-content"
+            onclick="navigateToPage('QnA-public_sub.html')"
+          >
+            <div class="question-header">
+              <span class="question-author">shin</span>
+              <div class="question-time alignright">오후 7:04</div>
+            </div>
+            <div class="question-header">
+              <div class="question-title">
+                이산수학 186쪽 예제 3번 풀었는데 어디서 잘못된건가요?
+              </div>
+              <button
+                class="question-likes alignright"
+                onclick="incrementLikes(this); event.stopPropagation();"
+              >
+                💜 13
+              </button>
+            </div>
+            <div style="clear: both"></div>
+          </div>
+        </div>
+        <div class="question">
+          <img
+            src="image/icon.jpg"
+            alt="아이콘"
+            class="question-icon"
+            onclick="navigateToPage('profile-other.html')"
+          />
+          <div
+            class="question-content"
+            onclick="navigateToPage('QnA-public_sub.html')"
+          >
+            <div class="question-header">
+              <span class="question-author">shin</span>
+              <div class="question-time alignright">오후 7:04</div>
+            </div>
+            <div class="question-header">
+              <div class="question-title">
+                이산수학 186쪽 예제 3번 풀었는데 어디서 잘못된건가요?
+              </div>
+              <button
+                class="question-likes alignright"
+                onclick="incrementLikes(this); event.stopPropagation();"
+              >
+                💜 13
+              </button>
+            </div>
+            <div style="clear: both"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="write-container">
+        <button
+          class="write-button"
+          onclick="navigateToPage('QnA-public_write.html')"
+        >
+          글쓰기
+        </button>
+      </div>
     </div>
 
     <div class="bottom">
-        <div class="rule"><a href="rule1.html">이용약관</a></div>
-        <div class="rule"><a href="rule2.html">개인정보처리방침</a></div>
-        <div class="rule"><a href="rule3.html">청소년보호정책</a></div>
-        <div class="rule"><a href="rule4.html">커뮤니티이용규칙</a></div>
-        <div class="rule"><a href="inform.html">공지사항</a></div>
-        <div class="rule">@DISS</div>
-        <div class="email">Email: DISS@gmail.com</div>
+      <div class="rule"><a href="rule1.html">이용약관</a></div>
+      <div class="rule"><a href="rule2.html">개인정보처리방침</a></div>
+      <div class="rule"><a href="rule3.html">청소년보호정책</a></div>
+      <div class="rule"><a href="rule4.html">커뮤니티이용규칙</a></div>
+      <div class="rule"><a href="inform.html">공지사항</a></div>
+      <div class="rule">@DISS</div>
+      <div class="email">Email: DISS@gmail.com</div>
     </div>
-</body>
+  </body>
 </html>

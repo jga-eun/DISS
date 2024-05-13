@@ -47,34 +47,44 @@ function sendMessage() {
   }
 }
 
-/*글 등록*/ 
+/*글 등록*/
 function upload() {
-  const title = document.querySelector("input[placeholder='제목을 입력하세요']").value;
-  const subject = document.querySelector("input[placeholder='과목명을 입력하세요']").value;
+  const title = document.querySelector(
+    "input[placeholder='제목을 입력하세요']"
+  ).value;
+  const subject = document.querySelector(
+    "input[placeholder='과목명을 입력하세요']"
+  ).value;
+
+  // 제목이 비어있는 경우 경고 메시지 출력
+  if (!title.trim()) {
+    alert("제목을 입력해주세요.");
+    return; // 함수 실행 중단
+  }
 
   const now = new Date();
-  const period = now.getHours() >= 12 ? '오후' : '오전';
-  const hours = ((now.getHours() % 12) || 12).toString().padStart(2, '0');
-  const minutes = now.getMinutes().toString().padStart(2, '0');
+  const period = now.getHours() >= 12 ? "오후" : "오전";
+  const hours = (now.getHours() % 12 || 12).toString().padStart(2, "0");
+  const minutes = now.getMinutes().toString().padStart(2, "0");
   const time = `${period} ${hours}:${minutes}`;
 
   const newQuestion = {
-      id: '나',
-      title,
-      subject,
-      time,
-      likes: 0
+    id: "나",
+    title,
+    subject,
+    time,
+    likes: 0,
   };
 
-  localStorage.setItem('newQuestion', JSON.stringify(newQuestion));
-  window.location.href = 'QnA-public_main.html';
+  localStorage.setItem("newQuestion", JSON.stringify(newQuestion));
+  window.location.href = "QnA-public_main.html";
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const newQuestion = JSON.parse(localStorage.getItem('newQuestion'));
+document.addEventListener("DOMContentLoaded", () => {
+  const newQuestion = JSON.parse(localStorage.getItem("newQuestion"));
   if (newQuestion) {
-      const questionsContainer = document.querySelector(".questions");
-      const questionHTML = `
+    const questionsContainer = document.querySelector(".questions");
+    const questionHTML = `
           <div class="question">
               <img src="image/icon.jpg" alt="아이콘" class="question-icon">
               <div class="question-content">
@@ -89,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
               </div>
           </div>
       `;
-      questionsContainer.insertAdjacentHTML('afterbegin', questionHTML);
-      localStorage.removeItem('newQuestion'); 
+    questionsContainer.insertAdjacentHTML("afterbegin", questionHTML);
+    localStorage.removeItem("newQuestion");
   }
 });
