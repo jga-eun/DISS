@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <title>DISS Files</title>
+    <link rel="stylesheet" href="st_base.css" />
+    <link rel="stylesheet" href="sale.css" />
+    <script src="sale.js" defer></script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="image/logo.png" alt="Logo Image" class="logo" />
+        <img src="image/profile.png" alt="Profile Image" class="profile" />
+    </div>
+    <div class="search-container">
+        <input
+          type="text"
+          class="search-input"
+          id="search-input"
+          placeholder="검색어 입력"
+        />
+        <button class="search-button"></button>
+      </div>
+  
+      <div class="container">
+        <div id="sidebar" class="sidebar">
+          <div class="sidebar-content">
+            <h3>
+                카테고리
+                <button onclick="toggleCategory()">
+                  <span id="category-arrow">▼</span>
+                </button>
+              </h3>
+            <ul id="category-list">
+              <li class="category-item selected"><a href="#">전체</a></li>
+              <li class="category-item"><a href="#">이모티콘</a></li>
+              <li class="category-item"><a href="#">작품</a></li>
+              <li class="category-item"><a href="#">기타</a></li>
+            </ul>
+            <h3>
+                정렬
+                <button onclick="toggleOrder()">
+                  <span id="order-arrow">▼</span>
+                </button>
+              </h3>
+            <ul id="order-list">
+              <li class="order-item selected"><a href="#">인기순</a></li>
+              <li class="order-item"><a href="#">평점순</a></li>
+              <li class="order-item"><a href="#">최신순</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="main-content">
+            <div class="file-box">
+                <img src="image/sale.jpg" alt="" class="file-icon" />
+                <div class="file-details">
+                    <div class="file-title">[이모티콘] 신난 수룡이</div>
+                    <div class="file-desc">하늘을 날라다니는 수룡이</div>
+                    <a href="sale_sub.html" class="file-link">상세 보기</a>
+                </div>
+            </div>
+            <div class="file-box">
+                <img src="image/sale.jpg" alt="" class="file-icon" />
+                <div class="file-details">
+                    <div class="file-title">[이모티콘] 행복한 수룡이</div>
+                    <div class="file-desc">손하트하고 있는 수룡이</div>
+                    <a href="sale_sub.html" class="file-link">상세 보기</a>
+                </div>
+            </div>
+            <div class="file-box">
+                <img src="image/sale.jpg" alt="" class="file-icon" />
+                <div class="file-details">
+                    <div class="file-title">[작품] 수룡이 인형</div>
+                    <div class="file-desc">학과별 수룡이</div>
+                    <a href="sale_sub.html" class="file-link">상세 보기</a>
+                </div>
+            </div>
+            <div class="file-box">
+                <img src="image/sale.jpg" alt="" class="file-icon" />
+                <div class="file-details">
+                    <div class="file-title">[이모티콘] 공부하는 수룡이</div>
+                    <div class="file-desc"> 도서관에서 공부하고 있는 수룡이</div>
+                    <a href="sale_sub.html" class="file-link">상세 보기</a>
+                </div>
+            </div>
+            <div class="file-box">
+                <img src="image/sale.jpg" alt="" class="file-icon" />
+                <div class="file-details">
+                    <div class="file-title">[작품] 수룡이 휴대폰 거치대</div>
+                    <div class="file-desc">수룡이가 그려진 휴대폰 거치대</div>
+                    <a href="sale_sub.html" class="file-link">상세 보기</a>
+                </div>
+            </div>
+            <div class="file-box">
+                <img src="image/sale.jpg" alt="" class="file-icon" />
+                <div class="file-details">
+                    <div class="file-title">[이모티콘] 놀란 수룡이</div>
+                    <div class="file-desc">동그란 눈과 입이 떡 벌어진 수룡이</div>
+                    <a href="sale_sub.html" class="file-link">상세 보기</a>
+                </div>
+            </div>
+        </div>
+        
+
+    <div class="bottom">
+        <div class="rule"><a href="rule1.html">이용약관</a></div>
+        <div class="rule"><a href="rule2.html">개인정보처리방침</a></div>
+        <div class="rule"><a href="rule3.html">청소년보호정책</a></div>
+        <div class="rule"><a href="rule4.html">커뮤니티이용규칙</a></div>
+        <div class="rule"><a href="inform.html">공지사항</a></div>
+        <div class="email">Email: DISS@gmail.com</div>
+    </div>
+</body>
+</html>
