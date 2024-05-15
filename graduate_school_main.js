@@ -72,93 +72,92 @@ function resetSelection() {
 }
 
 
-
 // 분야 테이블의 각 셀에 클릭 이벤트 추가하여 선택 정보 업데이트
-document.getElementById('architecture').addEventListener('click', function() {
-    selectBranch('architecture');
+document.getElementById('건축').addEventListener('click', function() {
+    selectBranch('건축');
 });
 
-document.getElementById('management').addEventListener('click', function() {
-    selectBranch('management');
+document.getElementById('경영').addEventListener('click', function() {
+    selectBranch('경영');
 });
-document.getElementById('education').addEventListener('click', function() {
-    selectBranch('education');
-});
-
-document.getElementById('machine').addEventListener('click', function() {
-    selectBranch('machine');
-});
-document.getElementById('animal').addEventListener('click', function() {
-    selectBranch('animal');
+document.getElementById('교육').addEventListener('click', function() {
+    selectBranch('교육');
 });
 
-document.getElementById('physics').addEventListener('click', function() {
-    selectBranch('physics');
+document.getElementById('기계').addEventListener('click', function() {
+    selectBranch('기계');
 });
-document.getElementById('biology').addEventListener('click', function() {
-    selectBranch('biology');
-});
-
-document.getElementById('math').addEventListener('click', function() {
-    selectBranch('math');
-});
-document.getElementById('psychology').addEventListener('click', function() {
-    selectBranch('psychology');
+document.getElementById('동물').addEventListener('click', function() {
+    selectBranch('동물');
 });
 
-document.getElementById('entertainment').addEventListener('click', function() {
-    selectBranch('entertainment');
+document.getElementById('물리').addEventListener('click', function() {
+    selectBranch('물리');
 });
-document.getElementById('medical').addEventListener('click', function() {
-    selectBranch('medical');
-});
-
-document.getElementById('electron').addEventListener('click', function() {
-    selectBranch('electron');
-});
-document.getElementById('shipbuilding').addEventListener('click', function() {
-    selectBranch('shipbuilding');
+document.getElementById('생명').addEventListener('click', function() {
+    selectBranch('생명');
 });
 
-document.getElementById('chemistry').addEventListener('click', function() {
-    selectBranch('chemistry');
+document.getElementById('수학').addEventListener('click', function() {
+    selectBranch('수학');
 });
-document.getElementById('environment').addEventListener('click', function() {
-    selectBranch('environment');
+document.getElementById('심리').addEventListener('click', function() {
+    selectBranch('심리');
 });
 
-document.getElementById('it').addEventListener('click', function() {
-    selectBranch('it');
+document.getElementById('예체능').addEventListener('click', function() {
+    selectBranch('예체능');
+});
+document.getElementById('의료').addEventListener('click', function() {
+    selectBranch('의료');
+});
+
+document.getElementById('전자').addEventListener('click', function() {
+    selectBranch('전자');
+});
+document.getElementById('조선').addEventListener('click', function() {
+    selectBranch('조선');
+});
+
+document.getElementById('화학').addEventListener('click', function() {
+    selectBranch('화학');
+});
+document.getElementById('환경').addEventListener('click', function() {
+    selectBranch('환경');
+});
+
+document.getElementById('IT').addEventListener('click', function() {
+    selectBranch('IT');
 });
 
 // 지역 테이블의 각 셀에 클릭 이벤트 추가하여 선택 정보 업데이트
-document.getElementById('gangwon').addEventListener('click', function() {
-    selectRegion('gangwon');
+document.getElementById('강원').addEventListener('click', function() {
+    selectRegion('강원');
 });
 
-document.getElementById('gyeonggi').addEventListener('click', function() {
-    selectRegion('gyeonggi');
+document.getElementById('경기').addEventListener('click', function() {
+    selectRegion('경기');
 });
-document.getElementById('busan').addEventListener('click', function() {
-    selectRegion('busan');
-});
-
-document.getElementById('seoul').addEventListener('click', function() {
-    selectRegion('seoul');
-});
-document.getElementById('incheon').addEventListener('click', function() {
-    selectRegion('incheon');
+document.getElementById('경상').addEventListener('click', function() {
+    selectRegion('경상');
 });
 
-document.getElementById('jeolla').addEventListener('click', function() {
-    selectRegion('jeolla');
+document.getElementById('서울').addEventListener('click', function() {
+    selectRegion('서울');
 });
-document.getElementById('jeju').addEventListener('click', function() {
-    selectRegion('jeju');
+document.getElementById('인천').addEventListener('click', function() {
+    selectRegion('인천');
 });
 
-document.getElementById('chungcheong').addEventListener('click', function() {
-    selectRegion('chungcheong');
+document.getElementById('전라').addEventListener('click', function() {
+    selectRegion('전라');
+});
+document.getElementById('제주').addEventListener('click', function() {
+    selectRegion('제주');
+});
+
+document.getElementById('충청').addEventListener('click', function() {
+    selectRegion('충청');
 });
 
 // 초기화 버튼 클릭 이벤트 추가
