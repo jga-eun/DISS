@@ -74,50 +74,7 @@
 
     <!-- 선택된 정보를 표시할 영역 -->
     <div class="ShowInfo" id="selectedInfo">
-        <select id="standard" name="standard">
-            <option value="popular">인기순</option>
-            <option value="recommend">추천순</option>
-            <option value="much">후기 많은순</option>
-          </select>
-
-          <a href="DISS_graduate_school_detail.html">
-            <div class="Info" id="selectedInfo2">
-                <img src="profile.png" alt="Diss logo" class="profile2">
-                <div class="Info_detail">
-                    <!--php에서 얻어온 정보를 넣고싶은 부분-->
-                    <?php include 'C:/xampp/htdocs/DISS/graduate.php'; ?>
-                </div>
-            </div>
-            </a>
-
-        <a href="DISS_graduate_school_detail.html">
-        <div class="Info" id="selectedInfo2">
-            <img src="profile.png" alt="Diss logo" class="profile2">
-            <div class="Info_detail">
-                <!--php에서 얻어온 정보를 넣고싶은 부분-->
-                <?php include 'C:/xampp/htdocs/DISS/graduate.php'; ?>
-            </div>
-        </div>
-        </a>
-
-        <a href="DISS_graduate_school_detail.html">
-        <div class="Info" id="selectedInfo3">
-            <img src="profile.png" alt="Diss logo" class="profile2">
-            <div class="Info_detail">
-                <!--php에서 얻어온 정보를 넣고싶은 부분-->
-                <p><b>이다영</b></p>
-                <h2><b>고려대학교 AI 융합학부</b></h2>
-                <p>서울</p>
-                <h4>#GaN HEMT #Internet of Things (IoT) #Power Amplifier #RF CMOS #Trasmitter</h4>
-            </div>
-        </div>
-        </a>
-
-            
-        <div class="button-more">
-            <button type="button">더보기</button>
-        </div>
-
+        <?php include 'C:/xampp/htdocs/DISS/graduate.php'; ?>
     </div>
 
     <div class="bottom">

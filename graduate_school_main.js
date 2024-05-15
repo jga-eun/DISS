@@ -46,6 +46,22 @@ function showSelectedInfo() {
     if (selectedBranch === null && selectedRegion === null) {
         selectedInfoDiv.innerHTML = "분야와 지역을 모두 선택해주세요.";
     } else {
+        // 선택된 branch와 region 값을 가져와서 fetch 요청을 보냄
+        fetch(`graduate.php?branch=${selectedBranch}&region=${selectedRegion}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text(); // 응답을 텍스트로 파싱
+            })
+            .then(data => {
+                // 받은 데이터를 selectedInfoDiv에 표시
+                selectedInfoDiv.innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+                selectedInfoDiv.innerHTML = "데이터를 불러오는 도중 오류가 발생했습니다.";
+            });
         selectedInfoDiv.style.display = "flex";
     }
 }
