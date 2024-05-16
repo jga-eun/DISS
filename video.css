@@ -2,20 +2,24 @@
   display: flex;
   overflow-y: auto; /* 스크롤 기능을 추가하기 위해 추가 */
 }
+
 .sidebar {
   width: 300px;
   background-color: white;
   transition: width 0.3s;
   padding-left: 40px;
 }
+
 .sidebar-content {
   padding: 20px;
   text-align: center;
 }
+
 ul {
   list-style-type: none;
   padding: 0;
 }
+
 .category-item,
 .order-item {
   background-color: white;
@@ -23,101 +27,97 @@ ul {
   padding: 10px;
   border-radius: 5px;
   text-align: center;
+  display: block;
+  width: calc(100% - 20px); /* Ensures consistent width with padding accounted */
 }
+
 .category-item:hover,
 .order-item:hover {
   background-color: #f3e6ff;
   cursor: pointer;
-  text-align: center;
 }
+
 .selected {
   background-color: #f3e6ff;
-  color: rgb(0, 0, 0);
+  color: black;
 }
+
 .main-content {
   flex: 1;
   padding: 20px;
-}
-.course-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2열로 그리드 레이아웃 */
-  gap: 20px;
-}
-.course-item a {
-  display: block;
-  color: inherit; /* 링크 색상을 상속받아 변경하지 않음 */
-  text-decoration: none; /* 밑줄 제거 */
-  transition: background-color 0.3s; /* 부드러운 배경색 변화 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.course-item a:hover {
-  background-color: #f0f0f0; /* 마우스 오버 시 배경색 변경 */
+.course-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Maintains a 2-column layout */
+  gap: 20px;
+  width: 100%;
 }
 
 .course-item {
   display: flex;
-  align-items: center; 
-  gap: 20px; 
+  align-items: center;
+  gap: 20px;
+  background-color: #FFF; /* Optional: to distinguish items visually */
+  padding: 10px; /* Provides padding around items */
+  border-radius: 8px; /* Optional: rounded corners for aesthetics */
 }
+
 .course-item img {
-  max-width: 100%; /* 이미지 너비를 그리드 셀에 맞추기 위해 설정 */
-  max-width: 200px; /* 이미지의 최대 크기 제한 */
+  width: auto; /* Adjust width to fit */
+  max-width: 200px; /* Limiting image width */
   height: auto;
-  margin-bottom: 10px;
 }
+
 .course-info {
   text-align: left;
-  line-height: 2;
-  margin-bottom: 50px;
-}
-.course-info strong {
-  display: block;
-  margin-bottom: 4px;
-}
-.course-info p {
-  margin: 4px 0;
+  flex: 1; /* Allows the text to take the remaining space */
 }
 
 .search-container {
   display: flex;
   align-items: center;
-  margin-left: 900px;
+  justify-content: flex-end;
+  margin-right: 20px;
 }
 
 .search-input {
   padding: 8px;
-  border: 3px solid #d8b2ff; /* 검색창 보더 색상 변경 */
-  width: 400px; /* 검색창 넓이 확대 */
+  border: 3px solid #d8b2ff;
+  width: 400px;
   height: 30px;
   border-radius: 10px;
-  margin-right: 15px; /* 검색어 입력 부분에 여백 추가 */
 }
 
 .search-button {
-  width: 40px; /* 버튼 크기 조정 */
-  height: 40px; /* 버튼 크기 조정 */
+  width: 40px;
+  height: 40px;
   border: none;
-  background-image: url("image/search.JPG"); /* 검색 이미지 추가 */
-  background-size: cover; /* 이미지가 버튼을 덮도록 설정 */
+  background-image: url("image/search.JPG");
+  background-size: cover;
   cursor: pointer;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .stars {
-  color: #ffd700;
+  color: #ffd700; /* Gold color for stars */
 }
 
 .more-button {
   padding: 5px 10px;
-  background-color: #f3e6ff; 
+  background-color: #f3e6ff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   margin-top: 10px;
-  color: #000;
+  color: black;
   font-size: 0.9em;
 }
+
 
 /*video_sub.html*/
 .content {
@@ -180,7 +180,7 @@ ul {
   border-radius: 5px;
   text-align: center;
   display: block;
-  width: 100%;
+  width: calc(100% - 20px);
 }
 
 /* 선택된 아이템 스타일 */
@@ -189,6 +189,8 @@ ul {
   color: rgb(0, 0, 0);
   font-weight: bold; 
 }
+
+
 
 /*video_detail.html*/
 .container {
@@ -302,3 +304,28 @@ video {
   text-decoration: none; 
   color: inherit; 
 }
+.video-page .main-content {
+  display: flex; /* Uses flexbox layout for horizontal alignment */
+  flex-direction: row; /* Aligns children (video and sidebar) side by side */
+  align-items: flex-start; /* Aligns items to the start of the container */
+  height: auto; /* Adapts to the content height */
+  max-height: 100vh; /* Maximum height to prevent overflow beyond viewport */
+}
+
+.video-page .video-area {
+  flex: 1; /* Takes up remaining space */
+  padding: 20px;
+}
+
+.video-page .course-sidebar {
+  width: 300px; /* Fixed width for sidebar */
+  padding: 20px;
+  background-color: #f3e6ff; /* Light purple background color */
+}
+
+.video-page video {
+  width: 100%; /* Ensures video fills its container */
+  max-height: 500px; /* Maximum video display height */
+}
+
+

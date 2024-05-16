@@ -3,14 +3,14 @@ function toggleSidebar() {
 }
 
 function toggleCategory() {
-  const categoryList = document.getElementById('category-list');
-  const arrow = document.getElementById('category-arrow');
-  if (categoryList.style.display === 'none') {
-    categoryList.style.display = 'block';
-    arrow.textContent = '▲';
+  const categoryList = document.getElementById("category-list");
+  const arrow = document.getElementById("category-arrow");
+  if (categoryList.style.display === "none") {
+    categoryList.style.display = "block";
+    arrow.textContent = "▲";
   } else {
-    categoryList.style.display = 'none';
-    arrow.textContent = '▼';
+    categoryList.style.display = "none";
+    arrow.textContent = "▼";
   }
 }
 
@@ -40,26 +40,58 @@ function toggleOrder() {
 
 // 데이터 배열
 const videos = [
-  { id: 1, title: '쉽게 사용하는 노션 사용법', author: '권수정', rating: 4.8, price: '5,000', views: 100 },
-  { id: 2, title: '2시간으로 끝내는 Figma', author: '박수정', rating: 4.9, price: '3,000', views: 50 },
-  { id: 3, title: '하루 30분, 포토샵 기본', author: '이수정', rating: '5.0', price: '10,000', views: 200 },
-  { id: 4, title: '눈에 띄는 포트폴리오 제작법', author: '정수정', rating: 4.5, price: '8,000', views: 150 }
+  {
+    id: 1,
+    title: "쉽게 사용하는 노션 사용법",
+    author: "권수정",
+    rating: 4.8,
+    price: "5,000",
+    views: 100,
+    category: "전공별",
+  },
+  {
+    id: 2,
+    title: "2시간으로 끝내는 Figma",
+    author: "박수정",
+    rating: 4.9,
+    price: "3,000",
+    views: 50,
+    category: "자격증",
+  },
+  {
+    id: 3,
+    title: "하루 30분, 포토샵 기본",
+    author: "이수정",
+    rating: "5.0",
+    price: "10,000",
+    views: 200,
+    category: "기타",
+  },
+  {
+    id: 4,
+    title: "눈에 띄는 포트폴리오 제작법",
+    author: "정수정",
+    rating: 4.5,
+    price: "8,000",
+    views: 150,
+    category: "전공별",
+  },
 ];
 
-document.addEventListener('DOMContentLoaded', () => {
-  sortVideos('rating'); // 페이지 로드 시 평점순으로 자동 정렬
+document.addEventListener("DOMContentLoaded", () => {
+  sortVideos("rating"); // 페이지 로드 시 평점순으로 자동 정렬
 });
 
 function sortVideos(criteria) {
   let sortedVideos = videos.slice(); // 복사본을 만들어 정렬에 사용
   switch (criteria) {
-    case 'rating':
+    case "rating":
       sortedVideos.sort((a, b) => b.rating - a.rating);
       break;
-    case 'price':
+    case "price":
       sortedVideos.sort((a, b) => a.price - b.price);
       break;
-    case 'popularity':
+    case "popularity":
       sortedVideos.sort((a, b) => b.views - a.views);
       break;
   }
@@ -68,19 +100,21 @@ function sortVideos(criteria) {
 }
 
 function updateButtonStyles(selectedCriteria) {
-  const orderItems = document.querySelectorAll('#order-list li');
-  orderItems.forEach(item => {
-    item.classList.remove('selected');
-    if (item.querySelector('a').getAttribute('onclick').includes(selectedCriteria)) {
-      item.classList.add('selected');
+  const orderItems = document.querySelectorAll("#order-list li");
+  orderItems.forEach((item) => {
+    item.classList.remove("selected");
+    if (
+      item.querySelector("a").getAttribute("onclick").includes(selectedCriteria)
+    ) {
+      item.classList.add("selected");
     }
   });
 }
 
 function updateVideoList(videos) {
-  const courseList = document.querySelector('.course-list');
-  courseList.innerHTML = '';
-  videos.forEach(video => {
+  const courseList = document.querySelector(".course-list");
+  courseList.innerHTML = "";
+  videos.forEach((video) => {
     const videoElement = `
       <a href="video_sub.html" class="course-item">
         <img src="image/video_${video.id}.png" alt="Video ${video.id}" />
@@ -91,19 +125,40 @@ function updateVideoList(videos) {
             <span>${video.price}원</span>
         </div>
       </a>`;
-    courseList.insertAdjacentHTML('beforeend', videoElement);
+    courseList.insertAdjacentHTML("beforeend", videoElement);
   });
 }
 
 var toggles = document.getElementsByClassName("accordion-toggle");
-        for (var i = 0; i < toggles.length; i++) {
-            toggles[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-                if (panel.style.maxHeight){
-                    panel.style.maxHeight = null;
-                } else {
-                    panel.style.maxHeight = panel.scrollHeight + "px";
-                } 
-            });
-        }
+for (var i = 0; i < toggles.length; i++) {
+  toggles[i].addEventListener("click", function () {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+
+function updateCategoryStyles(selectedCategory) {
+  const categoryItems = document.querySelectorAll(".category-item");
+  categoryItems.forEach((item) => {
+    item.classList.remove("selected");
+    if (item.textContent.includes(selectedCategory)) {
+      item.classList.add("selected");
+    }
+  });
+}
+
+function filterByCategory(category) {
+  const filteredVideos = videos.filter(
+    (video) => category === "전체" || video.category === category
+  );
+  updateVideoList(filteredVideos);
+  updateCategoryStyles(category);
+}
+document.addEventListener('DOMContentLoaded', () => {
+  filterByCategory('전체'); // 페이지 로드 시 전체 카테고리로 시작
+});

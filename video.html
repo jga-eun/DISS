@@ -29,11 +29,12 @@
                     </button>
                 </h3>
                 <ul id="category-list">
-                    <li class="category-item selected"><a href="#">전체</a></li>
-                    <li class="category-item"><a href="#">전공별</a></li>
-                    <li class="category-item"><a href="#">자격증</a></li>
-                    <li class="category-item"><a href="#">기타</a></li>
-                </ul>
+                    <li class="category-item selected" onclick="filterByCategory('전체')"><a href="#">전체</a></li>
+                    <li class="category-item" onclick="filterByCategory('전공별')"><a href="#">전공별</a></li>
+                    <li class="category-item" onclick="filterByCategory('자격증')"><a href="#">자격증</a></li>
+                    <li class="category-item" onclick="filterByCategory('기타')"><a href="#">기타</a></li>
+                  </ul>
+                  
                 <h3>
                     정렬
                     <button onclick="toggleOrder()">
