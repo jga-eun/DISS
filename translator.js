@@ -43,3 +43,9 @@ document.addEventListener("DOMContentLoaded", () => {
     translatePage(lang);
   }
 });
+
+// 언어 선택 시 언어 변경 함수
+function changeLanguage() {
+  var language = document.getElementById("language-select").value;
+  setLanguage(language);
+}

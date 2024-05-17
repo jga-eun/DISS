@@ -38,7 +38,7 @@
               <li><a href="profile.html" class="menu-item">채팅방</a></li>
               <li><a href="profile-file.html" class="menu-item">파일 관리</a></li>
               <li><a href="profile-schedule.html" class="menu-item">시간표</a></li>
-              <li><a href="profile-privacy.html" class="menu-item active">개인정보 수정</a></li>
+              <li><a href="profile-privacy.html" class="menu-item active">개인정보</a></li>
               <li><a href="Login.html" class="menu-item">로그아웃</a></li>
           </ul>
           </nav>
@@ -62,6 +62,17 @@
             <div class="info-label">학과</div>
             <div class="info-box">AI융합학부 지능형IoT</div>
           </div>
+          <div class="info-item">
+            <div class="info-label">언어 선택</div>
+            <select id="language-select" class="info-box" onchange="changeLanguage()">
+              <option value="ko">한국어</option>
+              <option value="en">English</option>
+              <option value="zh">中文</option>
+              <option value="ja">日本語</option>
+          </select>
+          
+        </div>
+        
         </div>
       </div>
     </main>
