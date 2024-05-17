@@ -1,22 +1,35 @@
-name: Azure Static Web Apps CI/CD
+name: Deploy to Azure Web App
 
 on:
   push:
     branches:
-      - Home&Login  # 사용 중인 브랜치 이름
+      - main
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
 
-    - name: Build and Deploy
-      id: builddeploy
-      uses: Azure/static-web-apps-deploy@v1
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v2
       with:
-        azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_SALMON_WAVE_08298C000 }}
-        repo_token: ${{ secrets.GITHUB_TOKEN }}
-        action: "upload"
-        app_location: "/"  # 프로젝트의 루트 디렉토리
-        output_location: "/"  # 빌드 출력 디렉토리
+        php-version: '7.4'
+
+    - name: Deploy HTML files to Azure Web App
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: DISS
+        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+        # Specify the path to your HTML files to deploy
+        package: C:\Users\jjh\Documents\GitHub\DISS
+
+    - name: Deploy PHP files to Azure Web App
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: DISS
+        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+        # Specify the path to your PHP files to deploy
+        package: C:\xampp\htdocs
