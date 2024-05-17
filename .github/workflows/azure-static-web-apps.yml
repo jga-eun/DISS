@@ -3,7 +3,7 @@ name: Azure Static Web Apps CI/CD
 on:
   push:
     branches:
-      - Home&Login  # 사용 중인 브랜치 이름을 넣어주세요
+      - Home&Login  # 사용 중인 브랜치 이름
 
 jobs:
   build-and-deploy:
@@ -19,4 +19,4 @@ jobs:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         action: "upload"
         app_location: "/"  # 프로젝트의 루트 디렉토리
-        output_location: "/"  # 빌드 출력 디렉토리 (예: build 또는 dist)
+        output_location: "/"  # 빌드 출력 디렉토리
