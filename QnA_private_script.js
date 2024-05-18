@@ -1,4 +1,4 @@
-function sendMessage() {
+function sub_sendMessage() {
     var messageInput = document.getElementById("messageInput");
     var message = messageInput.value;
     if (message.trim() !== "") {
@@ -7,7 +7,7 @@ function sendMessage() {
     }
 }
 
-function displayMessage(message) {
+function sub_displayMessage(message) {
     var messagesDiv = document.getElementById("messages");
     var messageContainer = document.createElement("div");
     messageContainer.className = "message right-message";
@@ -44,8 +44,8 @@ function displayMessage(message) {
 
 
 function filterMessage(message) {
-    var subscriptionKey = '';
-    var endpoint = '';
+    var subscriptionKey = '1689ee9c318845ceabc447ac2eb58fbc';
+    var endpoint = 'https://diss-qna-private.cognitiveservices.azure.com/';
     var listId = '2494';
     var url = endpoint + '/contentmoderator/moderate/v1.0/ProcessText/Screen';
 
@@ -66,9 +66,9 @@ function filterMessage(message) {
     .then(response => response.json())
     .then(data => {
         if (data && data.Terms && data.Terms.length > 0) {
-            displayMessage("비방 또는 욕설이 감지되어 메시지가 거부되었습니다.");
+            sub_displayMessage("비방 또는 욕설이 감지되어 메시지가 거부되었습니다.");
         } else {
-            displayMessage(message);
+            sub_displayMessage(message);
         }
     })
     .catch(error => {
