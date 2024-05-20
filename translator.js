@@ -1,7 +1,7 @@
-// 번역 함수
 async function translatePage(targetLang) {
-  const apiKey = "";
-  const url = `https://translation.googleapis.com/language/translate/v2?key=${apiKey}`;
+  const subscriptionKey = "";
+  const region = "";
+  const url = `https://api.cognitive.microsofttranslator.com/translate?api-version=3.0&to=${targetLang}`;
 
   document.querySelectorAll("body *").forEach(async (element) => {
     if (
@@ -12,12 +12,16 @@ async function translatePage(targetLang) {
       try {
         const response = await fetch(url, {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ q: element.textContent, target: targetLang }),
+          headers: {
+            "Content-Type": "application/json",
+            "Ocp-Apim-Subscription-Key": subscriptionKey,
+            "Ocp-Apim-Subscription-Region": region,
+          },
+          body: JSON.stringify([{ Text: element.textContent }]),
         });
         const data = await response.json();
-        if (data.data && data.data.translations.length > 0) {
-          element.textContent = data.data.translations[0].translatedText;
+        if (data.length > 0 && data[0].translations.length > 0) {
+          element.textContent = data[0].translations[0].text;
         }
       } catch (error) {
         console.error("Error translating:", error);
