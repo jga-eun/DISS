@@ -328,4 +328,13 @@ video {
   max-height: 500px; /* Maximum video display height */
 }
 
+.audio-icon {
+  background: none;
+  border: none;
+  color: #6200ee; /* 파란색 */
+  font-size: 24px; /* 아이콘 크기 */
+  cursor: pointer; /* 커서 스타일 */
+}
+
+
 
