@@ -25,14 +25,20 @@
   
   .container {
     display: flex;
-    overflow-y: auto; /* 스크롤 기능을 추가하기 위해 추가 */
-  }
-  .sidebar {
-    width: 300px;
-    background-color: white;
-    transition: width 0.3s;
-    padding-left: 40px;
-  }
+    flex-direction: row;
+}
+
+  /* 사이드바 */
+.sidebar {
+  position: fixed;
+  width: 300px;
+  background-color: white;
+  top: 100px;
+  bottom: 0;
+  left: 0;
+  padding-left: 40px;
+  transition: transform 0.3s ease-in-out;
+}
   .sidebar-content {
     padding: 20px;
     text-align: center;
@@ -59,10 +65,24 @@
     background-color: #f3e6ff;
     color: rgb(0, 0, 0);
   }
-  .main-content {
-    flex: 1;
-    padding: 20px;
-  }
+  /* 메인 콘텐츠 */
+.main-content {
+  margin-left: 340px; /* 사이드바의 너비 + 패딩 고려 */
+  transition: margin-left 0.3s ease-in-out;
+  width: calc(100% - 340px); /* 전체 너비에서 사이드바 너비를 제외 */
+  padding: 20px;
+}
+/* 사이드바 토글을 위한 추가 클래스 */
+.sidebar.collapsed {
+  transform: translateX(-100%); /* 사이드바를 왼쪽으로 완전히 숨깁니다 */
+}
+/* 메인 컨텐츠 레이아웃 */
+.main-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  background-color: #ffffff;
+}
   .course-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2열로 그리드 레이아웃 */
@@ -178,3 +198,20 @@
     margin-top: 10px;
   }
   
+  .selected {
+    background-color: #f3e6ff; 
+    color: #000000; /* 텍스트 색상은 흰색으로 */
+}
+
+.category-item a, .order-item a {
+    display: block;
+    padding: 10px;
+    color: black; /* 기본 텍스트 색상은 검은색 */
+    text-decoration: none; /* 밑줄 제거 */
+    height: 15px;
+
+}
+
+.category-item a:hover, .order-item a:hover {
+    background-color: #f3e6ff; /* 호버 시 배경 연보라색 */
+}
