@@ -1,6 +1,11 @@
 <?php
-    header("Access-Control-Allow-Origin: *"); 
     header("Content-Type: application/json");
+
+    // 입력값 받기
+    $input = json_decode(file_get_contents('php://input'), true);
+    $name = $input['name'];
+    $id = $input['id'];
+    $pw = $input['pw'];
 
     // MSSQL 연결 정보
     $serverName = "tcp:diss.database.windows.net,1433"; 
@@ -16,31 +21,21 @@
     $conn = sqlsrv_connect($serverName, $connectionOptions);
 
     if ($conn === false) {
-        echo json_encode(array("error" => "Connection Error"));
+        echo json_encode(array("success" => false, "error" => "Connection Error"));
         die(print_r(sqlsrv_errors(), true));
     }
 
-    // 데이터베이스에서 데이터 선택
-    $sql = "SELECT * FROM DISS.search";
-    $stmt = sqlsrv_query($conn, $sql);
+    // 데이터베이스에 데이터 삽입
+    $sql = "INSERT INTO DISS.login (name, id, pw) VALUES (?, ?, ?)";
+    $params = array($name, $id, $pw);
+    $stmt = sqlsrv_query($conn, $sql, $params);
 
     if ($stmt === false) {
-        echo json_encode(array("error" => "Query Error"));
+        echo json_encode(array("success" => false, "error" => "Query Error"));
         die(print_r(sqlsrv_errors(), true));
+    } else {
+        echo json_encode(array("success" => true));
     }
-
-    $data = array(); // 데이터를 저장할 배열 초기화
-
-    while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
-        // 각 행을 $data 배열에 추가
-        $data[] = $row;
-    }
-
-    // 배열을 JSON 형식으로 변환
-    $json_data = json_encode($data, JSON_UNESCAPED_UNICODE);
-
-    // JSON 데이터를 출력
-    echo $json_data;
 
     // MSSQL 연결 닫기
     sqlsrv_free_stmt($stmt);

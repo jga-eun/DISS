@@ -1,0 +1,55 @@
+/* 기본적인 body 스타일링은 st_base.css에서 설정되어 있다고 가정 */
+
+/* 회원가입 폼 스타일링 */
+.container {
+    width: 90%;
+    max-width: 400px;
+    /* 최대 너비 설정 */
+    margin: 15vh auto;
+    /* 중앙 정렬 및 위아래 마진 설정 */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    /* 높이 증가 */
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* padding 포함하여 크기 계산 */
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    /* 높이 증가 */
+    background-color: #7E05FE;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    /* 버튼 간격 설정 */
+    box-sizing: border-box;
+    /* padding 포함하여 크기 계산 */
+}
+
+button:hover {
+    background-color: #6904D9;
+}

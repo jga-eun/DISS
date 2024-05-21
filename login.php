@@ -1,9 +1,9 @@
 <?php
-    header("Access-Control-Allow-Origin: http://127.0.0.1:5500"); 
+    header("Access-Control-Allow-Origin: *"); 
     header("Content-Type: application/json");
 
     // MSSQL 연결 정보
-    $serverName = "diss.database.windows.net"; 
+    $serverName = "tcp:diss.database.windows.net,1433";
     $connectionOptions = array(
         "Database" => "DISS",
         "Uid" => "DissPeople",

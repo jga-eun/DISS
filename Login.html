@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,11 @@
     <link rel="stylesheet" href="st_login.css">
     <link rel="stylesheet" href="st_base.css">
 </head>
+
 <body>
     <div class="header">
-        <a href="Home.html"><img src="image/logo.png" alt="Logo Image" class="logo"></a><!-- alt : 이미지 로드 실패 시 대체 텍스트 -->
+        <a href="Home.html"><img src="image/logo.png" alt="Logo Image"
+                class="logo"></a><!-- alt : 이미지 로드 실패 시 대체 텍스트 -->
         <a href="profile.html"><img src="image/profile.png" alt="Profile Image" class="profile"></a>
     </div>
     <div class="login-form">
@@ -36,7 +39,7 @@
         function validateLogin() {
             const id = document.getElementById('id').value;
             const password = document.getElementById('password').value;
-            fetch('http://localhost/login.php')
+            fetch('https://diveintosungshin.azurewebsites.net/login.php')
                 .then(response => response.json())
                 .then(data => {
                     const user = data.find(user => user.id === id && user.pw === password);
@@ -53,4 +56,5 @@
         }
     </script>
 </body>
+
 </html>
