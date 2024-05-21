@@ -1,9 +1,9 @@
 <?php
-    header("Access-Control-Allow-Origin: http://127.0.0.1:5500"); 
+    header("Access-Control-Allow-Origin: *"); 
     header("Content-Type: application/json");
 
     // MSSQL 연결 정보
-    $serverName = "diss.database.windows.net"; 
+    $serverName = "tcp:diss.database.windows.net,1433";
     $connectionOptions = array(
         "Database" => "DISS",
         "Uid" => "DissPeople",
@@ -19,7 +19,7 @@
     }
 
     // 데이터베이스에서 데이터 선택
-    $sql = "SELECT * FROM DISS.file";
+    $sql = "SELECT * FROM DISS.fileZip";
     $stmt = sqlsrv_query($conn, $sql);
 
     if ($stmt === false) {

@@ -1,91 +1,83 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Result</title>
-    <link rel="stylesheet" href="st_inform.css">
+    <title>Register</title>
     <link rel="stylesheet" href="st_base.css">
+    <link rel="stylesheet" href="st_register.css">
 </head>
+
 <body>
     <div class="header">
-        <a href="Home.html"><img src="image/logo.png" alt="Logo Image" class="logo"></a>
+        <a href="Home.html"><img src="image/logo.png" alt="Logo Image"
+                class="logo"></a><!-- alt : 이미지 로드 실패 시 대체 텍스트 -->
         <a href="profile.html"><img src="image/profile.png" alt="Profile Image" class="profile"></a>
     </div>
 
-    <div class="content" id="search-results">
-        <!-- 검색 결과가 여기에 표시될 것입니다. -->
+    <div class="container">
+        <h2>Register</h2>
+        <form id="register-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="id">ID:</label>
+            <input type="text" id="id" name="id" pattern="\d{8}" title="ID must be a student number." required>
+            <br>
+            <label for="pw">Password:</label>
+            <input type="password" id="pw" name="pw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}"
+                title="Password must include uppercase, lowercase, numbers, and special characters." required>
+            <br>
+            <button type="button" id="register-button">Register</button>
+        </form>
     </div>
 
     <div class="bottom">
-        <div class="rule"><a href="rule1.html" r1="이용약관">이용약관</a></div>
-        <div class="rule"><a href="rule2.html" r2="개인정보처리방침">개인정보처리방침</a></div>
-        <div class="rule"><a href="rule3.html" r3="청소년보호정책">청소년보호정책</a></div>
-        <div class="rule"><a href="rule4.html" r4="커뮤니티이용규칙">커뮤니티이용규칙</a></div>
-        <div class="rule"><a href="inform.html" r5="공지사항">공지사항</a></div>
+        <div class="rule"><a href="rule1.html" r1="Terms of Service">Terms of Service</a></div>
+        <div class="rule"><a href="rule2.html" r2="Privacy Policy">Privacy Policy</a></div>
+        <div class="rule"><a href="rule3.html" r3="Youth Protection Policy">Youth Protection Policy</a></div>
+        <div class="rule"><a href="rule4.html" r4="Community Guidelines">Community Guidelines</a></div>
+        <div class="rule"><a href="inform.html" r5="Notices">Notices</a></div>
         <div class="rule">@DISS</div>
-        <div class="email">Email : DISS@gmail.com</div>
+        <div class="email">Email: DISS@gmail.com</div>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // 검색 결과 및 키워드 가져오기
-            const searchResults = JSON.parse(sessionStorage.getItem('searchResult'));
-            const keyword = sessionStorage.getItem('searchKeyword');
+        document.getElementById("register-button").addEventListener("click", function () {
+            const name = document.getElementById("name").value;
+            const id = document.getElementById("id").value;
+            const pw = document.getElementById("pw").value;
 
-            // 검색 결과를 표시할 컨테이너 선택
-            const resultContainer = document.getElementById('search-results');
-
-            // 검색 결과 표시 함수 호출
-            displaySearchResults(searchResults, keyword, resultContainer);
-        });
-
-        // 검색 결과 표시 함수
-        function displaySearchResults(searchResults, keyword, container) {
-            // 검색 결과 컨테이너 초기화
-            container.innerHTML = '';
-
-            // 키워드 표시
-            const header = document.createElement('h1');
-            header.textContent = keyword;
-            container.appendChild(header);
-
-            // 검색 결과를 카테고리별로 그룹화
-            const groupedResults = groupByCategory(searchResults);
-
-            // 각 카테고리별 검색 결과 표시
-            for (const category in groupedResults) {
-                if (groupedResults.hasOwnProperty(category)) {
-                    const categoryHeader = document.createElement('h2');
-                    categoryHeader.textContent = category;
-                    container.appendChild(categoryHeader);
-
-                    const categoryNotices = groupedResults[category];
-                    categoryNotices.forEach(item => {
-                        const notice = document.createElement('div');
-                        notice.classList.add('notice');
-
-                        const contentParagraph = document.createElement('p');
-                        contentParagraph.textContent = item.content;
-                        notice.appendChild(contentParagraph);
-
-                        container.appendChild(notice);
+            if (name && id && pw) {
+                fetch("register.php", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        name: name,
+                        id: id,
+                        pw: pw
+                    })
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            alert("Registration completed.");
+                            document.getElementById("register-form").reset(); // 폼 초기화
+                        } else {
+                            alert("Registration failed. Error: " + data.error);
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Error:", error);
                     });
-                }
+            } else {
+                alert("Please fill in all fields.");
             }
-        }
-
-        // 검색 결과를 카테고리별로 그룹화하는 함수
-        function groupByCategory(searchResults) {
-            const groupedResults = {};
-            searchResults.forEach(item => {
-                if (!groupedResults.hasOwnProperty(item.category)) {
-                    groupedResults[item.category] = [];
-                }
-                groupedResults[item.category].push(item);
-            });
-            return groupedResults;
-        }
+        });
     </script>
 </body>
+
 </html>

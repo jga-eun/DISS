@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>자료집</title>
+  <title>Resource Collection</title>
   <link rel="stylesheet" href="st_inform.css">
   <link rel="stylesheet" href="st_base.css">
   <link rel="stylesheet" href="fileZip.css">
@@ -12,7 +12,7 @@
 
 <body>
   <div class="header">
-    <a href="Home.html"><img src="image/logo.png" alt="Logo Image" class="logo"></a>
+    <a href="Home.html"><img src="image/logo.png" alt="Logo Image" class="logo"></a><!-- alt : 이미지 로드 실패 시 대체 텍스트 -->
     <a href="profile.html"><img src="image/profile.png" alt="Profile Image" class="profile"></a>
   </div>
 
@@ -44,9 +44,9 @@
             <div class="content">${item.content1}</div>
             <div class="content">${item.content2}</div>
             <div class="content">${item.content3}</div>
-            <div class="details">조회: ${item.click}</div>
-            <div class="details">별점: ${item.review}</div>
-            <div class="details">날짜: ${item.upload}</div>
+            <div class="details">Views: ${item.click}</div>
+            <div class="details">Rating: ${item.review}</div>
+            <div class="details">Date: ${item.upload}</div>
           </div>
         `;
               buttonContainer.appendChild(button);
@@ -59,13 +59,13 @@
   </div>
 
   <div class="bottom">
-    <div class="rule"><a href="rule1.html" r1="이용약관">이용약관</a></div>
-    <div class="rule"><a href="rule2.html" r2="개인정보처리방침">개인정보처리방침</a></div>
-    <div class="rule"><a href="rule3.html" r3="청소년보호정책">청소년보호정책</a></div>
-    <div class="rule"><a href="rule4.html" r4="커뮤니티이용규칙">커뮤니티이용규칙</a></div>
-    <div class="rule"><a href="inform.html" r5="공지사항">공지사항</a></div>
+    <div class="rule"><a href="rule1.html" r1="Terms of Service">Terms of Service</a></div>
+    <div class="rule"><a href="rule2.html" r2="Privacy Policy">Privacy Policy</a></div>
+    <div class="rule"><a href="rule3.html" r3="Youth Protection Policy">Youth Protection Policy</a></div>
+    <div class="rule"><a href="rule4.html" r4="Community Guidelines">Community Guidelines</a></div>
+    <div class="rule"><a href="inform.html" r5="Notices">Notices</a></div>
     <div class="rule">@DISS</div>
-    <div class="email">Email : DISS@gmail.com</div>
+    <div class="email">Email: DISS@gmail.com</div>
   </div>
 </body>
 

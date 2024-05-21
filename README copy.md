@@ -1,2 +1,0 @@
-# DISS
-Cloud Computing Project
