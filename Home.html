@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DISS</title>
+    <link rel="stylesheet" href="st_home.css" />
+    <link rel="stylesheet" href="st_base.css" />
+  </head>
+
+  <body>
+    <div class="header">
+      <a href="Home.html"
+        ><img src="image/logo.png" alt="Logo Image" class="logo" /></a
+      ><!-- alt : 이미지 로드 실패 시 대체 텍스트 -->
+      <a href="profile.html"
+        ><img src="image/profile.png" alt="Profile Image" class="profile"
+      /></a>
+    </div>
+
+    <div class="content">
+      <div class="search-container">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="검색어를 입력하세요..."
+        />
+        <button type="button" id="search-button">검색</button>
+      </div>
+
+      <div class="banner">
+        <div class="slider-wrapper">
+          <div class="banner-slide">
+            <img src="image/banner3.png" alt="Banner 3" />
+          </div>
+          <div class="banner-slide">
+            <img src="image/banner1.png" alt="Banner 1" />
+          </div>
+          <div class="banner-slide">
+            <img src="image/banner2.png" alt="Banner 2" />
+          </div>
+          <div class="banner-slide">
+            <img src="image/banner3.png" alt="Banner 3" />
+          </div>
+          <div class="banner-slide">
+            <img src="image/banner1.png" alt="Banner 1" />
+          </div>
+        </div>
+      </div>
+
+      <div class="button-container">
+        <div class="button-wrapper">
+          <a href="QnA_private.html" class="custom-button">
+            <img
+              src="image/button1.png"
+              alt="1:1 질의응답"
+              style="width: 100%; height: auto"
+            />
+            <br />1:1 질의응답</a>
+          </button>
+        </div>
+        <div class="button-wrapper">
+          <a href="QnA_public.html" class="custom-button">
+            <img
+              src="image/button2.png"
+              alt="공개 질문"
+              style="width: 100%; height: auto"
+            />
+            <br />공개 질문 </a>
+          </button>
+        </div>
+        <div class="button-wrapper">
+          <a href="video.html" class="custom-button">
+            <img
+              src="image/button3.png"
+              alt="동영상 강의"
+              style="width: 100%; height: auto"
+            />
+            <br />동영상 강의</a>
+          </button>
+        </div>
+        <div class="button-wrapper">
+          <a href="fileZip.html" class="custom-button">
+            <img
+              src="image/button4.png"
+              alt="자료실"
+              style="width: 100%; height: auto"
+            />
+            <br />자료실</a>
+          </button>
+        </div>
+        <div class="button-wrapper">
+          <a href="academy.html" class="custom-button">
+            <img
+              src="image/button5.png"
+              alt="대학원"
+              style="width: 100%; height: auto"
+            />
+            <br />대학원</a>
+          </button>
+        </div>
+        <div class="button-wrapper">
+          <a href="product.html" class="custom-button">
+            <img
+              src="image/button6.png"
+              alt="수비니아"
+              style="width: 100%; height: auto"
+            />
+            <br />수비니아</a>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div class="rule"><a href="rule1.html">이용약관</a></div>
+      <div class="rule"><a href="rule2.html">개인정보처리방침</a></div>
+      <div class="rule"><a href="rule3.html">청소년보호정책</a></div>
+      <div class="rule"><a href="rule4.html">커뮤니티이용규칙</a></div>
+      <div class="rule"><a href="inform.html">공지사항</a></div>
+      <div class="rule">@DISS</div>
+      <div class="email">Email: DISS@gmail.com</div>
+    </div>
+    <script>
+       document.addEventListener("DOMContentLoaded", function () {
+    const searchButton = document.getElementById("search-button");
+    const searchInput = document.getElementById("search-input");
+    
+    searchButton.addEventListener("click", function () {
+        const keyword = searchInput.value;
+        fetch(`http://localhost/search.php`)
+            .then((response) => response.json())
+            .then((data) => {
+                const searchResults = data.filter(item => item.keyword === keyword);
+                if (searchResults.length > 0) {
+                    sessionStorage.setItem("searchResult", JSON.stringify(searchResults));
+                    window.location.href = "result.html";
+                } else {
+                    // 검색 결과가 없는 경우 경고창 표시
+                    alert("검색 결과가 존재하지 않습니다."); //경고창 사용법 js에서 alert
+                }
+            })
+            .catch((error) => console.error("Error:", error));
+    });
+  });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        let currentIndex = 1;
+        const slides = document.querySelectorAll(".banner-slide");
+        const totalSlides = slides.length;
+
+        function nextSlide() {
+          currentIndex++;
+          const offset = -currentIndex * 100;
+          const sliderWrapper = document.querySelector(".slider-wrapper");
+          sliderWrapper.style.transition = "transform 0.5s ease-in-out";
+          sliderWrapper.style.transform = `translateX(${offset}%)`;
+
+          // 마지막 슬라이드일 경우 첫 슬라이드로 이동
+          if (currentIndex === totalSlides - 1) {
+            setTimeout(() => {
+              sliderWrapper.style.transition = "none";
+              currentIndex = 1;
+              sliderWrapper.style.transform = `translateX(-100%)`;
+            }, 500); // 슬라이드 애니메이션 시간과 일치하도록 함
+          }
+        }
+
+        setInterval(nextSlide, 3000); // 3초마다 슬라이드 이동
+      });
+    </script>
+  </body>
+</html>

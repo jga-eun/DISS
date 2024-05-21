@@ -1,0 +1,56 @@
+/* styles.css */
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2열로 버튼 생성 */
+    gap: 10px;
+  }
+  
+  .custom-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border: none;
+    border-radius: 10px; /* 모서리 둥글게 처리 */
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .custom-button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .button-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* 이미지가 왼쪽으로 정렬되도록 설정 */
+    justify-content: center;
+  }
+  
+  .image {
+    width: 60%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .category {
+    color: #007bff;
+  }
+  
+  .title {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .content {
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  
+  .details {
+    font-size: 0.8rem;
+    color: #666666;
+    text-align: center;
+  }
+  
