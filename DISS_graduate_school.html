@@ -1,46 +1,47 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DISS</title>
     <link rel="stylesheet" href="st_base.css">
     <link rel="stylesheet" href="graduate_school_style.css">
+    <script src="graduate_school_main.js" defer></script>
 </head>
-
 <body>
 
     <div class="header">
-        <a href="Home.html"><img src="logo_image.png" alt="Logo Image" class="logo"></a>
+        <a href="Home.html"><img src="logo_image.png" alt="Logo Image" class="logo"></a><!-- alt : 이미지 로드 실패 시 대체 텍스트 -->
         <a href="profile.html"><img src="profile.ver2.png" alt="Profile Image" class="profile"></a>
     </div>
 
+
     <!-- 분야, 지역 선택 div-->
-    <div class="selection">
-        <div class="branch">
+    <div class="selection">       <!-- 모든 걸 포함하는 div: selection-->
+        <div class="branch"> <!-- 분야 div: branch-->
             <h2><b>분야</b></h2>
             <table id="branch-table">
                 <tbody>
                     <tr>
-                        <td><button class="branch-button" data-branch="건축">건축</button></td>
-                        <td><button class="branch-button" data-branch="경영">경영</button></td>
-                        <td><button class="branch-button" data-branch="교육">교육</button></td>
-                        <td><button class="branch-button" data-branch="기계">기계</button></td>
-                        <td><button class="branch-button" data-branch="동물">동물</button></td>
-                        <td><button class="branch-button" data-branch="물리">물리</button></td>
-                        <td><button class="branch-button" data-branch="생명">생명</button></td>
-                        <td><button class="branch-button" data-branch="수학">수학</button></td>
+                        <td id="건축"><b>건축</b></td>
+                        <td id="경영"><b>경영</b></td>
+                        <td id="교육"><b>교육</b></td>
+                        <td id="기계"><b>기계</b></td>
+                        <td id="동물"><b>동물</b></td>
+                        <td id="물리"><b>물리</b></td>
+                        <td id="생명"><b>생명</b></td>
+                        <td id="수학"><b>수학</b></td>
                     </tr>
+
                     <tr>
-                        <td><button class="branch-button" data-branch="심리">심리</button></td>
-                        <td><button class="branch-button" data-branch="예체능">예체능</button></td>
-                        <td><button class="branch-button" data-branch="의료">의료</button></td>
-                        <td><button class="branch-button" data-branch="전자">전자</button></td>
-                        <td><button class="branch-button" data-branch="조선">조선</button></td>
-                        <td><button class="branch-button" data-branch="화학">화학</button></td>
-                        <td><button class="branch-button" data-branch="환경">환경</button></td>
-                        <td><button class="branch-button" data-branch="IT">IT</button></td>
+                        <td id="심리"><b>심리</b></td>
+                        <td id="예체능"><b>예체능</b></td>
+                        <td id="의료"><b>의료</b></td>
+                        <td id="전자"><b>전자</b></td>
+                        <td id="조선"><b>조선</b></td>
+                        <td id="화학"><b>화학</b></td>
+                        <td id="환경"><b>환경</b></td>
+                        <td id="IT"><b>IT</b></td>
                     </tr>
                 </tbody>
             </table>
@@ -51,27 +52,36 @@
             <table id="region-table">
                 <tbody>
                     <tr>
-                        <td><button class="region-button" data-region="강원">강원</button></td>
-                        <td><button class="region-button" data-region="경기">경기</button></td>
-                        <td><button class="region-button" data-region="경상">경상</button></td>
-                        <td><button class="region-button" data-region="서울">서울</button></td>
-                        <td><button class="region-button" data-region="인천">인천</button></td>
-                        <td><button class="region-button" data-region="전라">전라</button></td>
-                        <td><button class="region-button" data-region="제주">제주</button></td>
-                        <td><button class="region-button" data-region="충청">충청</button></td>
+                        <td id="강원"><b>강원</b></td>
+                        <td id="경기"><b>경기</b></td>
+                        <td id="경상"><b>경상</b></td>
+                        <td id="서울"><b>서울</b></td>
+                        <td id="인천"><b>인천</b></td>
+                        <td id="전라"><b>전라</b></td>
+                        <td id="제주"><b>제주</b></td>
+                        <td id="충청"><b>충청</b></td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
         <div class="button-container">
-            <button id="resetButton" type="button">초기화</button>
-            <button id="searchButton" type="button">검색</button>
+            <button id="resetButton" type="button" onclick="resetSelection()">초기화</button>
+            <button id="searchButton" type="button" onclick="showSelectedInfo()">검색</button>
         </div>
+
     </div>
 
     <!-- 선택된 정보를 표시할 영역 -->
-    <div class="ShowInfo" id="selectedInfo"></div>
+    <div class="ShowInfo" id="selectedInfo">
+        <select id="standard" name="standard">';
+            <option value="popular">인기순</option>;
+            <option value="recommend">추천순</option>;
+            <option value="much">후기 많은순</option>;
+            </select>';
+        
+        <?php include 'graduate.php'; ?>
+    </div>
 
     <div class="bottom">
         <div class="rule"><a href="rule1.html">이용약관</a></div>
@@ -83,124 +93,5 @@
         <div class="email">Email: DISS@gmail.com</div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var selectedBranch = null; // 선택된 분야의 정보를 저장할 변수
-            var selectedRegion = null; // 선택된 지역의 정보를 저장할 변수
-            var allData = []; // 전체 데이터를 저장할 배열
-
-            function selectBranch(button) {
-                if (selectedBranch === button) {
-                    selectedBranch = null;
-                } else {
-                    if (selectedBranch !== null) {
-                        selectedBranch.classList.remove('selected');
-                    }
-                    selectedBranch = button;
-                }
-                updateCellStyle(button);
-            }
-
-            function selectRegion(button) {
-                if (selectedRegion === button) {
-                    selectedRegion = null;
-                } else {
-                    if (selectedRegion !== null) {
-                        selectedRegion.classList.remove('selected');
-                    }
-                    selectedRegion = button;
-                }
-                updateCellStyle(button);
-            }
-
-            function updateCellStyle(button) {
-                button.classList.toggle('selected');
-            }
-
-            function showSelectedInfo() {
-                var selectedInfoDiv = document.getElementById('selectedInfo');
-
-                if (selectedBranch === null || selectedRegion === null) {
-                    selectedInfoDiv.innerHTML = "분야와 지역을 모두 선택해주세요.";
-                } else {
-                    var branchText = selectedBranch.getAttribute('data-branch');
-                    var regionText = selectedRegion.getAttribute('data-region');
-                    console.log('Selected Branch:', branchText);
-                    console.log('Selected Region:', regionText);
-
-                    // 필터링된 데이터를 가져오기
-                    var filteredData = allData.filter(function (item) {
-                        return item.branch === branchText && item.region === regionText;
-                    });
-
-                    console.log('Filtered Data:', filteredData);
-
-                    // 필터링된 데이터를 HTML로 변환하여 버튼 형태로 표시
-                    var html = '';
-                    if (filteredData.length > 0) {
-                        filteredData.forEach(function (item) {
-                            html += `
-                                <button class="data-button">
-                                    <p><b>${item.name}</b></p>
-                                    <h2><b>${item.school} ${item.major}</b></h2>
-                                    <p>${item.region}</p>
-                                    <p>Keywords: ${item.keyword1 || ''}, ${item.keyword2 || ''}, ${item.keyword3 || ''}</p>
-                                </button>
-                            `;
-                        });
-                    } else {
-                        html = "해당 정보를 찾을 수 없습니다.";
-                    }
-                    selectedInfoDiv.innerHTML = html;
-                    selectedInfoDiv.style.display = "flex";
-                }
-            }
-
-            function resetSelection() {
-                if (selectedBranch !== null) {
-                    selectedBranch.classList.remove('selected');
-                    selectedBranch = null;
-                }
-
-                if (selectedRegion !== null) {
-                    selectedRegion.classList.remove('selected');
-                    selectedRegion = null;
-                }
-
-                var selectedInfoDiv = document.getElementById('selectedInfo');
-                selectedInfoDiv.style.display = "none";
-            }
-
-            var branchButtons = document.querySelectorAll('.branch-button');
-            branchButtons.forEach(function (button) {
-                button.addEventListener('click', function () {
-                    selectBranch(button);
-                });
-            });
-
-            var regionButtons = document.querySelectorAll('.region-button');
-            regionButtons.forEach(function (button) {
-                button.addEventListener('click', function () {
-                    selectRegion(button);
-                });
-            });
-
-            document.getElementById('resetButton').addEventListener('click', resetSelection);
-            document.getElementById('searchButton').addEventListener('click', showSelectedInfo);
-
-            // 페이지 로드 시 전체 데이터를 가져옵니다.
-            fetch('https://dissgraduate.azurewebsites.net/graduate.php')
-                .then(response => response.json())
-                .then(data => {
-                    console.log('All Data:', data); // 모든 데이터를 콘솔에 출력
-                    allData = data; // 전체 데이터를 저장
-                })
-                .catch(error => {
-                    console.error('Error fetching data:', error);
-                });
-        });
-    </script>
-
 </body>
-
 </html>
