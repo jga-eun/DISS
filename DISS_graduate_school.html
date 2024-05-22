@@ -6,7 +6,6 @@
     <title>DISS</title>
     <link rel="stylesheet" href="st_base.css">
     <link rel="stylesheet" href="graduate_school_style.css">
-    <script src="graduate_school_main.js" defer></script>
 </head>
 <body>
 
@@ -14,7 +13,6 @@
         <a href="Home.html"><img src="logo_image.png" alt="Logo Image" class="logo"></a><!-- alt : 이미지 로드 실패 시 대체 텍스트 -->
         <a href="profile.html"><img src="profile.ver2.png" alt="Profile Image" class="profile"></a>
     </div>
-
 
     <!-- 분야, 지역 선택 div-->
     <div class="selection">       <!-- 모든 걸 포함하는 div: selection-->
@@ -67,15 +65,12 @@
 
         <div class="button-container">
             <button id="resetButton" type="button" onclick="resetSelection()">초기화</button>
-            <button id="selectButton" type="button" onclick="showSelectedInfo()">검색</button>
+            <button id="searchButton" type="button" onclick="showSelectedInfo()">검색</button>
         </div>
-
     </div>
 
     <!-- 선택된 정보를 표시할 영역 -->
-    <div class="ShowInfo" id="selectedInfo">
-        <?php include 'C:/xampp/htdocs/DISS/graduate.php'; ?>
-    </div>
+    <div class="ShowInfo" id="selectedInfo"></div>
 
     <div class="bottom">
         <div class="rule"><a href="rule1.html">이용약관</a></div>
@@ -87,6 +82,145 @@
         <div class="email">Email: DISS@gmail.com</div>
     </div>
 
-</body>
+    <script>
+        var selectedBranch = null; // 선택된 분야의 정보를 저장할 변수
+        var selectedRegion = null; // 선택된 지역의 정보를 저장할 변수
+        var allData = []; // 전체 데이터를 저장할 배열
 
+        function selectBranch(branchId) {
+            if (selectedBranch === branchId) {
+                selectedBranch = null;
+            } else {
+                if (selectedBranch !== null) {
+                    var prevSelectedCell = document.getElementById(selectedBranch);
+                    prevSelectedCell.classList.remove('selected');
+                }
+                selectedBranch = branchId;
+            }
+            updateCellStyle(branchId);
+        }
+
+        function selectRegion(regionId) {
+            if (selectedRegion === regionId) {
+                selectedRegion = null;
+            } else {
+                if (selectedRegion !== null) {
+                    var prevSelectedCell = document.getElementById(selectedRegion);
+                    prevSelectedCell.classList.remove('selected');
+                }
+                selectedRegion = regionId;
+            }
+            updateCellStyle(regionId);
+        }
+
+        function updateCellStyle(cellId) {
+            var cell = document.getElementById(cellId);
+            if (cell) {
+                cell.classList.toggle('selected');
+            }
+        }
+
+        function showSelectedInfo() {
+            var selectedInfoDiv = document.getElementById('selectedInfo');
+
+            if (selectedBranch === null || selectedRegion === null) {
+                selectedInfoDiv.innerHTML = "분야와 지역을 모두 선택해주세요.";
+            } else {
+                console.log('Selected Branch:', selectedBranch);
+                console.log('Selected Region:', selectedRegion);
+
+                // 필터링된 데이터를 가져오기
+                var filteredData = allData.filter(function(item) {
+                    return item.branch === selectedBranch && item.region === selectedRegion;
+                });
+
+                console.log('Filtered Data:', filteredData);
+
+                // 필터링된 데이터를 HTML로 변환하여 표시
+                var html = '';
+                if (filteredData.length > 0) {
+                    filteredData.forEach(function(item) {
+                        html += `
+                            <div class="Info">
+                                <img src="profile.png" alt="Diss logo" class="profile2">
+                                <div class="Info_detail">
+                                    <p><b>${item.name}</b></p>
+                                    <h2><b>${item.school} ${item.major}</b></h2>
+                                    <p>${item.region}</p>
+                                    <p>Keywords: ${item.keyword1 || ''}, ${item.keyword2 || ''}, ${item.keyword3 || ''}</p>
+                                </div>
+                            </div>
+                        `;
+                    });
+                } else {
+                    html = "해당 정보를 찾을 수 없습니다.";
+                }
+                selectedInfoDiv.innerHTML = html;
+                selectedInfoDiv.style.display = "flex";
+            }
+        }
+
+        function resetSelection() {
+            if (selectedBranch !== null) {
+                var prevSelectedBranchCell = document.getElementById(selectedBranch);
+                prevSelectedBranchCell.classList.remove('selected');
+                selectedBranch = null;
+            }
+
+            if (selectedRegion !== null) {
+                var prevSelectedRegionCell = document.getElementById(selectedRegion);
+                prevSelectedRegionCell.classList.remove('selected');
+                selectedRegion = null;
+            }
+
+            var selectedInfoDiv = document.getElementById('selectedInfo');
+            selectedInfoDiv.style.display = "none";
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var branches = ['건축', '경영', '교육', '기계', '동물', '물리', '생명', '수학', '심리', '예체능', '의료', '전자', '조선', '화학', '환경', 'IT'];
+            branches.forEach(function(branch) {
+                var element = document.getElementById(branch);
+                if (element) {
+                    element.addEventListener('click', function() {
+                        selectBranch(branch);
+                    });
+                }
+            });
+
+            var regions = ['강원', '경기', '경상', '서울', '인천', '전라', '제주', '충청'];
+            regions.forEach(function(region) {
+                var element = document.getElementById(region);
+                if (element) {
+                    element.addEventListener('click', function() {
+                        selectRegion(region);
+                    });
+                }
+            });
+
+            document.getElementById('resetButton').addEventListener('click', resetSelection);
+            document.getElementById('searchButton').addEventListener('click', showSelectedInfo);
+
+    // 페이지 로드 시 전체 데이터를 가져옵니다.
+    const fetchUrl = 'https://dissgraduate-2.azurewebsites.net/graduate.php';
+    console.log("Fetching data from: ", fetchUrl);
+    
+    fetch(fetchUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok: ' + response.statusText);
+            }
+            return response.json();
+        })
+        .then(data => {
+            allData = data; // 전체 데이터를 저장
+            console.log("Fetched data: ", allData);
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+});
+    </script>
+
+</body>
 </html>
