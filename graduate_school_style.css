@@ -1,17 +1,18 @@
-body{
-    width:100%;
-    height:100%;
-    margin:0;
-    padding:0;
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
+
 .selection {
     position: fixed;
-    min-height:100%;
+    min-height: 100%;
     position: relative;
-    border: 8px solid #7E05FE; /* 보더 스타일 및 색상 설정 */
-    border-left: 15px solid #7E05FE; /* 왼쪽 선 굵기 설정 */
-    border-right: 15px solid #7E05FE; /* 오른쪽 선 굵기 설정 */
-    border-radius: 20px; /* 내부 테두리에 둥근 모서리 적용 */
+    border: 8px solid #7E05FE;
+    border-left: 15px solid #7E05FE;
+    border-right: 15px solid #7E05FE;
+    border-radius: 20px;
     margin-top: 30px;
     height: auto;
     min-height: 100%;
@@ -19,21 +20,23 @@ body{
 
 .branch {
     display: flex;
-    margin-top:30px;
+    margin-top: 30px;
 }
 
 .branch h2 {
     color: #7E05FE;
-    margin-left:auto;
+    margin-left: auto;
 }
 
 table {
     border-collapse: collapse;
     width: 80%;
     table-layout: fixed;
-    margin:auto;
+    margin: auto;
 }
-th, td {
+
+th,
+td {
     border: 2px solid #7E05FE;
     padding: 8px;
     text-align: center;
@@ -45,24 +48,24 @@ td.selected {
 
 .region {
     display: flex;
-    margin-top:30px;
+    margin-top: 30px;
 }
 
 .region h2 {
     color: #7E05FE;
-    margin-left:auto;
+    margin-left: auto;
 }
 
 .button-container {
     display: flex;
     justify-content: flex-end;
     margin-top: 30px;
-    margin-bottom: 30px; /* 아래쪽 여백 추가 */
-    margin-right: 70px; /* 오른쪽 여백 추가 */
- }
+    margin-bottom: 30px;
+    margin-right: 70px;
+}
 
 .button-container button {
-    background-color: #7E05FE; 
+    background-color: #7E05FE;
     border: none;
     color: white;
     padding: 5px 35px;
@@ -75,20 +78,20 @@ td.selected {
 }
 
 .ShowInfo {
-    height:100%;
-    display: none; /* 초기에는 숨겨진 상태로 설정 */
+    height: 100%;
+    display: none;
     flex-direction: column;
     margin-bottom: 60px;
-    margin-top:30px
+    margin-top: 30px;
 }
 
 a {
-    text-decoration: none; /* 밑줄 제거 */
-    color: inherit; /* 기본 텍스트 색상 상속 */
+    text-decoration: none;
+    color: inherit;
 }
 
-select{
-    color:#7E05FE;
+select {
+    color: #7E05FE;
     border: 2px solid #7E05FE;
     width: 130px;
     height: 30px;
@@ -97,12 +100,11 @@ select{
     font-weight: bold;
 }
 
-
 .Info {
     display: flex;
-    margin-left:50px;
-    margin-right:50px;
-    align-items: center; /* 수직 가운데 정렬 */
+    margin-left: 50px;
+    margin-right: 50px;
+    align-items: center;
     background-color: rgba(217, 217, 217, 0.23);
     margin-top: 30px;
 }
@@ -112,21 +114,22 @@ select{
 }
 
 .Info_detail p,
-.Info_detail h2{
-    line-height: 0.7; /* 기본 글씨 크기에 따라 조절 가능한 값을 사용 */
-}
-.Info_detail h4 {
-    color:#18106C;
+.Info_detail h2 {
     line-height: 0.7;
 }
 
-.Info profile2 {
-    max-width:100%;
-    height:auto;
+.Info_detail h4 {
+    color: #18106C;
+    line-height: 0.7;
+}
+
+.profile2 {
+    max-width: 100%;
+    height: auto;
     display: inline-block;
-    margin-left:30px;
-    margin-top:15px;
-    margin-bottom:15px;
+    margin-left: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .button-more {
@@ -136,17 +139,34 @@ select{
 }
 
 .button-more button {
-    background-color: #F3E6FF; 
+    background-color: #F3E6FF;
     border: none;
     padding: 5px 35px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    width: 1000px; /* 또는 필요한 너비로 조정 */
+    width: 1000px;
     height: 50px;
     cursor: pointer;
     border-radius: 10px;
     font-weight: bold;
 }
 
+.data-button {
+    background-color: rgba(217, 217, 217, 0.23);
+    border: 2px solid #7E05FE;
+    border-radius: 10px;
+    color: #000;
+    padding: 10px;
+    margin: 10px 50px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.data-button p,
+.data-button h2 {
+    margin: 0;
+    line-height: 1.2;
+}
