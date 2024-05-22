@@ -28,7 +28,9 @@ ul {
   border-radius: 5px;
   text-align: center;
   display: block;
-  width: calc(100% - 20px); /* Ensures consistent width with padding accounted */
+  width: calc(
+    100% - 20px
+  ); /* Ensures consistent width with padding accounted */
 }
 
 .category-item:hover,
@@ -61,7 +63,7 @@ ul {
   display: flex;
   align-items: center;
   gap: 20px;
-  background-color: #FFF; /* Optional: to distinguish items visually */
+  background-color: #fff; /* Optional: to distinguish items visually */
   padding: 10px; /* Provides padding around items */
   border-radius: 8px; /* Optional: rounded corners for aesthetics */
 }
@@ -96,7 +98,7 @@ ul {
   width: 40px;
   height: 40px;
   border: none;
-  background-image: url("image/search.JPG");
+  background-image: url("image/search.png");
   background-size: cover;
   cursor: pointer;
   background-position: center;
@@ -117,7 +119,6 @@ ul {
   color: black;
   font-size: 0.9em;
 }
-
 
 /*video_sub.html*/
 .content {
@@ -187,10 +188,8 @@ ul {
 .selected {
   background-color: #f3e6ff;
   color: rgb(0, 0, 0);
-  font-weight: bold; 
+  font-weight: bold;
 }
-
-
 
 /*video_detail.html*/
 .container {
@@ -205,17 +204,17 @@ ul {
 
 video {
   width: 100%;
-  max-height: 500px; 
+  max-height: 500px;
 }
 .primary-sidebar {
-  width: 200px; 
-  background-color: #eeeeee; 
+  width: 200px;
+  background-color: #eeeeee;
   padding: 20px;
   float: left;
 }
 
 .course-sidebar {
-  width: 300px; 
+  width: 300px;
   background-color: #f3e6ff;
   padding: 20px;
   float: right;
@@ -243,7 +242,7 @@ video {
   padding: 20px;
   float: right;
   height: auto;
-  overflow-y: hidden; 
+  overflow-y: hidden;
 }
 
 .video-page .accordion {
@@ -300,9 +299,10 @@ video {
   color: inherit;
 }
 
-.video-page .footer .rule a, .video-page .footer .email {
-  text-decoration: none; 
-  color: inherit; 
+.video-page .footer .rule a,
+.video-page .footer .email {
+  text-decoration: none;
+  color: inherit;
 }
 .video-page .main-content {
   display: flex; /* Uses flexbox layout for horizontal alignment */
@@ -335,6 +335,3 @@ video {
   font-size: 24px; /* 아이콘 크기 */
   cursor: pointer; /* 커서 스타일 */
 }
-
-
-
