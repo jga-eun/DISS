@@ -1,70 +1,127 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자료집</title>
-    <link rel="stylesheet" href="st_inform.css">
-    <link rel="stylesheet" href="st_base.css">
-    <link rel="stylesheet" href="fileZip.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자료집</title>
+  <link rel="stylesheet" href="st_inform.css">
+  <link rel="stylesheet" href="st_base.css">
+  <link rel="stylesheet" href="fileZip.css">
 </head>
 
 <body>
-    <div class="header">
-        <a href="Home.html"><img src="image/logo.png" alt="Logo Image" class="logo"></a>
-        <a href="profile.html"><img src="image/profile.png" alt="Profile Image" class="profile"></a>
-    </div>
+  <div class="header">
+    <a href="Home.html"><img src="image/logo.png" alt="Logo Image" class="logo"></a>
+    <a href="profile.html"><img src="image/profile.png" alt="Profile Image" class="profile"></a>
+  </div>
 
-    <div class="content">
-        <div id="button-container" class="button-container"></div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  fetch('http://localhost/file.php')
-    .then(response => response.json())
-    .then(data => {
-      const buttonContainer = document.getElementById('button-container');
-      data.forEach(item => {
-        const button = document.createElement('button');
-        button.className = 'custom-button';
-        let categoryImage = '';
-        if (item.category === '자격증') {
-          categoryImage = 'certification.png';
-        } else if (item.category === '공모전') {
-          categoryImage = 'challenge.png';
-        } else {
-          categoryImage = 'etc.png';
-        }
-        button.innerHTML = `
-          <img src="image/${categoryImage}" alt="Category Image" class="image" />
-          <div class="button-text">
-            <div class="category">${item.category}</div>
-            <div class="title"><strong>${item.title}</strong></div>
-            <div class="content">${item.content1}</div>
-            <div class="content">${item.content2}</div>
-            <div class="content">${item.content3}</div>
-            <div class="details">조회: ${item.click}</div>
-            <div class="details">별점: ${item.review}</div>
-            <div class="details">날짜: ${item.upload}</div>
+  <div class="content">
+    <div class="sidebar">
+      <div class="filter-container">
+        <div class="dropdown">
+          <button class="dropbtn">카테고리</button>
+          <div class="dropdown-content" id="category-filter">
+            <!-- 카테고리 옵션이 동적으로 추가될 예정 -->
           </div>
-        `;
-        buttonContainer.appendChild(button);
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">정렬 기준</button>
+          <div class="dropdown-content">
+            <a href="#" onclick="sortData('click')">조회순</a>
+            <a href="#" onclick="sortData('upload')">날짜순</a>
+            <a href="#" onclick="sortData('review')">평점순</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="button-container" class="button-container"></div>
+
+    <script>
+      let data = [];
+
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch('http://localhost/file.php')
+          .then(response => response.json())
+          .then(jsonData => {
+            data = jsonData;
+            populateCategoryFilter();
+            displayData(data);
+          })
+          .catch(error => console.error('Error:', error));
       });
-    })
-    .catch(error => console.error('Error:', error));
-});
-</script>
 
-    </div>
+      function populateCategoryFilter() {
+        const categories = [...new Set(data.map(item => item.category))];
+        const categoryFilter = document.getElementById('category-filter');
+        categories.forEach(category => {
+          const categoryOption = document.createElement('a');
+          categoryOption.href = "#";
+          categoryOption.textContent = category;
+          categoryOption.onclick = () => filterByCategory(category);
+          categoryFilter.appendChild(categoryOption);
+        });
+        const allOption = document.createElement('a');
+        allOption.href = "#";
+        allOption.textContent = "전체";
+        allOption.onclick = () => displayData(data);
+        categoryFilter.insertBefore(allOption, categoryFilter.firstChild);
+      }
 
-    <div class="bottom">
-        <div class="rule"><a href="rule1.html" r1="이용약관">이용약관</a></div>
-        <div class="rule"><a href="rule2.html" r2="개인정보처리방침">개인정보처리방침</a></div>
-        <div class="rule"><a href="rule3.html" r3="청소년보호정책">청소년보호정책</a></div>
-        <div class="rule"><a href="rule4.html" r4="커뮤니티이용규칙">커뮤니티이용규칙</a></div>
-        <div class="rule"><a href="inform.html" r5="공지사항">공지사항</a></div>
-        <div class="rule">@DISS</div>
-        <div class="email">Email : DISS@gmail.com</div>
-    </div>
+      function filterByCategory(category) {
+        const filteredData = data.filter(item => item.category === category);
+        displayData(filteredData);
+      }
+
+      function sortData(attribute) {
+        const sortedData = [...data].sort((a, b) => {
+          if (attribute === 'upload') {
+            return new Date(b[attribute]) - new Date(a[attribute]);
+          }
+          return b[attribute] - a[attribute];
+        });
+        displayData(sortedData);
+      }
+
+      function displayData(dataToDisplay) {
+        const buttonContainer = document.getElementById('button-container');
+        buttonContainer.innerHTML = '';
+        dataToDisplay.forEach(item => {
+          const button = document.createElement('button');
+          button.className = 'custom-button';
+          let categoryImage = '';
+          if (item.category === '자격증') {
+            categoryImage = 'certification.png';
+          } else if (item.category === '공모전') {
+            categoryImage = 'challenge.png';
+          } else {
+            categoryImage = 'etc.png';
+          }
+          button.innerHTML = `
+            <img src="image/${categoryImage}" alt="Category Image" class="image" />
+            <div class="button-text">
+              <div class="category">${item.category}</div>
+              <div class="title"><strong>${item.title}</strong></div>
+              <div class="content">${item.content1 || ''}</div>
+              <div class="content">${item.content2 || ''}</div>
+              <div class="content">${item.content3 || ''}</div>
+            </div>
+          `;
+          buttonContainer.appendChild(button);
+        });
+      }
+    </script>
+  </div>
+
+  <div class="bottom">
+    <div class="rule"><a href="rule1.html" r1="이용약관">이용약관</a></div>
+    <div class="rule"><a href="rule2.html" r2="개인정보처리방침">개인정보처리방침</a></div>
+    <div class="rule"><a href="rule3.html" r3="청소년보호정책">청소년보호정책</a></div>
+    <div class="rule"><a href="rule4.html" r4="커뮤니티이용규칙">커뮤니티이용규칙</a></div>
+    <div class="rule"><a href="inform.html" r5="공지사항">공지사항</a></div>
+    <div class="rule">@DISS</div>
+    <div class="email">Email : DISS@gmail.com</div>
+  </div>
 </body>
+
 </html>
