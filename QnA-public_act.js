@@ -15,8 +15,8 @@ function showAnswer() {
     "make all 명령은 모두 작성되어있습니다.";
   const timestampDiv = document.getElementById("timestamp");
   timestampDiv.innerHTML = "2024년 4월 2일 오전 4:01";
-  timestampDiv.style.display = "block"; // 변경된 내용 표시
-  timestampDiv.style.color = "#555"; // 텍스트 색상 변경
+  timestampDiv.style.display = "block";
+  timestampDiv.style.color = "#555";
 }
 
 /*댓글 작성*/
@@ -31,7 +31,7 @@ function sendMessage() {
     messageElement.style.marginLeft = "80px";
     messageElement.innerHTML = `
         <div style="display: flex; align-items: center;">
-            <img src="image/icon.jpg" alt="아이콘" class="detail-icon">
+            <img src="image/icon.png" alt="아이콘" class="detail-icon">
             <div class="icon-info">
                 <strong>나</strong>
                 <p id="additional-info">${message}</p>
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const questionsContainer = document.querySelector(".questions");
     const questionHTML = `
           <div class="question">
-              <img src="image/icon.jpg" alt="아이콘" class="question-icon">
+              <img src="image/icon.png" alt="아이콘" class="question-icon">
               <div class="question-content">
                   <div class="question-header">
                       <span class="question-author">${newQuestion.id}</span>

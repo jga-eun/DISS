@@ -1,67 +1,85 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>DISS QnA</title>
-    <link rel="stylesheet" href="QnA-public_style.css">
-    <link rel="stylesheet" href="st_base.css">
+    <link rel="stylesheet" href="QnA-public_style.css" />
+    <link rel="stylesheet" href="st_base.css" />
     <script src="QnA-public_act.js" defer></script>
     <script src="translator.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="header">
-        <a href="Home.html"><img src="image/logo.png" alt="Logo Image" class="logo"></a>
-        <a href="profile.html"><img src="image/profile.png" alt="Profile Image" class="profile"></a>
+      <a href="Home.html"
+        ><img src="image/logo.png" alt="Logo Image" class="logo"
+      /></a>
+      <a href="profile.html"
+        ><img src="image/profile.png" alt="Profile Image" class="profile"
+      /></a>
     </div>
 
     <div class="question-detail">
-        <div class="search-bar">
-            <div class="search-options">
-                <a href="QnA-public_main.html" class="button active">public</a>
-                <a href="QnA_private_home.html" class="button">private</a>
-                <a href="#" class="button">AI</a>
-                <div class="underline"></div>
-            </div>
+      <div class="search-bar">
+        <div class="search-options">
+          <a href="QnA-public_main.html" class="button active">public</a>
+          <a href="QnA_private_home.html" class="button">private</a>
+          <a href="QnA_private_AI.html" class="button">AI</a>
+          <div class="underline"></div>
         </div>
-        
-        <div class="detail-row">
-            <div class="row-title">제목</div>
-            <input class="row-content" type="text" placeholder="제목을 입력하세요">
-        </div>
-        <div class="detail-row">
-            <div class="row-title">과목명</div>
-            <input class="row-content" type="text" placeholder="과목명을 입력하세요">
-        </div>
-        <div class="detail-row">
-            <div class="row-title">요청사항</div>
-            <textarea class="row-content" placeholder="요청사항을 입력하세요"></textarea>
-        </div>
-        <div class="detail-row">
-            <div class="row-title">세부사항</div>
-            <textarea class="row-content" placeholder="세부사항을 입력하세요"></textarea>
-        </div>
-        <div class="detail-row">
-            <div class="row-title">사진</div>
-            <input class="row-content" type="file">
-        </div>
-        <div class="detail-row">
-            <div class="row-title">파일</div>
-            <input class="row-content" type="file">
-        </div>
-        
-        <div class="upload-container">
-            <button class="upload-button" onclick="upload()">업로드</button>
-        </div>
+      </div>
+
+      <div class="detail-row">
+        <div class="row-title">제목</div>
+        <input
+          class="row-content"
+          type="text"
+          placeholder="제목을 입력하세요"
+        />
+      </div>
+      <div class="detail-row">
+        <div class="row-title">과목명</div>
+        <input
+          class="row-content"
+          type="text"
+          placeholder="과목명을 입력하세요"
+        />
+      </div>
+      <div class="detail-row">
+        <div class="row-title">요청사항</div>
+        <textarea
+          class="row-content"
+          placeholder="요청사항을 입력하세요"
+        ></textarea>
+      </div>
+      <div class="detail-row">
+        <div class="row-title">세부사항</div>
+        <textarea
+          class="row-content"
+          placeholder="세부사항을 입력하세요"
+        ></textarea>
+      </div>
+      <div class="detail-row">
+        <div class="row-title">사진</div>
+        <input class="row-content" type="file" />
+      </div>
+      <div class="detail-row">
+        <div class="row-title">파일</div>
+        <input class="row-content" type="file" />
+      </div>
+
+      <div class="upload-container">
+        <button class="upload-button" onclick="upload()">업로드</button>
+      </div>
     </div>
 
     <div class="bottom">
-        <div class="rule"><a href="rule1.html">이용약관</a></div>
-        <div class="rule"><a href="rule2.html">개인정보처리방침</a></div>
-        <div class="rule"><a href="rule3.html">청소년보호정책</a></div>
-        <div class="rule"><a href="rule4.html">커뮤니티이용규칙</a></div>
-        <div class="rule"><a href="inform.html">공지사항</a></div>
-        <div class="rule">@DISS</div>
-        <div class="email">Email: DISS@gmail.com</div>
+      <div class="rule"><a href="rule1.html">이용약관</a></div>
+      <div class="rule"><a href="rule2.html">개인정보처리방침</a></div>
+      <div class="rule"><a href="rule3.html">청소년보호정책</a></div>
+      <div class="rule"><a href="rule4.html">커뮤니티이용규칙</a></div>
+      <div class="rule"><a href="inform.html">공지사항</a></div>
+      <div class="rule">@DISS</div>
+      <div class="email">Email: DISS@gmail.com</div>
     </div>
-</body>
+  </body>
 </html>

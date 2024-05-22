@@ -10,7 +10,7 @@ header {
   text-align: center;
   padding: 20px;
   position: relative;
-  width: 95%; /* 전체 화면의 95%로 설정 */
+  width: 95%; 
   margin: 0 auto;
 }
 
