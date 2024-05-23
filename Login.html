@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,36 +8,38 @@
     <link rel="stylesheet" href="st_login.css">
     <link rel="stylesheet" href="st_base.css">
 </head>
+
 <body>
     <div class="header">
-        <a href="Home.html"><img src="image/logo.png" alt="Logo Image" class="logo"></a><!-- alt : 이미지 로드 실패 시 대체 텍스트 -->
+        <a href="Home.html"><img src="image/logo.png" alt="Logo Image"
+                class="logo"></a><!-- alt : 이미지 로드 실패 시 대체 텍스트 사용하여 이미지 자리 설정에 활용-->
         <a href="profile.html"><img src="image/profile.png" alt="Profile Image" class="profile"></a>
     </div>
     <div class="login-form">
         <form id="loginForm" onsubmit="return validateLogin()" method="POST">
             <input type="text" id="id" name="id" placeholder="ID" required>
             <input type="password" id="password" name="password" placeholder="PW" required>
-            <button type="submit">Login</button>
+            <button type="submit">로그인</button>
         </form>
         <br>
         <div>
-            <a href="/forgot-id">아이디 찾기</a> | <a href="/forgot-password">비밀번호 찾기</a> | <a href="/register">회원가입</a>
+            아이디 찾기</a> | 비밀번호 찾기</a> | <a href="/register">회원가입</a>
         </div>
     </div>
     <div class="bottom">
-        <div class="rule"><a href="rule1.html" r1="이용약관">이용약관</a></div>
-        <div class="rule"><a href="rule2.html" r2="개인정보처리방침">개인정보처리방침</a></div>
-        <div class="rule"><a href="rule3.html" r3="청소년보호정책">청소년보호정책</a></div>
-        <div class="rule"><a href="rule4.html" r4="커뮤니티이용규칙">커뮤니티이용규칙</a></div>
-        <div class="rule"><a href="inform.html" r5="공지사항">공지사항</a></div>
+        <div class="rule"><a href="rule1.html">이용약관</a></div>
+        <div class="rule">개인정보처리방침</a></div>
+        <div class="rule">청소년보호정책</a></div>
+        <div class="rule">커뮤니티이용규칙</a></div>
+        <div class="rule"><a href="inform.html">공지사항</a></div>
         <div class="rule">@DISS</div>
-        <div class="email">Email : DISS@gmail.com</div>
+        <div class="email">Email: DISS@gmail.com</div>
     </div>
     <script>
         function validateLogin() {
             const id = document.getElementById('id').value;
             const password = document.getElementById('password').value;
-            fetch('http://localhost/login.php')
+            fetch(`배포 php url 자리`)
                 .then(response => response.json())
                 .then(data => {
                     const user = data.find(user => user.id === id && user.pw === password);
@@ -49,8 +52,9 @@
                 .catch(error => {
                     console.error('Error:', error);
                 });
-            return false; // Prevent form submission
+            return false;
         }
     </script>
 </body>
+
 </html>
