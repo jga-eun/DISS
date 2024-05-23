@@ -114,7 +114,7 @@ function displayFiles(files) {
       const fileBox = document.createElement('div');
       fileBox.className = 'file-box';
       fileBox.innerHTML = `
-          <img src="image/sale.jpg" alt="" class="file-icon" />
+          <img src="image/sale.png" alt="" class="file-icon" />
           <div class="file-details">
               <div class="file-title">[${file.category}] ${file.title}</div>
               <div class="file-desc">${file.desc}</div>

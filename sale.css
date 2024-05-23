@@ -16,7 +16,7 @@
     width: 40px; /* 버튼 크기 조정 */
     height: 40px; /* 버튼 크기 조정 */
     border: none;
-    background-image: url("image/search.jpg"); /* 검색 이미지 추가 */
+    background-image: url("image/search.png"); /* 검색 이미지 추가 */
     background-size: cover; /* 이미지가 버튼을 덮도록 설정 */
     cursor: pointer;
     background-position: center;

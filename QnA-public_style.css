@@ -10,7 +10,7 @@ header {
   text-align: center;
   padding: 20px;
   position: relative;
-  width: 95%; 
+  width: 95%;
   margin: 0 auto;
 }
 
@@ -87,7 +87,7 @@ header {
   width: 40px; /* 버튼 크기 조정 */
   height: 40px; /* 버튼 크기 조정 */
   border: none;
-  background-image: url("image/search.jpg"); /* 검색 이미지 추가 */
+  background-image: url("image/search.png"); /* 검색 이미지 추가 */
   background-size: cover; /* 이미지가 버튼을 덮도록 설정 */
   cursor: pointer;
   background-position: center;
@@ -306,7 +306,7 @@ header {
   flex-grow: 1;
   padding: 10px;
   margin-right: 30px;
-  border: 3px solid #D8B2FF;
+  border: 3px solid #d8b2ff;
   border-radius: 5px;
 }
 
@@ -318,7 +318,7 @@ header {
   cursor: pointer;
   background-image: url("image/DISS_logo.png");
   background-size: cover;
-  background-position: center;  /* 이미지를 버튼의 중앙에 위치시킵니다 */
+  background-position: center; /* 이미지를 버튼의 중앙에 위치시킵니다 */
   height: 40px;
   width: 5%;
 }
