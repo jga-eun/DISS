@@ -1,120 +1,115 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <title>DISS QnA</title>
-    <link rel="stylesheet" href="QnA-public_style.css" />
-    <link rel="stylesheet" href="st_base2.css" />
-    <script src="QnA-public_act.js" defer></script>
-    <script src="translator.js" defer></script>
-  </head>
-  <body>
-    <div class="header">
-      <a href="Home.html"
-        ><img src="image/logo.png" alt="Logo Image" class="logo" /></a
-      ><!-- alt : 이미지 로드 실패 시 대체 텍스트 -->
-      <a href="profile.html"
-        ><img src="image/profile.png" alt="Profile Image" class="profile"
-      /></a>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>DISS QnA</title>
+  <link rel="stylesheet" href="QnA-public_style.css" />
+  <link rel="stylesheet" href="st_base2.css" />
+  <script src="QnA-public_act.js" defer></script>
+  <script src="translator.js" defer></script>
+</head>
+
+<body>
+  <div class="header">
+    <a href="Home.html"><img src="image/logo.png" alt="Logo Image" class="logo" /></a><!-- alt : 이미지 로드 실패 시 대체 텍스트 -->
+    <a href="profile.html"><img src="image/profile.png" alt="Profile Image" class="profile" /></a>
+  </div>
+
+  <div class="question-detail">
+    <div class="search-bar">
+      <div class="search-options">
+        <a href="QnA-public_main.html" class="button active">public</a>
+        <a href="QnA_private_home.html" class="button">private</a>
+        <a href="QnA_private_AI.html" class="button">AI</a>
+        <div class="underline"></div>
+      </div>
     </div>
 
-    <div class="question-detail">
-      <div class="search-bar">
-        <div class="search-options">
-          <a href="QnA-public_main.html" class="button active">public</a>
-          <a href="QnA_private_home.html" class="button">private</a>
-          <a href="QnA_private_AI.html" class="button">AI</a>
-          <div class="underline"></div>
-        </div>
+    <div class="detail-header">
+      <div class="detail-timestamp">2024년 4월 1일 오전 12:31</div>
+      <button class="question-likes" onclick="incrementLikes(this)">
+        💜 7
+      </button>
+    </div>
+    <div class="detail-row">
+      <div class="row-title">ID</div>
+      <div class="row-content">sulyong</div>
+    </div>
+    <div class="detail-row">
+      <div class="row-title">제목</div>
+      <div class="row-content">
+        알고리즘 과제1 makefile 오류나는 부분 찾아주세요.
+      </div>
+    </div>
+    <div class="detail-row">
+      <div class="row-title">과목명</div>
+      <div class="row-content">알고리즘</div>
+    </div>
+    <div class="detail-row">
+      <div class="row-title">요청사항</div>
+      <div class="row-content">
+        오류가 나는 부분을 찾고 수정한 뒤 이유도 알려주세요.
+      </div>
+    </div>
+    <div class="detail-row">
+      <div class="row-title">세부사항</div>
+      <div class="row-content">
+        Makefile을 아래와 파일과 같이 작성하였습니다.<br />
+        make all 명령을 만들어두었는데, 아래 사진과 같은 오류가 계속해서
+        뜹니다.<br />
+        코드가 어디가 왜 잘못되었나요?
+      </div>
+    </div>
+    <div class="detail-row">
+      <div class="row-title">사진</div>
+      <div class="row-content">
+        <img src="image/image.png" alt="이미지 추가" class="detail-photo" />
+      </div>
+    </div>
+    <div class="detail-row">
+      <div class="row-title">파일</div>
+      <div class="row-content">
+        <a href="Makefile" download="Makefile">
+          Makefile
+          <span>
+            <img src="image/download.png" alt="다운로드 아이콘" class="download-icon" />
+          </span>
+        </a>
       </div>
 
-      <div class="detail-header">
-        <div class="detail-timestamp">2024년 4월 1일 오전 12:31</div>
-        <button class="question-likes" onclick="incrementLikes(this)">
-          💜 7
-        </button>
-      </div>
-      <div class="detail-row">
-        <div class="row-title">ID</div>
-        <div class="row-content">sulyong</div>
-      </div>
-      <div class="detail-row">
-        <div class="row-title">제목</div>
-        <div class="row-content">
-          알고리즘 과제1 makefile 오류나는 부분 찾아주세요.
-        </div>
-      </div>
-      <div class="detail-row">
-        <div class="row-title">과목명</div>
-        <div class="row-content">알고리즘</div>
-      </div>
-      <div class="detail-row">
-        <div class="row-title">요청사항</div>
-        <div class="row-content">
-          오류가 나는 부분을 찾고 수정한 뒤 이유도 알려주세요.
-        </div>
-      </div>
-      <div class="detail-row">
-        <div class="row-title">세부사항</div>
-        <div class="row-content">
-          Makefile을 아래와 파일과 같이 작성하였습니다.<br />
-          make all 명령을 만들어두었는데, 아래 사진과 같은 오류가 계속해서
-          뜹니다.<br />
-          코드가 어디가 왜 잘못되었나요?
-        </div>
-      </div>
-      <div class="detail-row">
-        <div class="row-title">사진</div>
-        <div class="row-content">
-          <img src="image/image.png" alt="이미지 추가" class="detail-photo" />
-        </div>
-      </div>
-      <div class="detail-row">
-        <div class="row-title">파일</div>
-        <div class="row-content">
-          <a href="Makefile" download="Makefile">
-              Makefile
-              <span>
-                  <img
-                      src="image/download.png"
-                      alt="다운로드 아이콘"
-                      class="download-icon"
-                  />
-              </span>
-          </a>
-      </div>
-      
-      </div>
+    </div>
 
-      <hr class="file-divider" />
+    <hr class="file-divider" />
 
-      <div class="existing-comments">
-        <div class="icon-container" style="display: flex; justify-content: space-between; align-items: center;">
-          <div style="display: flex; align-items: center">
-            <img src="image/icon.png" alt="아이콘" class="detail-icon" />
-            <div class="icon-info">
-              <strong>윤수정</strong>
-              <p id="additional-info">열람하면 10포인트가 차감됩니다.</p>
-            </div>
+    <div class="existing-comments">
+      <div class="icon-container" style="display: flex; justify-content: space-between; align-items: center;">
+        <div style="display: flex; align-items: center">
+          <img src="image/icon.png" alt="아이콘" class="detail-icon" />
+          <div class="icon-info">
+            <strong>윤수정</strong>
+            <p id="additional-info">열람하면 10포인트가 차감됩니다.</p>
           </div>
-          <button class="open-button" onclick="showAnswer()" style="margin-right: 40px">open</button>
         </div>
-      
+        <button class="open-button" onclick="showAnswer()" style="margin-right: 40px">open</button>
       </div>
-      <div class="chat-input-container">
-        <input type="text" class="chat-input" placeholder="메시지를 입력하세요..." />
-        <button class="send-button" onclick="sendMessage()"></button>
-      </div>
-      
+
+    </div>
+    <div class="chat-input-container">
+      <input type="text" class="chat-input" placeholder="메시지를 입력하세요..." />
+      <button class="send-button" onclick="sendMessage()"></button>
+    </div>
+
 
     <div class="bottom">
       <div class="rule"><a href="rule1.html">이용약관</a></div>
-      <div class="rule"><a href="rule2.html">개인정보처리방침</a></div>
-      <div class="rule"><a href="rule3.html">청소년보호정책</a></div>
-      <div class="rule"><a href="rule4.html">커뮤니티이용규칙</a></div>
+      <div class="rule">개인정보처리방침</a></div>
+      <div class="rule">청소년보호정책</a></div>
+      <div class="rule">커뮤니티이용규칙</a></div>
       <div class="rule"><a href="inform.html">공지사항</a></div>
       <div class="rule">@DISS</div>
       <div class="email">Email: DISS@gmail.com</div>
     </div>
-  </body>
+</body>
+
 </html>

@@ -1,98 +1,84 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <title>DISS Video</title>
-    <link rel="stylesheet" href="st_base2.css" />
-    <link rel="stylesheet" href="video.css" />
-    <script src="video.js" defer></script>
-    <script src="translator.js"></script>
-  </head>
-  <body>
-    <div class="header">
-      <a href="Home.html"
-        ><img src="image/logo.png" alt="Logo Image" class="logo" /></a
-      ><!-- alt : 이미지 로드 실패 시 대체 텍스트 -->
-      <a href="profile.html"
-        ><img src="image/profile.png" alt="Profile Image" class="profile"
-      /></a>
-    </div>
 
-    <div class="search-container">
-      <input
-        type="text"
-        class="search-input"
-        id="search-input"
-        placeholder="검색어 입력"
-      />
-      <button class="search-button"></button>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <title>DISS Video</title>
+  <link rel="stylesheet" href="st_base2.css" />
+  <link rel="stylesheet" href="video.css" />
+  <script src="video.js" defer></script>
+  <script src="translator.js"></script>
+</head>
 
-    <div class="container">
-      <div id="sidebar" class="sidebar">
-        <div class="sidebar-content">
-          <h3>
-            카테고리
-            <button onclick="toggleCategory()">
-              <span id="category-arrow">▼</span>
-            </button>
-          </h3>
-          <ul id="category-list">
-            <li
-              class="category-item selected"
-              onclick="filterByCategory('전체')"
-            >
-              <a href="#">전체</a>
-            </li>
-            <li class="category-item" onclick="filterByCategory('전공별')">
-              <a href="#">전공별</a>
-            </li>
-            <li class="category-item" onclick="filterByCategory('자격증')">
-              <a href="#">자격증</a>
-            </li>
-            <li class="category-item" onclick="filterByCategory('기타')">
-              <a href="#">기타</a>
-            </li>
-          </ul>
+<body>
+  <div class="header">
+    <a href="Home.html"><img src="image/logo.png" alt="Logo Image" class="logo" /></a><!-- alt : 이미지 로드 실패 시 대체 텍스트 -->
+    <a href="profile.html"><img src="image/profile.png" alt="Profile Image" class="profile" /></a>
+  </div>
 
-          <h3>
-            정렬
-            <button onclick="toggleOrder()">
-              <span id="order-arrow">▼</span>
-            </button>
-          </h3>
-          <ul id="order-list">
-            <li class="order-item selected">
-              <a href="#" onclick="sortVideos('rating'); return false;"
-                >평점순</a
-              >
-            </li>
-            <li class="order-item">
-              <a href="#" onclick="sortVideos('price'); return false;"
-                >가격순</a
-              >
-            </li>
-            <li class="order-item">
-              <a href="#" onclick="sortVideos('popularity'); return false;"
-                >인기순</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
+  <div class="search-container">
+    <input type="text" class="search-input" id="search-input" placeholder="검색어 입력" />
+    <button class="search-button"></button>
+  </div>
 
-      <div class="main-content">
-        <div class="course-list"></div>
+  <div class="container">
+    <div id="sidebar" class="sidebar">
+      <div class="sidebar-content">
+        <h3>
+          카테고리
+          <button onclick="toggleCategory()">
+            <span id="category-arrow">▼</span>
+          </button>
+        </h3>
+        <ul id="category-list">
+          <li class="category-item selected" onclick="filterByCategory('전체')">
+            <a href="#">전체</a>
+          </li>
+          <li class="category-item" onclick="filterByCategory('전공별')">
+            <a href="#">전공별</a>
+          </li>
+          <li class="category-item" onclick="filterByCategory('자격증')">
+            <a href="#">자격증</a>
+          </li>
+          <li class="category-item" onclick="filterByCategory('기타')">
+            <a href="#">기타</a>
+          </li>
+        </ul>
+
+        <h3>
+          정렬
+          <button onclick="toggleOrder()">
+            <span id="order-arrow">▼</span>
+          </button>
+        </h3>
+        <ul id="order-list">
+          <li class="order-item selected">
+            <a href="#" onclick="sortVideos('rating'); return false;">평점순</a>
+          </li>
+          <li class="order-item">
+            <a href="#" onclick="sortVideos('price'); return false;">가격순</a>
+          </li>
+          <li class="order-item">
+            <a href="#" onclick="sortVideos('popularity'); return false;">인기순</a>
+          </li>
+        </ul>
       </div>
     </div>
 
-    <div class="bottom">
-      <div class="rule"><a href="rule1.html">이용약관</a></div>
-      <div class="rule"><a href="rule2.html">개인정보처리방침</a></div>
-      <div class="rule"><a href="rule3.html">청소년보호정책</a></div>
-      <div class="rule"><a href="rule4.html">커뮤니티이용규칙</a></div>
-      <div class="rule"><a href="inform.html">공지사항</a></div>
-      <div class="email">Email: DISS@gmail.com</div>
+    <div class="main-content">
+      <div class="course-list"></div>
     </div>
-  </body>
+  </div>
+
+  <div class="bottom">
+    <div class="rule"><a href="rule1.html">이용약관</a></div>
+    <div class="rule">개인정보처리방침</a></div>
+    <div class="rule">청소년보호정책</a></div>
+    <div class="rule">커뮤니티이용규칙</a></div>
+    <div class="rule"><a href="inform.html">공지사항</a></div>
+    <div class="rule">@DISS</div>
+    <div class="email">Email: DISS@gmail.com</div>
+  </div>
+</body>
+
 </html>

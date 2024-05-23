@@ -24,7 +24,8 @@ header {
   margin-right: 20px;
   font-size: 14px;
   color: #555;
-  margin-top: 20px; /* 수정된 부분 */
+  margin-top: 20px;
+  /* 수정된 부분 */
 }
 
 .profile-container {
@@ -57,7 +58,8 @@ header {
   display: flex;
   gap: 60px;
   list-style: none;
-  margin-bottom: 20px; /* 수정된 부분 */
+  margin-bottom: 20px;
+  /* 수정된 부분 */
 }
 
 .menu-item {
@@ -77,13 +79,15 @@ header {
 .menu-item.active {
   background-color: #f3e6ff;
   color: #000;
-  white-space: nowrap; /* 텍스트를 한 줄로 표시 */
+  white-space: nowrap;
+  /* 텍스트를 한 줄로 표시 */
 }
 
 .underline {
   width: 100%;
   height: 4px;
-  background-color: #d8b2ff; /* 보라색 구분선 */
+  background-color: #d8b2ff;
+  /* 보라색 구분선 */
   margin-top: 5px;
 }
 
@@ -103,8 +107,10 @@ header {
 }
 
 .chat-icon {
-  width: 80px; /* 크기 조정 */
-  height: 70px; /* 크기 조정 */
+  width: 80px;
+  /* 크기 조정 */
+  height: 70px;
+  /* 크기 조정 */
   margin-right: 10px;
   border-radius: 50%;
 }
@@ -141,31 +147,41 @@ header {
 /* 보라색 별 CSS */
 .star-rating {
   font-size: 16px;
-  color: #d8b2ff; /* 보라색 별 색상 */
+  color: #d8b2ff;
+  /* 보라색 별 색상 */
 }
 
 .question-detail {
-  overflow-y: scroll; /* 세로 스크롤을 위한 설정 */
-  max-height: 450px; /* 스크롤 높이 제한을 위해 추가 */
+  overflow-y: scroll;
+  /* 세로 스크롤을 위한 설정 */
+  max-height: 450px;
+  /* 스크롤 높이 제한을 위해 추가 */
 }
 
 /* file.html */
 .file-table {
   width: 100%;
-  border-collapse: collapse; /* 테이블 경계선 합치기 */
-  margin-top: 20px; /* 테이블 상단 여백 */
+  border-collapse: collapse;
+  /* 테이블 경계선 합치기 */
+  margin-top: 20px;
+  /* 테이블 상단 여백 */
 }
 
 .file-table th,
 .file-table td {
-  border: 1px solid #ddd; /* 테두리 */
-  padding: 10px; /* 패딩 */
-  text-align: center; /* 가운데 정렬 */
+  border: 1px solid #ddd;
+  /* 테두리 */
+  padding: 10px;
+  /* 패딩 */
+  text-align: center;
+  /* 가운데 정렬 */
 }
 
 .file-table th {
-  background-color: #f3e6ff; /* 테이블 헤더 배경색 */
-  font-weight: bold; /* 헤더 글씨 굵게 */
+  background-color: #f3e6ff;
+  /* 테이블 헤더 배경색 */
+  font-weight: bold;
+  /* 헤더 글씨 굵게 */
 }
 
 /*schedule.html*/
@@ -179,8 +195,10 @@ header {
   border: 1px solid #ccc;
   padding: 8px;
   width: 40px;
-  background-color: #f3e6ff; /* 연보라색 */
+  background-color: #f3e6ff;
+  /* 연보라색 */
 }
+
 .timetable td {
   border: 1px solid #ccc;
   padding: 8px;
@@ -188,7 +206,8 @@ header {
 }
 
 .timetable td {
-  height: 80px; /* 각 셀의 높이 조정 */
+  height: 80px;
+  /* 각 셀의 높이 조정 */
 }
 
 /*privacy.html*/
@@ -200,7 +219,8 @@ header {
 }
 
 .info-label {
-  width: 100px; /* 레이블의 고정된 너비 */
+  width: 100px;
+  /* 레이블의 고정된 너비 */
   font-weight: bold;
   margin-right: 10px;
   text-align: center;
@@ -210,7 +230,8 @@ header {
   flex: 1;
   padding: 15px;
   border-radius: 8px;
-  background-color: #f3e6ff; /* 연보라색 */
+  background-color: #f3e6ff;
+  /* 연보라색 */
 }
 
 /*other.html*/
@@ -249,21 +270,26 @@ header {
   background-color: #f3e6ff;
   border-radius: 5px;
   cursor: pointer;
-  width: 100%; /* 버튼을 화면에 꽉 차게 하기 위해 100% 설정 */
+  width: 100%;
+  /* 버튼을 화면에 꽉 차게 하기 위해 100% 설정 */
   font-size: 14px;
-  text-align: center; /* 버튼 내부 텍스트 가운데 정렬 */
+  text-align: center;
+  /* 버튼 내부 텍스트 가운데 정렬 */
 }
 
 .box-container {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: fit-content; /* 박스 크기를 자동 조정 */
-  margin-bottom: 20px; /* 박스와 다음 요소 간의 간격 추가 */
+  width: fit-content;
+  /* 박스 크기를 자동 조정 */
+  margin-bottom: 20px;
+  /* 박스와 다음 요소 간의 간격 추가 */
 }
 
 .box {
-  background-color: #f3e6ff; /* 연보라색 배경 */
+  background-color: #f3e6ff;
+  /* 연보라색 배경 */
   padding: 10px;
   border-radius: 5px;
 }
@@ -272,6 +298,7 @@ header {
   font-weight: bold;
   margin-bottom: 5px;
 }
+
 .info-item {
   display: flex;
   align-items: center;
@@ -279,7 +306,8 @@ header {
 }
 
 .info-label {
-  width: 100px; /* 레이블의 고정된 너비 */
+  width: 100px;
+  /* 레이블의 고정된 너비 */
   font-weight: bold;
   margin-right: 20px;
   text-align: left;
@@ -289,6 +317,7 @@ header {
   flex: 1;
   padding: 10px;
   border-radius: 8px;
-  background-color: #f3e6ff; /* 연보라색 배경 */
+  background-color: #f3e6ff;
+  /* 연보라색 배경 */
   text-align: center;
 }

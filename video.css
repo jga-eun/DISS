@@ -1,6 +1,7 @@
 .container {
   display: flex;
-  overflow-y: auto; /* 스크롤 기능을 추가하기 위해 추가 */
+  overflow-y: auto;
+  /* 스크롤 기능을 추가하기 위해 추가 */
 }
 
 .sidebar {
@@ -28,9 +29,8 @@ ul {
   border-radius: 5px;
   text-align: center;
   display: block;
-  width: calc(
-    100% - 20px
-  ); /* Ensures consistent width with padding accounted */
+  width: calc(100% - 20px);
+  /* Ensures consistent width with padding accounted */
 }
 
 .category-item:hover,
@@ -54,7 +54,8 @@ ul {
 
 .course-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Maintains a 2-column layout */
+  grid-template-columns: repeat(2, 1fr);
+  /* Maintains a 2-column layout */
   gap: 20px;
   width: 100%;
 }
@@ -63,50 +64,64 @@ ul {
   display: flex;
   align-items: center;
   gap: 20px;
-  background-color: #fff; /* Optional: to distinguish items visually */
-  padding: 10px; /* Provides padding around items */
-  border-radius: 8px; /* Optional: rounded corners for aesthetics */
+  background-color: #fff;
+  /* Optional: to distinguish items visually */
+  padding: 10px;
+  /* Provides padding around items */
+  border-radius: 8px;
+  /* Optional: rounded corners for aesthetics */
 }
 
 .course-item img {
-  width: auto; /* Adjust width to fit */
-  max-width: 200px; /* Limiting image width */
+  width: auto;
+  /* Adjust width to fit */
+  max-width: 200px;
+  /* Limiting image width */
   height: auto;
 }
 
 .course-info {
   text-align: left;
-  flex: 1; /* Allows the text to take the remaining space */
+  flex: 1;
+  /* Allows the text to take the remaining space */
 }
 
 .search-container {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  margin-right: 20px;
+  margin-left: 956px;
 }
 
 .search-input {
   padding: 8px;
   border: 3px solid #d8b2ff;
+  /* 검색창 보더 색상 변경 */
   width: 400px;
+  /* 검색창 넓이 확대 */
   height: 30px;
   border-radius: 10px;
+  margin-right: 15px;
+  /* 검색어 입력 부분에 여백 추가 */
 }
 
 .search-button {
   width: 40px;
+  /* 버튼 크기 조정 */
   height: 40px;
+  /* 버튼 크기 조정 */
   border: none;
   background-image: url("image/search.png");
+  /* 검색 이미지 추가 */
   background-size: cover;
+  /* 이미지가 버튼을 덮도록 설정 */
   cursor: pointer;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .stars {
-  color: #ffd700; /* Gold color for stars */
+  color: #ffd700;
+  /* Gold color for stars */
 }
 
 .more-button {
@@ -125,7 +140,8 @@ ul {
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  background-color: #f3e6ff; /* 연보라색 배경 설정 */
+  background-color: #f3e6ff;
+  /* 연보라색 배경 설정 */
   margin-top: 20px;
 }
 
@@ -137,7 +153,8 @@ ul {
 .course-image {
   width: 250px;
   height: 300px;
-  margin-left: 10px; /* 이미지와 텍스트 사이의 공간 */
+  margin-left: 10px;
+  /* 이미지와 텍스트 사이의 공간 */
   margin-top: 30px;
 }
 
@@ -145,12 +162,14 @@ ul {
   display: block;
   width: max-content;
   padding: 10px 20px;
-  background-color: #6200ee; /* 버튼 색상 설정 */
+  background-color: #6200ee;
+  /* 버튼 색상 설정 */
   color: white;
   text-align: center;
   text-decoration: none;
   border-radius: 4px;
-  margin-top: 15px; /* 버튼 위쪽 여백 */
+  margin-top: 15px;
+  /* 버튼 위쪽 여백 */
 }
 
 .course-item {
@@ -158,18 +177,26 @@ ul {
   align-items: center;
   margin-bottom: 20px;
 }
+
 .course-info {
   margin-left: 20px;
 }
+
 .course-item a {
   display: block;
-  color: inherit; /* 링크 색상을 상속받아 변경하지 않음 */
-  text-decoration: none; /* 밑줄 제거 */
-  transition: background-color 0.3s; /* 부드러운 배경색 변화 */
+  color: inherit;
+  /* 링크 색상을 상속받아 변경하지 않음 */
+  text-decoration: none;
+  /* 밑줄 제거 */
+  transition: background-color 0.3s;
+  /* 부드러운 배경색 변화 */
 }
+
 .course-item a:hover {
-  background-color: #f0f0f0; /* 마우스 오버 시 배경색 변경 */
+  background-color: #f0f0f0;
+  /* 마우스 오버 시 배경색 변경 */
 }
+
 .course-info strong {
   display: block;
 }
@@ -206,6 +233,7 @@ video {
   width: 100%;
   max-height: 500px;
 }
+
 .primary-sidebar {
   width: 200px;
   background-color: #eeeeee;
@@ -265,7 +293,7 @@ video {
   display: block;
 }
 
-.video-page .accordion-item:not(:first-child) > .accordion-toggle {
+.video-page .accordion-item:not(:first-child)>.accordion-toggle {
   margin-top: 10px;
 }
 
@@ -304,34 +332,48 @@ video {
   text-decoration: none;
   color: inherit;
 }
+
 .video-page .main-content {
-  display: flex; /* Uses flexbox layout for horizontal alignment */
-  flex-direction: row; /* Aligns children (video and sidebar) side by side */
-  align-items: flex-start; /* Aligns items to the start of the container */
-  height: auto; /* Adapts to the content height */
-  max-height: 100vh; /* Maximum height to prevent overflow beyond viewport */
+  display: flex;
+  /* Uses flexbox layout for horizontal alignment */
+  flex-direction: row;
+  /* Aligns children (video and sidebar) side by side */
+  align-items: flex-start;
+  /* Aligns items to the start of the container */
+  height: auto;
+  /* Adapts to the content height */
+  max-height: 100vh;
+  /* Maximum height to prevent overflow beyond viewport */
 }
 
 .video-page .video-area {
-  flex: 1; /* Takes up remaining space */
+  flex: 1;
+  /* Takes up remaining space */
   padding: 20px;
 }
 
 .video-page .course-sidebar {
-  width: 300px; /* Fixed width for sidebar */
+  width: 300px;
+  /* Fixed width for sidebar */
   padding: 20px;
-  background-color: #f3e6ff; /* Light purple background color */
+  background-color: #f3e6ff;
+  /* Light purple background color */
 }
 
 .video-page video {
-  width: 100%; /* Ensures video fills its container */
-  max-height: 500px; /* Maximum video display height */
+  width: 100%;
+  /* Ensures video fills its container */
+  max-height: 500px;
+  /* Maximum video display height */
 }
 
 .audio-icon {
   background: none;
   border: none;
-  color: #6200ee; /* 파란색 */
-  font-size: 24px; /* 아이콘 크기 */
-  cursor: pointer; /* 커서 스타일 */
+  color: #6200ee;
+  /* 파란색 */
+  font-size: 24px;
+  /* 아이콘 크기 */
+  cursor: pointer;
+  /* 커서 스타일 */
 }

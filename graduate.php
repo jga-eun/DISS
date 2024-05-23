@@ -3,12 +3,14 @@ header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json");
 
 // MSSQL 연결 정보
-$serverName = "dissgraduate-2.database.windows.net";
-$connectionOptions = array(
-    "Database" => "dissgraduate",
-    "Uid" => "DissPeople",
-    "PWD" => "cwbh0456@92"
-);
+    $serverName = "데베 서버 이름";
+    $connectionOptions = array(
+        "Database" => "데이터베이스 이름",
+        "Uid" => "아이디",
+        "PWD" => "비밀번호"
+        "Encrypt" => true, // 암호화를 사용하여 보안을 강화
+        "TrustServerCertificate" => false // 서버 인증서 신뢰 여부
+    );
 
 // MSSQL 연결
 $conn = sqlsrv_connect($serverName, $connectionOptions);
@@ -19,7 +21,7 @@ if ($conn === false) {
 }
 
 // 데이터베이스에서 모든 데이터 선택
-$sql = "SELECT name, school, major, branch, region, keyword1, keyword2, keyword3 FROM dbo.Graduates";
+$sql = "SELECT name, school, major, branch, region, keyword1, keyword2, keyword3 FROM 스키마.테이블";
 $stmt = sqlsrv_query($conn, $sql);
 
 if ($stmt === false) {
