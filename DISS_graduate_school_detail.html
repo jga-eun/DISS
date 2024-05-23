@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DISS 대학원 상세 페이지</title>
+    <link rel="stylesheet" href="st_base.css">
+    <link rel="stylesheet" href="graduate_school_detail_style.css">
+    <script src="graduate_school_detail_main.js" defer></script>
+
+</head>
+
+<body>
+
+    <div class="header">
+        <a href="Home.html"><img src="logo_image.png" alt="Logo Image" class="logo"></a><!-- alt : 이미지 로드 실패 시 대체 텍스트 -->
+        <a href="profile.html"><img src="profile.ver2.png" alt="Profile Image" class="profile"></a>
+    </div>
+
+    <div class="container" >
+        <div class="detail">
+            <img src="detail.png" alt="Diss detail" >
+            <button id="reviewbutton" type="button" onclick="toggleReviewInput()">한줄평 쓰기</button>
+            <div id="reviewInputSection" style="display: none;">
+                <!-- 여기에 한줄평 입력란이 동적으로 생성될 것입니다. -->
+            </div>
+        </div>
+        <div class="detail-explain">
+            <div class="explain1">
+                <h2><b>ooo 조교수</b></h2>
+                <h2><b>H대학교 에너지 시스템공학과</b></h2>
+                <p>discussion@gmail.com</p>
+                <p>https://university.ac.kr</p>
+            </div>
+            <div class="explain2">
+                <h2><b>연구실 소개</b></h2>
+                <h3> BML (Bio Modeling Lab)은 2023년 개설된 연구실로 자연에서 영감을 받아 새로운 재료를 설계하고 개발하는 연구를 진행하는 실험실로, 국내 여러 기업 및 정부출연기관과 협업하고 있는 연구실입니다. 또한 BK21사업에 선정되어 해당 수혜를 받을 수 있습니다. </h3>
+            </div>
+            <div class="explain3">
+                <h2><b>연구 분야</b></h2>
+                <h3>1. 생체 조직 재생 연구</h3>
+                <h3>- 표면처리, 코팅을 이용한 생체 분자를 도입 및 생물학적 효과 분석</h3>
+                <h3>- 바이오 프린팅 기술을 활용한 암모델 개발</h3>
+                <h3>2. 나노표면처리 기술 연구</h3>
+                <h3>- 나노복합체를 이용한 표면개질 연구</h3>
+                <h3>- 자연유래 생체 활성물질을 적용한 생체적합성 향상 연구</h3>
+            </div>
+        </div> 
+    </div>
+
+    <div class="bottom">
+        <div class="rule"><a href="rule1.html">이용약관</a></div>
+        <div class="rule"><a href="rule2.html">개인정보처리방침</a></div>
+        <div class="rule"><a href="rule3.html">청소년보호정책</a></div>
+        <div class="rule"><a href="rule4.html">커뮤니티이용규칙</a></div>
+        <div class="rule"><a href="inform.html">공지사항</a></div>
+        <div class="rule">@DISS</div>
+        <div class="email">Email: DISS@gmail.com</div>
+    </div>
+</body>
