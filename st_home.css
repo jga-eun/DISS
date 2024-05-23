@@ -1,0 +1,129 @@
+/* 검색 바 부분 */
+.search-container {
+    height: 10vh;
+    justify-content: center;
+    /* 수평 중앙 정렬 */
+    display: flex;
+    align-items: center;
+    margin-top: 2%;
+}
+
+#search-input {
+    width: 80%;
+    height: 10vh;
+    padding: 8px;
+    font-size: 3vh;
+    border: 0.3vh solid #7E05FE;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* box-sizing을 설정하여 패딩과 테두리를 포함한 크기 계산 */
+}
+
+#search-button {
+    height: 10vh;
+    width: 15vh;
+    font-size: 3vh;
+    padding: 8px 16px;
+    background-color: #7E05FE;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 8px;
+    box-sizing: border-box;
+    /* box-sizing을 설정하여 패딩과 테두리를 포함한 크기 계산 */
+}
+
+#search-button:hover {
+    background-color: #5e03c0;
+}
+
+/* 배너 부분 */
+.banner {
+    margin: 3%;
+    /* 간격 유지 */
+    display: flex;
+    justify-content: center;
+    /* 수평 중앙 정렬 */
+    overflow: hidden;
+    /* 배너 슬라이드에서 화면 밖의 부분을 숨김 */
+}
+
+.slider-wrapper {
+    margin-right: 0;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    /* 부드러운 슬라이드 */
+}
+
+.banner-slide {
+    flex: 0 0 100%;
+    /* 각 슬라이드가 화면의 전체 너비를 차지하도록 설정 */
+    box-sizing: border-box;
+    /* 슬라이드 간 경계 */
+}
+
+.banner-slide img {
+    width: 100%;
+    height: auto;
+}
+
+/* 메뉴 버튼 부분 */
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3개의 열 */
+    grid-template-rows: repeat(2, auto);
+    /* 2개의 행, 각 행의 높이는 자동으로 설정 */
+    grid-gap: 10px;
+    /* 그리드 사이의 간격 */
+    padding: 0 10px;
+    /* 양쪽에 패딩을 추가하여 오른쪽이 잘리지 않도록 */
+    box-sizing: border-box;
+    /* box-sizing을 설정하여 패딩과 테두리를 포함한 크기 계산 */
+}
+
+.button-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    /* 버튼 간격 조절 */
+}
+
+.custom-button {
+    background-color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* 글씨 가운데로 고정 */
+    font-weight: bold;
+    font-size: 3vh;
+    width: 100%;
+    /* 버튼의 너비를 조정 */
+    overflow: hidden;
+    /* 이미지가 버튼 크기를 넘지 않도록 */
+    position: relative;
+    /* 포지션 상대적 설정 */
+    box-sizing: border-box;
+    /* box-sizing을 설정하여 패딩과 테두리를 포함한 크기 계산 */
+}
+
+.custom-button img {
+    max-width: 100%;
+    /* 이미지가 버튼 크기를 넘지 않도록 */
+    height: auto;
+    /* 이미지 비율 유지 */
+    transition: filter 0.3s ease;
+    /* 필터 전환 효과 */
+}
+
+.custom-button:hover img {
+    filter: brightness(75%);
+    /* 호버 시 이미지 밝기 조정 */
+}
