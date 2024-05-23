@@ -52,7 +52,7 @@ function showSelectedInfo() {
             filteredData.forEach(function(item) {
                 html += `
                     <div class="Info">
-                        <img src="profile.png" alt="Diss logo" class="profile2">
+                        <img src="profile_3.png" alt="Diss logo" class="profile2">
                         <div class="Info_detail">
                             <p><b>${item.name}</b></p>
                             <h2><b>${item.school} ${item.major}</b></h2>
