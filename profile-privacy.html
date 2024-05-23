@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DISS QnA</title>
+    <link rel="stylesheet" href="st_base2.css" />
+    <link rel="stylesheet" href="profile.css" />
+    <script src="translator.js" defer></script>
+  </head>
+  <body>
+    <div class="header">
+      <a href="Home.html"
+        ><img src="image/logo.png" alt="Logo Image" class="logo"
+      /></a>
+      <a href="profile.html"
+        ><img src="image/profile.png" alt="Profile Image" class="profile"
+      /></a>
+    </div>
+
+    <main class="profile-container">
+      <div class="profile-sidebar">
+        <img src="image/me.png" alt="프로필 이미지" class="profile-img" />
+        <p></p>
+        <div class="profile-info">
+          <div class="rating">만족도 : 5점</div>
+          <div>포인트 : 410p</div>
+          <div class="star-rating">⭐⭐⭐⭐⭐</div>
+          <div>sulyong</div>
+          <div>22학번</div>
+          <div>AI융합학부 지능형IoT</div>
+        </div>
+      </div>
+
+      <div class="profile-content">
+        <div class="menu-bar">
+          <nav>
+            <ul class="menu-list">
+              <li><a href="profile.html" class="menu-item">채팅방</a></li>
+              <li><a href="profile-file.html" class="menu-item">파일 관리</a></li>
+              <li><a href="profile-schedule.html" class="menu-item">시간표</a></li>
+              <li><a href="profile-privacy.html" class="menu-item active">개인정보</a></li>
+              <li><a href="Login.html" class="menu-item">로그아웃</a></li>
+          </ul>
+          </nav>
+          <div class="underline"></div>
+        </div>
+
+        <div class="content-area">
+          <div class="info-item">
+            <div class="info-label">ID</div>
+            <div class="info-box">sulyong</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">이름</div>
+            <div class="info-box">이수룡</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">학번</div>
+            <div class="info-box">20221234</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">학과</div>
+            <div class="info-box">AI융합학부 지능형IoT</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">언어 선택</div>
+            <select id="language-select" class="info-box" onchange="changeLanguage()">
+              <option value="ko">한국어</option>
+              <option value="en">English</option>
+              <option value="zh">中文</option>
+              <option value="ja">日本語</option>
+          </select>
+          
+        </div>
+        
+        </div>
+      </div>
+    </main>
+
+    <div class="bottom">
+      <div class="rule"><a href="rule1.html">이용약관</a></div>
+      <div class="rule"><a href="rule2.html">개인정보처리방침</a></div>
+      <div class="rule"><a href="rule3.html">청소년보호정책</a></div>
+      <div class="rule"><a href="rule4.html">커뮤니티이용규칙</a></div>
+      <div class="rule"><a href="inform.html">공지사항</a></div>
+      <div class="rule">@DISS</div>
+      <div class="email">Email: DISS@gmail.com</div>
+    </div>
+  </body>
+</html>
