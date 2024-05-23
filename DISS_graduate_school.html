@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DISS</title>
+    <link rel="stylesheet" href="st_base.css">
+    <link rel="stylesheet" href="graduate_school_style.css">
+    <script src="graduate_school_main.js" defer></script>
+</head>
+<body>
+
+    <div class="header">
+        <a href="Home.html"><img src="logo_image.png" alt="Logo Image" class="logo"></a><!-- alt : 이미지 로드 실패 시 대체 텍스트 -->
+        <a href="profile.html"><img src="profile.ver2.png" alt="Profile Image" class="profile"></a>
+    </div>
+
+
+    <!-- 분야, 지역 선택 div-->
+    <div class="selection">       <!-- 모든 걸 포함하는 div: selection-->
+        <div class="branch"> <!-- 분야 div: branch-->
+            <h2><b>분야</b></h2>
+            <table id="branch-table">
+                <tbody>
+                    <tr>
+                        <td id="건축"><b>건축</b></td>
+                        <td id="경영"><b>경영</b></td>
+                        <td id="교육"><b>교육</b></td>
+                        <td id="기계"><b>기계</b></td>
+                        <td id="동물"><b>동물</b></td>
+                        <td id="물리"><b>물리</b></td>
+                        <td id="생명"><b>생명</b></td>
+                        <td id="수학"><b>수학</b></td>
+                    </tr>
+
+                    <tr>
+                        <td id="심리"><b>심리</b></td>
+                        <td id="예체능"><b>예체능</b></td>
+                        <td id="의료"><b>의료</b></td>
+                        <td id="전자"><b>전자</b></td>
+                        <td id="조선"><b>조선</b></td>
+                        <td id="화학"><b>화학</b></td>
+                        <td id="환경"><b>환경</b></td>
+                        <td id="IT"><b>IT</b></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="region">
+            <h2>지역</h2>
+            <table id="region-table">
+                <tbody>
+                    <tr>
+                        <td id="강원"><b>강원</b></td>
+                        <td id="경기"><b>경기</b></td>
+                        <td id="경상"><b>경상</b></td>
+                        <td id="서울"><b>서울</b></td>
+                        <td id="인천"><b>인천</b></td>
+                        <td id="전라"><b>전라</b></td>
+                        <td id="제주"><b>제주</b></td>
+                        <td id="충청"><b>충청</b></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="button-container">
+            <button id="resetButton" type="button" onclick="resetSelection()">초기화</button>
+            <button id="searchButton" type="button" onclick="showSelectedInfo()">검색</button>
+        </div>
+
+    </div>
+
+    <!-- 선택된 정보를 표시할 영역 -->
+    <div class="ShowInfo" id="selectedInfo">
+        <select id="standard" name="standard">';
+            <option value="popular">인기순</option>;
+            <option value="recommend">추천순</option>;
+            <option value="much">후기 많은순</option>;
+            </select>';
+        
+        <?php include 'graduate.php'; ?>
+    </div>
+
+    <div class="bottom">
+        <div class="rule"><a href="rule1.html">이용약관</a></div>
+        <div class="rule"><a href="rule2.html">개인정보처리방침</a></div>
+        <div class="rule"><a href="rule3.html">청소년보호정책</a></div>
+        <div class="rule"><a href="rule4.html">커뮤니티이용규칙</a></div>
+        <div class="rule"><a href="inform.html">공지사항</a></div>
+        <div class="rule">@DISS</div>
+        <div class="email">Email: DISS@gmail.com</div>
+    </div>
+
+</body>
+</html>
