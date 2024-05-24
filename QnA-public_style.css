@@ -84,14 +84,15 @@ header {
 }
 
 .search-button {
-  width: 40px; /* 버튼 크기 조정 */
-  height: 40px; /* 버튼 크기 조정 */
-  border: none;
+  width: 50px; /* 버튼 크기 조정 */
+  height: 50px; /* 버튼 크기 조정 */
+  border: 5px;
   background-image: url("image/search.png"); /* 검색 이미지 추가 */
   background-size: cover; /* 이미지가 버튼을 덮도록 설정 */
   cursor: pointer;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: #ffffff;
 }
 
 .questions {
@@ -223,12 +224,6 @@ header {
   border-top: 2px solid #d8b2ff;
 }
 
-.detail-photo {
-  width: 50px; /* 이미지 크기 조정 */
-  height: 50px; /* 이미지 크기 조정 */
-  margin-right: 15px;
-}
-
 .detail-icon {
   width: 50px; /* 아이콘 크기 조정 */
   height: 50px; /* 아이콘 크기 조정 */
@@ -249,9 +244,10 @@ header {
 }
 
 .detail-photo {
-  width: 50px; /* 이미지 크기 조정 */
-  height: 50px; /* 이미지 크기 조정 */
+  width: 400px; /* 이미지 크기 조정 */
+  height: auto; /* 이미지 비율 유지 */
   margin-right: 15px;
+  display: block; /* 이미지를 블록 요소로 만들어 가운데 정렬 가능하게 함 */
 }
 
 .detail-icon {
@@ -311,16 +307,14 @@ header {
 }
 
 .send-button {
-  padding: 10px 20px;
-  color: white;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
   background-image: url("image/DISS_logo.png");
   background-size: cover;
   background-position: center; /* 이미지를 버튼의 중앙에 위치시킵니다 */
-  height: 40px;
+  height: 50px;
   width: 5%;
+  background-color: #ffffff;
 }
 
 /*write.html*/
