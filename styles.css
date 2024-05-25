@@ -1,0 +1,250 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f8;
+    color: #333;
+}
+
+.header {
+    background: white;
+    color: #7E05FE;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    font-size: 1.3rem;
+}
+
+.home-button {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 70px;
+    height: auto;
+}
+/*--------------------------*/
+.instructions {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 95%;
+    text-align: left;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.search-options {
+    display: flex;
+    width: 16.8%;
+    position: relative;
+}
+
+.button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #000000;
+    border: none;
+    background-color: transparent;
+    font-size:20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover,
+.button.active {
+    background-color: #f3e6ff;
+    color: #000000;
+}
+
+.underline {
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 95%;
+    height: 3px;
+    background-color: #d8b2ff;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input {
+    flex: 1;
+    margin-right: 10px;
+    padding: 20px;
+    border: 3px solid #D8B2FF;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.search-container button {
+    padding: 0;
+    background: none;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-input {
+    padding: 8px;
+    border: 3px solid #d8b2ff;
+    width: 400px;
+    height: 30px;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.search-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-image: url("images/search.png");
+    background-size: cover;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/*--------------------------*/
+.user-container {
+    background: white;
+    margin: 0px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+}
+
+.user-card {
+    background: #FBF7FF;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.1);
+    margin: 10px;
+    width: calc(45%); /* 두 카드가 나란히 배치될 수 있도록 너비 조정 */
+    text-align: center;
+    padding: 10px;
+    min-height: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.profile-image-container {
+    flex: 0 0 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    background: url('images/profile_sulyong.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.personal-info {
+    line-height: 0.5;
+    margin: 2px 0;
+    text-align: center;
+    font-size: 1.3rem;
+    color: black;
+}
+
+.user-info {
+    flex-grow: 1;
+    padding-left: 20px;
+    font-size: 1.5rem;
+}
+
+.user-info h2 {
+    margin: 5px 0;
+}
+
+.user-info .rating {
+    color: black;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.user-info .tags {
+    background: #FBF7FF;
+    padding: 5px;
+    font-size: 1.5rem;
+    display: inline-block;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+/*--------------------------*/
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #ddd;
+}
+
+.site-footer {
+    background-color: #7E05FE;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.site-footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-email {
+    width: 100%;
+    text-align: center;
+    margin-top: none;
+}
+
+.stars {
+    color: #D8B2FF;
+}
+
+.tags {
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 0.8rem;
+    width: 100%;
+}

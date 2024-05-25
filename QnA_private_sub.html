@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DISS_QnA_private_sub</title>
+    <link rel="stylesheet" href="QnA_private_sub_styles.css">
+    <link rel="stylesheet" href="st_base.css">
+
+    <style>
+        #messages {
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="Home.html"><img src="image/logo.png" alt="Logo Image" class="logo"></a><!-- alt : 이미지 로드 실패 시 대체 텍스트 -->
+        <a href="profile.html"><img src="image/profile.png" alt="Profile Image" class="profile"></a>
+        <div class="instructions">
+            <p>1. 예의를 지켜주세요.</p>
+            <p>2. 10분에 10point씩 차감됩니다.</p>
+            <p>3. 프로필을 클릭하면 상세 페이지로 넘어갑니다.</p>
+        </div>
+    </div>
+
+    <div class="question-detail">
+        <div class="search-bar">
+            <div class="search-options">
+                <a href="#" class="button">public</a>
+                <a href="#" class="button active">private</a>
+                <a href="#" class="button">AI</a>
+                <div class="underline"></div>
+            </div>
+        </div>
+        
+        <div class="detail-header">
+            <div class="detail-timestamp">2024년 4월 1일 오전 12:31</div>
+        </div>
+        <div class="detail-row">
+            <div class="row-title">ID</div>
+            <div class="row-content">sulyong</div>
+        </div>
+        <div class="detail-row">
+            <div class="row-title">제목</div>
+            <div class="row-content">알고리즘 과제1 makefile 오류나는 부분 찾아주세요.</div>
+        </div>
+        <div class="detail-row">
+            <div class="row-title">과목명</div>
+            <div class="row-content">알고리즘</div>
+        </div>
+        <div class="detail-row">
+            <div class="row-title">요청사항</div>
+            <div class="row-content">오류가 나는 부분을 찾고 수정한 뒤 이유도 알려주세요.</div>
+        </div>
+        <div class="detail-row">
+            <div class="row-title">세부사항</div>
+            <div class="row-content">
+                Makefile을 아래와 파일과 같이 작성하였습니다.<br>
+                make all 명령을 만들어두었는데, 아래 사진과 같은 오류가 계속해서 뜹니다.<br>
+                코드가 어디가 왜 잘못되었나요?
+            </div>
+        </div>
+        <div class="detail-row">
+            <div class="row-title">사진</div>
+            <div class="row-content">
+                <img src="images/image.png" alt="이미지 추가" class="detail-photo">
+            </div>
+        </div>
+        <div class="detail-row">
+            <div class="row-title">파일</div>
+            <div class="row-content">
+                Makefile
+            </div>
+        </div>
+        <hr class="file-divider">
+    </div>
+
+    <div class="chat-section">
+        <div class="message left-message">
+            <div class="message-header">
+                <img src="images/profile_sulyong.png" class="user-icon" alt="User Icon">
+                <span class="username">난향수정</span>
+            </div>
+            <div class="message-body">
+                Makefile은 "make" 명령어를 사용하여 소스 코드를 컴파일하고 실행하기 위한 규칙을 정의하는 것 입니다.<br>
+                <br>
+                현재 주어진 상황에서는 이미 최신의 실행 파일이 생성되어 있어서 더 이상 변경할 필요가 없기 때문에 "make: Nothing to be done for 'all'."이라는 메시지가 나타나게 됩니다. 
+                <br><br>
+                "make all" 명령을 여러 번 실행하더라도 동일한 메시지가 나타날 것입니다.
+                <br><br>
+                “make all” 명령을 실행하고 싶으면, "make clean" 명령을 사용하여 불필요한 파일을 제거하면 됩니다.
+            </div>
+            <div class="message-timestamp">2024년 4월 1일 오전 12:39</div>
+        </div>
+        <div class="message right-message">
+            <div class="message-header">
+                <span class="username">sulyong</span>
+                <img src="images/profile_sulyong.png" class="user-icon" alt="User Icon">
+            </div>
+            <div class="message-body">
+                Makefile에 "make clean" 명령을 어떻게 작성하나요?
+            </div>
+            <div class="message-timestamp">2024년 4월 1일 오전 12:41</div>
+        </div>
+        <div class="message left-message">
+            <div class="message-header">
+                <img src="images/profile_sulyong.png" class="user-icon" alt="User Icon">
+                <span class="username">난향수정</span>
+            </div>
+            <div class="message-body">
+                clean:<br>
+                 rm -f $(OBJ) $(TARGET) maxcut.out<br>
+                 <br>
+                위 코드를 Makefile에 추가해주시면 됩니다.    
+            </div>
+            <div class="message-timestamp">2024년 4월 1일 오전 12:43</div>
+        </div>
+        <div id="messages"></div>
+    </div>
+
+    <div class="chat-input-container">
+        <input type="text" class="chat-input" id="messageInput" placeholder="메시지를 입력하세요...">
+        <button class="send-button" onclick="sub_sendMessage()"></button>
+    </div>
+
+    <div class="bottom">
+        <div class="rule"><a href="rule1.html">이용약관</a></div>
+        <div class="rule"><a href="rule2.html">개인정보처리방침</a></div>
+        <div class="rule"><a href="rule3.html">청소년보호정책</a></div>
+        <div class="rule"><a href="rule4.html">커뮤니티이용규칙</a></div>
+        <div class="rule"><a href="inform.html">공지사항</a></div>
+        <div class="rule">@DISS</div>
+        <div class="email">Email: DISS@gmail.com</div>
+    </div>
+
+    <script src="QnA_private_script.js"></script>
+</body>
+</html>
