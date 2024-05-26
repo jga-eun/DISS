@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DISS_QnA_private_sub</title>
+    <link rel="stylesheet" href="QnA_private_list.css" />
+    <link rel="stylesheet" href="st_base.css" />
+    <script src="QnA-public_act.js" defer></script>
+    <script src="translator.js" defer></script>
+    <style>
+        #messages {
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+  <div class="header">
+    <a href="Home.html"><img src="image/logo.png" alt="Logo Image" class="logo"></a><!-- alt : 이미지 로드 실패 시 대체 텍스트 -->
+    <a href="profile.html"><img src="image/profile.png" alt="Profile Image" class="profile"></a>
+    <div class="instructions">
+        <p>1. 예의를 지켜주세요.</p>
+        <p>2. 10분에 10point씩 차감됩니다.</p>
+        <p>3. 프로필을 클릭하면 상세 페이지로 넘어갑니다.</p>
+    </div>
+  </div>
+
+  <div class="question-detail">
+    <div class="search-bar">
+      <div class="search-options">
+          <a href="QnA_private_list_get.html" class="button">질문 한 것</a>
+          <a href="QnA_private_list_send.html" class="button active">질문 받은 것</a>
+          <div class="underline"></div>
+      </div>
+    </div>
+
+    <div class="questions">
+        <div class="question">
+            <img src="image/icon.png" alt="아이콘" class="question-icon" onclick="navigateToPage('profile-other.html')" />
+            <div class="question-content" onclick="navigateToPage('QnA_private_sub.html')">
+            <div class="question-header">
+                <span class="question-author">sung</span>
+                <div class="question-time alignright">오후 8:19</div>
+            </div>
+            <div class="question-header">
+                <div class="question-title">
+                심층학습 확률적 경사하강법 문제 풀이 중 틀린 부분 찾아주세요.
+                </div>
+            </div>
+            <div style="clear: both"></div>
+            </div>
+        </div>
+
+        <div class="question">
+            <img src="image/icon.png" alt="아이콘" class="question-icon" onclick="navigateToPage('profile-other.html')" />
+            <div class="question-content" onclick="navigateToPage('QnA_private_sub.html')">
+            <div class="question-header">
+                <span class="question-author">shin</span>
+                <div class="question-time alignright">오후 7:04</div>
+            </div>
+            <div class="question-header">
+                <div class="question-title">
+                이산수학 186쪽 예제 3번 풀었는데 어디서 잘못된건가요?
+                </div>
+            </div>
+            <div style="clear: both"></div>
+            </div>
+        </div>
+        <div class="question">
+            <img src="image/icon.png" alt="아이콘" class="question-icon" onclick="navigateToPage('profile-other.html')" />
+            <div class="question-content" onclick="navigateToPage('QnA_private_sub.html')">
+            <div class="question-header">
+                <span class="question-author">sungshin</span>
+                <div class="question-time alignright">오후 10:04</div>
+            </div>
+            <div class="question-header">
+                <div class="question-title">
+                인공지능 3차시 과제 질문있습니다.
+                </div>
+            </div>
+            <div style="clear: both"></div>
+            </div>
+        </div>
+  </div>
+
+    <div class="bottom">
+        <div class="rule"><a href="rule1.html">이용약관</a></div>
+        <div class="rule">개인정보처리방침</a></div>
+        <div class="rule">청소년보호정책</a></div>
+        <div class="rule">커뮤니티이용규칙</a></div>
+        <div class="rule"><a href="inform.html">공지사항</a></div>
+        <div class="rule">@DISS</div>
+        <div class="email">Email: DISS@gmail.com</div>
+    </div>
+
+    <script src="QnA_private_script.js"></script>
+</body>
+</html>
