@@ -143,9 +143,10 @@ body {
 }
 
 .detail-photo {
-    width: 50px; /* 이미지 크기 조정 */
-    height: 50px; /* 이미지 크기 조정 */
+    width: 400px; /* 이미지 크기 조정 */
+    height: auto; /* 이미지 크기 조정 */
     margin-right: 15px;
+    display: block; /* 이미지를 블록 요소로 만들어 가운데 정렬 가능하게 함 */
 }
 
 /*----chating-----*/

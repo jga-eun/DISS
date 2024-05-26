@@ -75,3 +75,12 @@ function filterMessage(message) {
         console.error('Error:', error);
     });
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    var cards = document.querySelectorAll('.user-card');
+    cards.forEach(function(card) {
+        card.addEventListener('click', function() {
+            window.location.href = card.getAttribute('data-href');
+        });
+    });
+});
