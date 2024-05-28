@@ -44,9 +44,8 @@ function sub_displayMessage(message) {
 
 
 function filterMessage(message) {
-    var subscriptionKey = '1689ee9c318845ceabc447ac2eb58fbc';
-    var endpoint = 'https://diss-qna-private.cognitiveservices.azure.com/';
-    var listId = '2494';
+    var subscriptionKey = 'fc15ddd9fd294ee28d69d07ed764ce65';
+    var endpoint = 'https://diss-message.cognitiveservices.azure.com/';
     var url = endpoint + '/contentmoderator/moderate/v1.0/ProcessText/Screen';
 
     var params = {
