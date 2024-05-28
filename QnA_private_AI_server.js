@@ -6,12 +6,12 @@ const path = require('path');
 const app = express();
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
+    console.log(`Server running at https://diss-y.azurewebsites.net/:${port}`);
 });
 
 // Azure OpenAI 설정
-const apiKey = 'fac11093e642402b875cad4fd291f833';  // Azure에서 받은 API 키
-const endpoint = 'https://diss-gpt.openai.azure.com/';  // 엔드포인트 URL
+const apiKey = '3fed8429be6a457dae839b0d1711469d';  // Azure에서 받은 API 키
+const endpoint = 'https://diss-y.openai.azure.com/';  // 엔드포인트 URL
 
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname))); // 정적 파일을 서비스합니다
@@ -47,5 +47,5 @@ app.post('/chat', async (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
+    console.log(`Server running at https://diss-y.azurewebsites.net/:${port}`);
 });
